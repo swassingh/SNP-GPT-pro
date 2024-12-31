@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S&PGPT - Demo</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="demo.html">Demo</a>
+        <a href="proposal.html">Proposal</a>
+    </div>
+
+
+    <div class="container">
+        <header>
+            <h1>Submit Your Words</h1>
+        </header>
+        <form id="myForm">
+            <label for="ticker">Company Ticker:</label>
+            <input type="text" id="ticker" name="ticker" required>
+
+            <label for="year">Year:</label>
+            <input type="text" id="year" name="year" required>
+
+            <label for="prompt">Prompt:</label>
+            <input type="text" id="prompt" name="prompt" required>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="api-response">
+            <label>API Response:</label>
+            <!-- API response will be displayed here -->
+            <p id="api-response">API response will be displayed here</p>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Swas Singh. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Collect form data
+            const ticker = document.getElementById('ticker').value;
+            const year = document.getElementById('year').value;
+            const prompt = document.getElementById('prompt').value;
+
+            // Replace with your API endpoint
+            const apiUrl = 'http://localhost:8000/submit';
+
+            fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ ticker, year, prompt })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle the API response
+                document.getElementById('api-response').textContent = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                document.getElementById('api-response').textContent = 'Error: ' + error;
+            });
+        });
+    </script>
+</body>
+</html>
