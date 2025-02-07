@@ -9,7 +9,7 @@ CORS(app)  # Allow cross-origin requests from any origin
 @app.route('/submit', methods=['POST'])
 def submit():
     data = request.json
-    api_key = '58ffd74ec2512ab3a514d1a410f19adb2757708f482cd964211e12a5d1d4052a'  # SEC API key
+    api_key = '19d7d2e2254c6fc4eda0756cb1b090b9f5b4244867c98fd7d372e612aa33ff3d'  # SEC API key
     openai_api_key = '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'  # OpenAI API key
     ticker = data.get('ticker')
     year = data.get('year')
@@ -66,7 +66,7 @@ def submit():
     extracted_parts = extract_all_10k_parts(api_key=api_key, filing_url=link_to_filing) # items=resp)
 
     # Assuming the 10-K filing contains a summary or relevant section as text
-    filing_content = [extracted_parts.get("7", "")]
+    filing_content = [extracted_parts.get("1", "")]
     # for response in sections_list:
     #     filing_content.append(
     #         extracted_parts.get(response, ""))
