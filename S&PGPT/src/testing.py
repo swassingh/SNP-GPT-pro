@@ -1,5 +1,6 @@
 import pandas as pd
 import requests
+import pygtrie
 
 # API endpoint for Nasdaq Stock Screener
 url = 'https://api.nasdaq.com/api/screener/stocks?tableonly=true&limit=25&offset=0&download=true'
@@ -29,3 +30,13 @@ df = df[df['country'] == 'United States']
 df.to_csv('S&PGPT/data/nasdaq_listed_companies.csv', index=False)
 
 print("CSV file 'nasdaq_listed_companies.csv' has been created successfully.")
+
+# Create a Trie data structure
+trie = pygtrie.CharTrie()
+
+# Insert symbols into the Trie
+for symbol in df['symbol'].astype(str):
+    trie[symbol] = True
+
+print(list(trie.keys(prefix='AB')))
+print("Trie data structure has been created successfully.")

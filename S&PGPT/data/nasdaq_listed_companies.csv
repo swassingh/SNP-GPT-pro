@@ -1,6 +1,6 @@
 symbol,name,country
 A,Agilent Technologies Inc. Common Stock,United States
-AA,Alcoa Corporation Common Stock ,United States
+AA,Alcoa Corporation Common Stock,United States
 AADI,Aadi Bioscience Inc. Common Stock,United States
 AAL,American Airlines Group Inc. Common Stock,United States
 AAME,Atlantic American Corporation Common Stock,United States
@@ -9,7 +9,7 @@ AAON,AAON Inc. Common Stock,United States
 AAP,Advance Auto Parts Inc.,United States
 AAPL,Apple Inc. Common Stock,United States
 AAT,American Assets Trust Inc. Common Stock,United States
-AB,AllianceBernstein Holding L.P.  Units,United States
+AB,AllianceBernstein Holding L.P. Units,United States
 ABAT,American Battery Technology Company Common Stock,United States
 ABBV,AbbVie Inc. Common Stock,United States
 ABCB,Ameris Bancorp Common Stock,United States
@@ -31,14 +31,14 @@ ABSI,Absci Corporation Common Stock,United States
 ABT,Abbott Laboratories Common Stock,United States
 ABVC,ABVC BioPharma Inc. Common Stock,United States
 AC,Associated Capital Group Inc. Common Stock,United States
-ACA,Arcosa Inc. Common Stock ,United States
+ACA,Arcosa Inc. Common Stock,United States
 ACAD,ACADIA Pharmaceuticals Inc. Common Stock,United States
 ACCD,Accolade Inc. Common Stock,United States
 ACCO,Acco Brands Corporation Common Stock,United States
 ACCS,ACCESS Newswire Inc. Common Stock,United States
 ACDC,ProFrac Holding Corp. Class A Common Stock,United States
-ACEL,Accel Entertainment Inc. ,United States
-ACET,Adicet Bio Inc. Common Stock ,United States
+ACEL,Accel Entertainment Inc.,United States
+ACET,Adicet Bio Inc. Common Stock,United States
 ACHC,Acadia Healthcare Company Inc. Common Stock,United States
 ACHR,Archer Aviation Inc. Class A Common Stock,United States
 ACHV,Achieve Life Sciences Inc. Common Shares,United States
@@ -56,7 +56,7 @@ ACONW,Aclarion Inc. Warrant,United States
 ACP,abrdn Income Credit Strategies Fund Common Shares,United States
 ACP^A,abrdn Income Credit Strategies Fund 5.250% Series A Perpetual Preferred Stock,United States
 ACR,ACRES Commercial Realty Corp. Common Stock,United States
-ACR^C,ACRES Commercial Realty Corp. 8.625% Fixed-to-Floating Series C Cumulative Redeemable Preferred Stock ,United States
+ACR^C,ACRES Commercial Realty Corp. 8.625% Fixed-to-Floating Series C Cumulative Redeemable Preferred Stock,United States
 ACR^D,ACRES Commercial Realty Corp. 7.875% Series D Cumulative Redeemable Preferred Stock,United States
 ACRE,Ares Commercial Real Estate Corporation Common Stock,United States
 ACRS,Aclaris Therapeutics Inc. Common Stock,United States
@@ -79,7 +79,7 @@ ADIL,Adial Pharmaceuticals Inc Common Stock,United States
 ADM,Archer-Daniels-Midland Company Common Stock,United States
 ADMA,ADMA Biologics Inc Common Stock,United States
 ADN,Advent Technologies Holdings Inc. Class A Common Stock,United States
-ADNT,Adient plc Ordinary Shares ,United States
+ADNT,Adient plc Ordinary Shares,United States
 ADNWW,Advent Technologies Holdings Inc. Warrant,United States
 ADP,Automatic Data Processing Inc. Common Stock,United States
 ADPT,Adaptive Biotechnologies Corporation Common Stock,United States
@@ -92,7 +92,6 @@ ADV,Advantage Solutions Inc. Class A Common Stock,United States
 ADVM,Adverum Biotechnologies Inc. Common Stock,United States
 ADVWW,Advantage Solutions Inc. Warrant,United States
 ADX,Adams Diversified Equity Fund Inc.,United States
-AE,Adams Resources & Energy Inc. Common Stock,United States
 AEE,Ameren Corporation Common Stock,United States
 AEF,abrdn Emerging Markets Equity Income Fund Inc. Common Stock,United States
 AEFC,Aegon Funding Company LLC 5.10% Subordinated Notes due 2049,United States
@@ -121,6 +120,7 @@ AFGC,American Financial Group Inc. 5.125% Subordinated Debentures due 2059,Unite
 AFGD,American Financial Group Inc. 5.625% Subordinated Debentures due 2060,United States
 AFGE,American Financial Group Inc. 4.500% Subordinated Debentures due 2060,United States
 AFJK,Aimei Health Technology Co. Ltd Ordinary Share,United States
+AFJKR,Aimei Health Technology Co. Ltd Right,United States
 AFJKU,Aimei Health Technology Co. Ltd Unit,United States
 AFL,AFLAC Incorporated Common Stock,United States
 AFRM,Affirm Holdings Inc. Class A Common Stock,United States
@@ -129,6 +129,7 @@ AGCO,AGCO Corporation Common Stock,United States
 AGD,abrdn Global Dynamic Dividend Fund Common Shares of Beneficial Interest,United States
 AGEN,Agenus Inc. Common Stock,United States
 AGFY,Agrify Corporation Common Stock,United States
+AGH,Aureus Greenway Holdings Inc. Common Stock,United States
 AGIO,Agios Pharmaceuticals Inc. Common Stock,United States
 AGL,agilon health inc. Common Stock,United States
 AGM,Federal Agricultural Mortgage Corporation Common Stock,United States
@@ -181,6 +182,7 @@ AISP,Airship AI Holdings Inc. Class A Common Stock,United States
 AISPW,Airship AI Holdings Inc. Warrants,United States
 AIT,Applied Industrial Technologies Inc. Common Stock,United States
 AITR,AI TRANSPORTATION ACQUISITION CORP Ordinary shares,United States
+AITRR,AI TRANSPORTATION ACQUISITION CORP Right,United States
 AITRU,AI TRANSPORTATION ACQUISITION CORP Unit,United States
 AIV,Apartment Investment and Management Company Common Stock,United States
 AIZ,Assurant Inc. Common Stock,United States
@@ -196,7 +198,6 @@ ALAB,Astera Labs Inc. Common Stock,United States
 ALB,Albemarle Corporation Common Stock,United States
 ALB^A,Albemarle Corporation Depositary Shares each representing a 1/20th of 7.25% Series A Mandatory Convertible Preferred Stock,United States
 ALBT,Avalon GloboCare Corp. Common Stock,United States
-ALCE,Alternus Clean Energy Inc. Class A Common Stock,United States
 ALCO,Alico Inc. Common Stock,United States
 ALCY,Alchemy Investments Acquisition Corp 1 Class A Ordinary Shares,United States
 ALCYW,Alchemy Investments Acquisition Corp 1 Warrants,United States
@@ -208,6 +209,7 @@ ALE,Allete Inc.,United States
 ALEC,Alector Inc. Common Stock,United States
 ALEX,Alexander & Baldwin Inc. Common Stock REIT Holding Company,United States
 ALF,Centurion Acquisition Corp. Class A Ordinary Shares,United States
+ALFUU,Centurion Acquisition Corp. Unit,United States
 ALFUW,Centurion Acquisition Corp. Warrant,United States
 ALG,Alamo Group Inc. Common Stock,United States
 ALGM,Allegro MicroSystems Inc. Common Stock,United States
@@ -322,7 +324,7 @@ AOMR,Angel Oak Mortgage REIT Inc. Common Stock,United States
 AON,Aon plc Class A Ordinary Shares (Ireland),United States
 AORT,Artivion Inc. Common Stock,United States
 AOS,A.O. Smith Corporation Common Stock,United States
-AOUT,American Outdoor Brands Inc. Common Stock ,United States
+AOUT,American Outdoor Brands Inc. Common Stock,United States
 AP,Ampco-Pittsburgh Corporation Common Stock,United States
 APA,APA Corporation Common Stock,United States
 APAM,Artisan Partners Asset Management Inc. Class A Common Stock,United States
@@ -406,7 +408,7 @@ ASG,Liberty All-Star Growth Fund Inc.,United States
 ASGI,abrdn Global Infrastructure Income Fund Common Shares of Beneficial Interest,United States
 ASGN,ASGN Incorporated Common Stock,United States
 ASH,Ashland Inc. Common Stock,United States
-ASIX,AdvanSix Inc. Common Stock ,United States
+ASIX,AdvanSix Inc. Common Stock,United States
 ASLE,AerSale Corporation Common Stock,United States
 ASMB,Assembly Biosciences Inc. Common Stock,United States
 ASNS,Actelis Networks Inc. Common Stock,United States
@@ -430,6 +432,7 @@ ATEX,Anterix Inc. Common Stock,United States
 ATGE,Adtalem Global Education Inc. Common Stock,United States
 ATHA,Athira Pharma Inc. Common Stock,United States
 ATI,ATI Inc. Common Stock,United States
+ATIIU,Archimedes Tech SPAC Partners II Co. Unit,United States
 ATKR,Atkore Inc. Common Stock,United States
 ATLC,Atlanticus Holdings Corporation Common Stock,United States
 ATLCL,Atlanticus Holdings Corporation 6.125% Senior Notes due 2026,United States
@@ -440,11 +443,9 @@ ATLO,Ames National Corporation Common Stock,United States
 ATLX,Atlas Lithium Corporation Common Stock,United States
 ATMC,AlphaTime Acquisition Corp Ordinary Shares,United States
 ATMCR,AlphaTime Acquisition Corp Right,United States
-ATMCU,AlphaTime Acquisition Corp Unit,United States
-ATMCW,AlphaTime Acquisition Corp Warrant,United States
 ATMU,Atmus Filtration Technologies Inc. Common Stock,United States
-ATMV,AlphaVest Acquisition Corp Ordinary Shares,United States
 ATMVR,AlphaVest Acquisition Corp Right.,United States
+ATMVU,AlphaVest Acquisition Corp Unit,United States
 ATNF,180 Life Sciences Corp. Common Stock,United States
 ATNFW,180 Life Sciences Corp. Warrant,United States
 ATNI,ATN International Inc. Common Stock,United States
@@ -469,6 +470,7 @@ AUR,Aurora Innovation Inc. Class A Common Stock,United States
 AURA,Aura Biosciences Inc. Common Stock,United States
 AUROW,Aurora Innovation Inc. Warrant,United States
 AUUD,Auddia Inc. Common Stock,United States
+AUUDW,Auddia Inc. Warrants,United States
 AVA,Avista Corporation Common Stock,United States
 AVAH,Aveanna Healthcare Holdings Inc. Common Stock,United States
 AVAV,AeroVironment Inc. Common Stock,United States
@@ -511,9 +513,9 @@ AXR,AMREP Corporation Common Stock,United States
 AXSM,Axsome Therapeutics Inc. Common Stock,United States
 AXTA,Axalta Coating Systems Ltd. Common Shares,United States
 AXTI,AXT Inc Common Stock,United States
-AYI,Acuity Brands Inc. ,United States
+AYI,Acuity Brands Inc.,United States
 AYRO,AYRO Inc. Common Stock,United States
-AYTU,Aytu BioPharma Inc.  Common Stock,United States
+AYTU,Aytu BioPharma Inc. Common Stock,United States
 AZEK,The AZEK Company Inc. Class A Common Stock,United States
 AZO,AutoZone Inc. Common Stock,United States
 AZPN,Aspen Technology Inc. Common Stock,United States
@@ -556,7 +558,6 @@ BATRA,Atlanta Braves Holdings Inc. Series A Common Stock,United States
 BATRK,Atlanta Braves Holdings Inc. Series C Common Stock,United States
 BAX,Baxter International Inc. Common Stock,United States
 BAYA,Bayview Acquisition Corp Ordinary Shares,United States
-BAYAU,Bayview Acquisition Corp Unit,United States
 BBAI,BigBear.ai Inc. Common Stock,United States
 BBCP,Concrete Pumping Holdings Inc. Common Stock,United States
 BBDC,Barings BDC Inc. Common Stock,United States
@@ -585,7 +586,6 @@ BCGWW,Binah Capital Group Inc. Warrants,United States
 BCLI,Brainstorm Cell Therapeutics Inc. Common Stock,United States
 BCML,BayCom Corp Common Stock,United States
 BCO,Brinks Company (The) Common Stock,United States
-BCOV,Brightcove Inc. Common Stock,United States
 BCOW,1895 Bancorp of Wisconsin Inc. (MD) Common Stock,United States
 BCPC,Balchem Corporation Common Stock,United States
 BCRX,BioCryst Pharmaceuticals Inc. Common Stock,United States
@@ -627,6 +627,7 @@ BFLY,Butterfly Network Inc. Class A Common Stock,United States
 BFRG,Bullfrog AI Holdings Inc. Common Stock,United States
 BFRGW,Bullfrog AI Holdings Inc. Warrants,United States
 BFRI,Biofrontera Inc. Common Stock,United States
+BFRIW,Biofrontera Inc. Warrants,United States
 BFS,Saul Centers Inc. Common Stock,United States
 BFS^D,Saul Centers Inc. Depositary Shares each representing 1/100th of a share of 6.125% Series D Cumulative Redeemable Preferred Stock,United States
 BFS^E,Saul Centers Inc. Depositary shares each representing a 1/100th fractional interest in a share of 6.000% Series E Cumulative Redeemable Preferred Stock,United States
@@ -659,7 +660,7 @@ BHR^B,Braemar Hotels & Resorts Inc. 5.50% Series B Cumulative Convertible Prefer
 BHR^D,Braemar Hotels & Resorts Inc. 8.25% Series D Cumulative Preferred Stock  par value $0.01 per share,United States
 BHRB,Burke & Herbert Financial Services Corp. Common Stock,United States
 BHV,BlackRock Virginia Municipal Bond Trust,United States
-BHVN,Biohaven Ltd. Common Shares ,United States
+BHVN,Biohaven Ltd. Common Shares,United States
 BIAF,bioAffinity Technologies Inc. Common Stock,United States
 BIAFW,bioAffinity Technologies Inc. Warrant,United States
 BIGC,BigCommerce Holdings Inc. Series 1 Common Stock,United States
@@ -681,7 +682,6 @@ BKE,Buckle Inc. (The) Common Stock,United States
 BKH,Black Hills Corporation Common Stock,United States
 BKHA,Black Hawk Acquisition Corporation Class A Ordinary Shares,United States
 BKHAR,Black Hawk Acquisition Corporation Rights,United States
-BKHAU,Black Hawk Acquisition Corporation Units,United States
 BKKT,Bakkt Holdings Inc. Class A Common Stock,United States
 BKN,BlackRock Investment Quality Municipal Trust Inc. (The),United States
 BKNG,Booking Holdings Inc. Common Stock,United States
@@ -695,6 +695,7 @@ BL,BlackLine Inc. Common Stock,United States
 BLAC,Bellevue Life Sciences Acquisition Corp. Common Stock,United States
 BLACR,Bellevue Life Sciences Acquisition Corp. Rights,United States
 BLACU,Bellevue Life Sciences Acquisition Corp. Unit,United States
+BLACW,Bellevue Life Sciences Acquisition Corp. Warrant,United States
 BLBD,Blue Bird Corporation Common Stock,United States
 BLBX,Blackboxstocks Inc. Common Stock,United States
 BLD,TopBuild Corp. Common Stock,United States
@@ -734,7 +735,6 @@ BNED,Barnes & Noble Education Inc Common Stock,United States
 BNGO,Bionano Genomics Inc. Common Stock,United States
 BNIX,Bannix Acquisition Corp. Common Stock,United States
 BNIXR,Bannix Acquisition Corp. Right,United States
-BNIXW,Bannix Acquisition Corp. Warrant,United States
 BNL,Broadstone Net Lease Inc. Common Stock,United States
 BNTC,Benitec Biopharma Inc. Common Stock,United States
 BNY,BlackRock New York Municipal Income Trust,United States
@@ -765,7 +765,7 @@ BPRN,Princeton Bancorp Inc. Common Stock (PA),United States
 BPT,BP Prudhoe Bay Royalty Trust Common Stock,United States
 BPTH,Bio-Path Holdings Inc. Common Stock,United States
 BR,Broadridge Financial Solutions Inc. Common Stock,United States
-BRBR,BellRing Brands Inc. Common Stock ,United States
+BRBR,BellRing Brands Inc. Common Stock,United States
 BRBS,Blue Ridge Bankshares Inc. Common Stock,United States
 BRC,Brady Corporation Common Stock,United States
 BRCC,BRC Inc. Class A Common Stock,United States
@@ -802,7 +802,6 @@ BSY,Bentley Systems Incorporated Class B Common Stock,United States
 BTA,BlackRock Long-Term Municipal Advantage Trust Common Shares of Beneficial Interest,United States
 BTAI,BioXcel Therapeutics Inc. Common Stock,United States
 BTBD,BT Brands Inc. Common Stock,United States
-BTBDW,BT Brands Inc. Warrant,United States
 BTBT,Bit Digital Inc. Ordinary Shares,United States
 BTCS,BTCS Inc. Common Stock,United States
 BTM,Bitcoin Depot Inc. Class A Common Stock,United States
@@ -814,7 +813,7 @@ BTOG,Bit Origin Limited Ordinary Shares,United States
 BTSG,BrightSpring Health Services Inc. Common Stock,United States
 BTSGU,BrightSpring Health Services Inc. Tangible Equity Unit,United States
 BTT,BlackRock Municipal 2030 Target Term Trust,United States
-BTU,Peabody Energy Corporation Common Stock ,United States
+BTU,Peabody Energy Corporation Common Stock,United States
 BTZ,BlackRock Credit Allocation Income Trust,United States
 BUI,BlackRock Utility Infrastructure & Power Opportunities Trust,United States
 BURL,Burlington Stores Inc. Common Stock,United States
@@ -862,7 +861,7 @@ CAC,Camden National Corporation Common Stock,United States
 CACC,Credit Acceptance Corporation Common Stock,United States
 CACI,CACI International Inc. Class A Common Stock,United States
 CADE,Cadence Bank Common Stock,United States
-CADE^A,Cadence Bank 5.50% Series A ,United States
+CADE^A,Cadence Bank 5.50% Series A,United States
 CADL,Candel Therapeutics Inc. Common Stock,United States
 CAF,Morgan Stanley China A Share Fund Inc. Common Stock,United States
 CAG,ConAgra Brands Inc. Common Stock,United States
@@ -875,15 +874,15 @@ CALX,Calix Inc Common Stock,United States
 CAMP,CAMP4 Therapeutics Corporation Common Stock,United States
 CAPL,CrossAmerica Partners LP Common Units representing limited partner interests,United States
 CAPN,Cayson Acquisition Corp Ordinary shares,United States
-CAPNR,Cayson Acquisition Corp Right,United States
+CAPNU,Cayson Acquisition Corp Unit,United States
 CAPR,Capricor Therapeutics Inc. Common Stock,United States
 CAR,Avis Budget Group Inc. Common Stock,United States
 CARA,Cara Therapeutics Inc. Common Stock,United States
 CARE,Carter Bankshares Inc. Common Stock,United States
-CARG,CarGurus Inc. Class A Common Stock ,United States
+CARG,CarGurus Inc. Class A Common Stock,United States
 CARM,Carisma Therapeutics Inc. Common Stock,United States
-CARR,Carrier Global Corporation Common Stock ,United States
-CARS,Cars.com Inc. Common Stock ,United States
+CARR,Carrier Global Corporation Common Stock,United States
+CARS,Cars.com Inc. Common Stock,United States
 CART,Maplebear Inc. Common Stock,United States
 CARV,Carver Bancorp Inc. Common Stock,United States
 CASH,Pathward Financial Inc. Common Stock,United States
@@ -941,7 +940,6 @@ CDE,Coeur Mining Inc. Common Stock,United States
 CDIO,Cardio Diagnostics Holdings Inc. Common stock,United States
 CDIOW,Cardio Diagnostics Holdings Inc. Warrant,United States
 CDLX,Cardlytics Inc. Common Stock,United States
-CDMO,Avid Bioservices Inc. Common Stock,United States
 CDNA,CareDx Inc. Common Stock,United States
 CDNS,Cadence Design Systems Inc. Common Stock,United States
 CDP,COPT Defense Properties Common Shares of Beneficial Interest,United States
@@ -961,7 +959,7 @@ CEAD,CEA Industries Inc. Common Stock,United States
 CEADW,CEA Industries Inc. Warrant,United States
 CECO,CECO Environmental Corp. Common Stock,United States
 CEE,The Central and Eastern Europe Fund Inc. (The) Common Stock,United States
-CEG,Constellation Energy Corporation Common Stock ,United States
+CEG,Constellation Energy Corporation Common Stock,United States
 CELC,Celcuity Inc. Common Stock,United States
 CELH,Celsius Holdings Inc. Common Stock,United States
 CELU,Celularity Inc. Class A Common Stock,United States
@@ -1003,7 +1001,6 @@ CGO,Calamos Global Total Return Fund Common Stock,United States
 CGON,CG Oncology Inc. Common stock,United States
 CGTX,Cognition Therapeutics Inc. Common Stock,United States
 CHAR,Charlton Aria Acquisition Corporation Class A Ordinary Shares,United States
-CHARR,Charlton Aria Acquisition Corporation Rights,United States
 CHCI,Comstock Holding Companies Inc. Class A Common Stock,United States
 CHCO,City Holding Company Common Stock,United States
 CHCT,Community Healthcare Trust Incorporated Common Stock,United States
@@ -1028,7 +1025,7 @@ CHSCP,CHS Inc. 8%  Cumulative Redeemable Preferred Stock,United States
 CHTR,Charter Communications Inc. Class A Common Stock New,United States
 CHW,Calamos Global Dynamic Income Fund Common Stock,United States
 CHWY,Chewy Inc. Class A Common Stock,United States
-CHX,ChampionX Corporation Common Stock ,United States
+CHX,ChampionX Corporation Common Stock,United States
 CHY,Calamos Convertible and High Income Fund Common Stock,United States
 CI,The Cigna Group Common Stock,United States
 CIA,Citizens Inc. Class A Common Stock ($1.00 Par),United States
@@ -1054,6 +1051,7 @@ CISO,CISO Global Inc. Common Stock,United States
 CIVB,Civista Bancshares Inc. Common Stock,United States
 CIVI,Civitas Resources Inc. Common Stock,United States
 CIX,CompX International Inc. Common Stock,United States
+CJMB,Callan JMB Inc. Common Stock,United States
 CKPT,Checkpoint Therapeutics Inc. Common Stock,United States
 CKX,CKX Lands Inc. Common Stock,United States
 CL,Colgate-Palmolive Company Common Stock,United States
@@ -1071,11 +1069,10 @@ CLMB,Climb Global Solutions Inc. Common Stock,United States
 CLMT,Calumet Inc. Common Stock,United States
 CLNE,Clean Energy Fuels Corp. Common Stock,United States
 CLNN,Clene Inc. Common Stock,United States
-CLNNW,Clene Inc. Warrant,United States
 CLOV,Clover Health Investments Corp. Class A Common Stock,United States
 CLPR,Clipper Realty Inc. Common Stock,United States
 CLPT,ClearPoint Neuro Inc. Common Stock,United States
-CLRB,Cellectar Biosciences Inc.  Common Stock,United States
+CLRB,Cellectar Biosciences Inc. Common Stock,United States
 CLRO,ClearOne Inc. (DE) Common Stock,United States
 CLSD,Clearside Biomedical Inc. Common Stock,United States
 CLSK,CleanSpark Inc. Common Stock,United States
@@ -1110,9 +1107,8 @@ CMTL,Comtech Telecommunications Corp. Common Stock,United States
 CMU,MFS Municipal Income Trust Common Stock,United States
 CNA,CNA Financial Corporation Common Stock,United States
 CNC,Centene Corporation Common Stock,United States
-CNDT,Conduent Incorporated Common Stock ,United States
+CNDT,Conduent Incorporated Common Stock,United States
 CNFR,Conifer Holdings Inc. Common Stock,United States
-CNFRZ,Conifer Holdings Inc. 9.75% Senior Unsecured Notes due 2028,United States
 CNK,Cinemark Holdings Inc Cinemark Holdings Inc. Common Stock,United States
 CNM,Core & Main Inc. Class A Common Stock,United States
 CNMD,CONMED Corporation Common Stock,United States
@@ -1271,7 +1267,7 @@ CTRN,Citi Trends Inc. Common Stock,United States
 CTS,CTS Corporation Common Stock,United States
 CTSH,Cognizant Technology Solutions Corporation Class A Common Stock,United States
 CTSO,Cytosorbents Corporation Common Stock,United States
-CTVA,Corteva Inc. Common Stock ,United States
+CTVA,Corteva Inc. Common Stock,United States
 CTXR,Citius Pharmaceuticals Inc. Common Stock,United States
 CUB,Lionheart Holdings Class A Ordinary Shares,United States
 CUBA,Herzfeld Caribbean Basin Fund Inc. (The) Common Stock,United States
@@ -1323,7 +1319,6 @@ CXM,Sprinklr Inc. Class A Common Stock,United States
 CXT,Crane NXT Co. Common Stock,United States
 CXW,CoreCivic Inc. Common Stock,United States
 CYCC,Cyclacel Pharmaceuticals Inc. Common Stock,United States
-CYCCP,Cyclacel Pharmaceuticals Inc. 6% Convertible Preferred Stock,United States
 CYCN,Cyclerion Therapeutics Inc. Common Stock,United States
 CYH,Community Health Systems Inc. Common Stock,United States
 CYN,Cyngn Inc. Common Stock,United States
@@ -1340,7 +1335,7 @@ DAIO,Data I/O Corporation Common Stock,United States
 DAKT,Daktronics Inc. Common Stock,United States
 DAL,Delta Air Lines Inc. Common Stock,United States
 DALN,DallasNews Corporation Series A Common Stock,United States
-DAN,Dana Incorporated Common Stock ,United States
+DAN,Dana Incorporated Common Stock,United States
 DAR,Darling Ingredients Inc. Common Stock,United States
 DARE,Dare Bioscience Inc. Common Stock,United States
 DASH,DoorDash Inc. Class A Common Stock,United States
@@ -1354,9 +1349,9 @@ DBD,Diebold Nixdorf Incorporated Common stock,United States
 DBI,Designer Brands Inc. Class A Common Stock,United States
 DBL,DoubleLine Opportunistic Credit Fund Common Shares of Beneficial Interest,United States
 DBRG,DigitalBridge Group Inc.,United States
-DBRG^H,DigitalBridge Group Inc. 7.125% Series H ,United States
-DBRG^I,DigitalBridge Group Inc. 7.15% Series I ,United States
-DBRG^J,DigitalBridge Group Inc. 7.125% Series J ,United States
+DBRG^H,DigitalBridge Group Inc. 7.125% Series H,United States
+DBRG^I,DigitalBridge Group Inc. 7.15% Series I,United States
+DBRG^J,DigitalBridge Group Inc. 7.125% Series J,United States
 DBX,Dropbox Inc. Class A Common Stock,United States
 DC,Dakota Gold Corp. Common Stock,United States
 DCGO,DocGo Inc. Common Stock,United States
@@ -1374,15 +1369,14 @@ DDT,Dillard's Capital Trust I,United States
 DE,Deere & Company Common Stock,United States
 DEA,Easterly Government Properties Inc. Common Stock,United States
 DECA,Denali Capital Acquisition Corp. Class A Ordinary Shares,United States
-DECAU,Denali Capital Acquisition Corp. Unit,United States
 DECAW,Denali Capital Acquisition Corp. Warrant,United States
 DECK,Deckers Outdoor Corporation Common Stock,United States
 DEI,Douglas Emmett Inc. Common Stock,United States
-DELL,Dell Technologies Inc. Class C Common Stock ,United States
+DELL,Dell Technologies Inc. Class C Common Stock,United States
 DENN,Denny's Corporation Common Stock,United States
 DERM,Journey Medical Corporation Common Stock,United States
 DFH,Dream Finders Homes Inc. Class A Common Stock,United States
-DFIN,Donnelley Financial Solutions Inc. Common Stock ,United States
+DFIN,Donnelley Financial Solutions Inc. Common Stock,United States
 DFLI,Dragonfly Energy Holdings Corp. Common Stock (NV),United States
 DFLIW,Dragonfly Energy Holdings Corp. Warrant,United States
 DFS,Discover Financial Services Common Stock,United States
@@ -1451,7 +1445,7 @@ DOMO,Domo Inc. Class B Common Stock,United States
 DORM,Dorman Products Inc. Common Stock,United States
 DOUG,Douglas Elliman Inc. Common Stock,United States
 DOV,Dover Corporation Common Stock,United States
-DOW,Dow Inc. Common Stock ,United States
+DOW,Dow Inc. Common Stock,United States
 DPG,Duff & Phelps Utility and Infrastructure Fund Inc.,United States
 DPZ,Domino's Pizza Inc Common Stock,United States
 DRCT,Direct Digital Holdings Inc. Class A Common Stock,United States
@@ -1480,7 +1474,7 @@ DTF,DTF Tax-Free Income 2028 Term Fund Inc. Common Stock,United States
 DTG,DTE Energy Company 2021 Series E 4.375% Junior Subordinated Debentures,United States
 DTI,Drilling Tools International Corporation Common Stock,United States
 DTIL,Precision BioSciences Inc. Common Stock,United States
-DTM,DT Midstream Inc. Common Stock ,United States
+DTM,DT Midstream Inc. Common Stock,United States
 DTSQ,DT Cloud Star Acquisition Corporation Ordinary Shares,United States
 DTST,Data Storage Corporation Common Stock,United States
 DTSTW,Data Storage Corporation Warrant,United States
@@ -1498,7 +1492,7 @@ DWSN,Dawson Geophysical Company Common Stock,United States
 DWTX,Dogwood Therapeutics Inc. Common Stock,United States
 DX,Dynex Capital Inc. Common Stock,United States
 DX^C,Dynex Capital Inc. 6.900% Series C Fixed-to-Floating Rate Cumulative Redeemable Preferred Stock,United States
-DXC,DXC Technology Company Common Stock ,United States
+DXC,DXC Technology Company Common Stock,United States
 DXCM,DexCom Inc. Common Stock,United States
 DXLG,Destination XL Group Inc. Common Stock,United States
 DXPE,DXP Enterprises Inc. Common Stock,United States
@@ -1524,7 +1518,7 @@ EBS,Emergent BioSolutions Inc. Common Stock,United States
 EBTC,Enterprise Bancorp Inc Common Stock,United States
 ECAT,BlackRock ESG Capital Allocation Term Trust Common Shares of Beneficial Interest,United States
 ECBK,ECB Bancorp Inc. Common Stock,United States
-ECC           ,Eagle Point Credit Company Inc. Common Stock,United States
+ECC          ,Eagle Point Credit Company Inc. Common Stock,United States
 ECC^D,Eagle Point Credit Company Inc. 6.75% Series D Preferred Stock,United States
 ECCC,Eagle Point Credit Company Inc. 6.50% Series C Term Preferred Stock due 2031,United States
 ECCF,Eagle Point Credit Company Inc. 8.00% Series F Term Preferred Stock due 2029,United States
@@ -1533,7 +1527,7 @@ ECCV,Eagle Point Credit Company Inc. 5.375% Notes due 2029,United States
 ECCW,Eagle Point Credit Company Inc. 6.75% Notes due 2031,United States
 ECCX,Eagle Point Credit Company Inc. 6.6875% Notes due 2028,United States
 ECDA,ECD Automotive Design Inc. Common Stock,United States
-ECDAW,ECD Automotive Design Inc. Warrant ,United States
+ECDAW,ECD Automotive Design Inc. Warrant,United States
 ECF,Ellsworth Growth and Income Fund Ltd.,United States
 ECF^A,Ellsworth Growth and Income Fund Ltd. 5.25% Series A Cumulative Preferred Shares (Liquidation Preference $25.00 per share),United States
 ECG,Everus Construction Group Inc. Common Stock,United States
@@ -1555,7 +1549,7 @@ EEA,The European Equity Fund Inc. Common Stock,United States
 EEFT,Euronet Worldwide Inc. Common Stock,United States
 EEIQ,EpicQuest Education Group International Limited Common Stock,United States
 EEX,Emerald Holding Inc. Common Stock,United States
-EFC,Ellington Financial Inc. Common Stock ,United States
+EFC,Ellington Financial Inc. Common Stock,United States
 EFC^A,Ellington Financial Inc. 6.750% Series A Fixed-to-Floating Rate Cumulative Redeemable Preferred Stock,United States
 EFC^B,Ellington Financial Inc. 6.250% Series B Fixed-Rate Reset Cumulative Redeemable Preferred Stock,United States
 EFC^C,Ellington Financial Inc. 8.625% Series C Fixed-Rate Reset Cumulative Redeemable Preferred Stock,United States
@@ -1564,12 +1558,14 @@ EFOI,Energy Focus Inc. Common Stock,United States
 EFR,Eaton Vance Senior Floating-Rate Fund Common Shares of Beneficial Interest,United States
 EFSC,Enterprise Financial Services Corporation Common Stock,United States
 EFSCP,Enterprise Financial Services Corporation Depositary Shares Each Representing a 1/40th Interest in a Share of 5% Fixed Rate Non-Cumulative Perpetual Preferred Stock Series A,United States
+EFSI,Eagle Financial Services Inc Common Stock,United States
 EFT,Eaton Vance Floating Rate Income Trust Common Shares of Beneficial Interest,United States
 EFX,Equifax Inc. Common Stock,United States
 EGAN,eGain Corporation Common Stock,United States
 EGBN,Eagle Bancorp Inc. Common Stock,United States
 EGF,Blackrock Enhanced Government Fund Inc. Common Stock,United States
-EGY,VAALCO Energy Inc.  Common Stock,United States
+EGHT,8x8 Inc Common Stock,United States
+EGY,VAALCO Energy Inc. Common Stock,United States
 EHAB,Enhabit Inc. Common Stock,United States
 EHC,Encompass Health Corporation Common Stock,United States
 EHI,Western Asset Global High Income Fund Inc Common Stock,United States
@@ -1676,7 +1672,7 @@ ESRT,Empire State Realty Trust Inc. Class A Common Stock,United States
 ESS,Essex Property Trust Inc. Common Stock,United States
 ESSA,ESSA Bancorp Inc. Common Stock,United States
 ESTC,Elastic N.V. Ordinary Shares,United States
-ET,Energy Transfer LP Common Units ,United States
+ET,Energy Transfer LP Common Units,United States
 ET^I,Energy Transfer L.P. Series I Fixed Rate Perpetual Preferred Units,United States
 ETB,Eaton Vance Tax-Managed Buy-Write Income Fund Eaton Vance Tax-Managed Buy-Write Income Fund Common Shares of Beneficial Interest,United States
 ETD,Ethan Allen Interiors Inc. Common Stock,United States
@@ -1705,7 +1701,7 @@ EVG,Eaton Vance Short Diversified Income Fund Eaton Vance Short Duration Diversi
 EVGO,EVgo Inc. Class A Common Stock,United States
 EVGOW,EVgo Inc. Warrants,United States
 EVH,Evolent Health Inc Class A Common Stock,United States
-EVI,EVI Industries Inc.  Common Stock,United States
+EVI,EVI Industries Inc. Common Stock,United States
 EVLV,Evolv Technologies Holdings Inc. Class A Common Stock,United States
 EVLVW,Evolv Technologies Holdings Inc. Warrant,United States
 EVM,Eaton Vance California Municipal Bond Fund Common Shares of Beneficial Interest $.01 par value,United States
@@ -1726,10 +1722,12 @@ EXC,Exelon Corporation Common Stock,United States
 EXE,Expand Energy Corporation Common Stock,United States
 EXEEL,Expand Energy Corporation Class C Warrants,United States
 EXEEW,Expand Energy Corporation Class A Warrants,United States
+EXEEZ,Expand Energy Corporation Class B Warrants,United States
 EXEL,Exelixis Inc. Common Stock,United States
 EXFY,Expensify Inc. Class A Common Stock,United States
 EXG,Eaton Vance Tax-Managed Global Diversified Equity Income Fund Common Shares of Beneficial Interest,United States
 EXLS,ExlService Holdings Inc. Common Stock,United States
+EXOZ,eXoZymes Inc. Common Stock,United States
 EXP,Eagle Materials Inc Common Stock,United States
 EXPD,Expeditors International of Washington Inc. Common Stock,United States
 EXPE,Expedia Group Inc. Common Stock,United States
@@ -1807,7 +1805,7 @@ FELE,Franklin Electric Co. Inc. Common Stock,United States
 FEMY,Femasys Inc. Common Stock,United States
 FENC,Fennec Pharmaceuticals Inc. Common Stock,United States
 FET,Forum Energy Technologies Inc. Common Stock,United States
-FF,FutureFuel Corp.  Common shares,United States
+FF,FutureFuel Corp. Common shares,United States
 FFA,First Trust Enhanced Equity Income Fund,United States
 FFBC,First Financial Bancorp. Common Stock,United States
 FFC,Flaherty & Crumrine Preferred and Income Securities Fund Incorporated,United States
@@ -1823,9 +1821,11 @@ FGB,First Trust Specialty Finance and Financial Opportunities Fund,United States
 FGBI,First Guaranty Bancshares Inc. Common Stock,United States
 FGBIP,First Guaranty Bancshares Inc. 6.75% Series A Fixed-Rate Non-Cumulative Perpetual Preferred Stock,United States
 FGEN,FibroGen Inc Common Stock,United States
-FGF,Fundamental Global Inc. Common Stock ,United States
+FGF,Fundamental Global Inc. Common Stock,United States
 FGFPP,Fundamental Global Inc. 8.00% Cumulative Preferred Stock,United States
 FGI,FGI Industries Ltd. Ordinary Shares,United States
+FGMC,FG Merger II Corp. Common stock,United States
+FGMCR,FG Merger II Corp. Rights,United States
 FGMCU,FG Merger II Corp. Unit,United States
 FGN,F&G Annuities & Life Inc. 7.950% Senior Notes due 2053,United States
 FGSN,F&G Annuities & Life Inc. 7.300% Junior Subordinated Notes due 2065,United States
@@ -1843,7 +1843,7 @@ FICO,Fair Isaac Corporation Common Stock,United States
 FIGS,FIGS Inc. Class A Common Stock,United States
 FINV,FinVolution Group American Depositary Shares,United States
 FINW,FinWise Bancorp Common Stock,United States
-FIP,FTAI Infrastructure Inc. Common Stock ,United States
+FIP,FTAI Infrastructure Inc. Common Stock,United States
 FIS,Fidelity National Information Services Inc. Common Stock,United States
 FISI,Financial Institutions Inc. Common Stock,United States
 FITB,Fifth Third Bancorp Common Stock,United States
@@ -1892,11 +1892,10 @@ FOA,Finance of America Companies Inc. Class A Common Stock,United States
 FOF,Cohen & Steers Closed-End Opportunity Fund Inc. Common Stock,United States
 FOLD,Amicus Therapeutics Inc. Common Stock,United States
 FONR,Fonar Corporation Common Stock,United States
-FOR,Forestar Group Inc Common Stock ,United States
+FOR,Forestar Group Inc Common Stock,United States
 FORA,Forian Inc. Common Stock,United States
 FORD,Forward Industries Inc. Common Stock,United States
 FORL,Four Leaf Acquisition Corporation Class A Common Stock,United States
-FORLW,Four Leaf Acquisition Corporation Warrants,United States
 FORM,FormFactor Inc. FormFactor Inc. Common Stock,United States
 FORR,Forrester Research Inc. Common Stock,United States
 FOSL,Fossil Group Inc. Common Stock,United States
@@ -1960,7 +1959,7 @@ FTLF,FitLife Brands Inc. Common Stock,United States
 FTNT,Fortinet Inc. Common Stock,United States
 FTRE,Fortrea Holdings Inc. Common Stock,United States
 FTS,Fortis Inc. Common Shares,United States
-FTV,Fortive Corporation Common Stock ,United States
+FTV,Fortive Corporation Common Stock,United States
 FUBO,fuboTV Inc. Common Stock,United States
 FUL,H. B. Fuller Company Common Stock,United States
 FULC,Fulcrum Therapeutics Inc. Common Stock,United States
@@ -1995,10 +1994,13 @@ GAM^B,General American Investors Company Inc. Cumulative Preferred Stock,United 
 GAME,GameSquare Holdings Inc. Common Stock,United States
 GANX,Gain Therapeutics Inc. Common Stock,United States
 GAP,Gap Inc. (The) Common Stock,United States
+GATE,Marblegate Acquisition Corp. Class A Common Stock,United States
+GATEU,Marblegate Acquisition Corp. Unit,United States
 GATEW,Marblegate Acquisition Corp. Warrant,United States
 GATX,GATX Corporation Common Stock,United States
 GBAB,Guggenheim Taxable Municipal Bond & Investment Grade Debt Trust Common Shares of Beneficial Interest,United States
 GBBK,Global Blockchain Acquisition Corp. Common Stock,United States
+GBBKR,Global Blockchain Acquisition Corp. Right,United States
 GBBKW,Global Blockchain Acquisition Corp. Warrant,United States
 GBCI,Glacier Bancorp Inc. Common Stock,United States
 GBDC,Golub Capital BDC Inc. Common Stock,United States
@@ -2011,19 +2013,18 @@ GCI,Gannett Co. Inc. Common Stock,United States
 GCMG,GCM Grosvenor Inc. Class A Common Stock,United States
 GCMGW,GCM Grosvenor Inc. Warrant,United States
 GCO,Genesco Inc. Common Stock,United States
+GCTK,GlucoTrack Inc. Common Stock,United States
 GCTS,GCT Semiconductor Holding Inc. Common Stock,United States
 GCV,Gabelli Convertible and Income Securities Fund Inc. (The) Common Stock,United States
 GD,General Dynamics Corporation Common Stock,United States
 GDDY,GoDaddy Inc. Class A Common Stock,United States
 GDEN,Golden Entertainment Inc. Common Stock,United States
 GDL,GDL Fund The Common Shares of Beneficial Interest,United States
-GDL^C,The GDL Fund Series C Cumulative Puttable and Callable Preferred Shares,United States
 GDO,Western Asset Global Corporate Opportunity Fund Inc. Common Stock,United States
 GDOT,Green Dot Corporation Class A Common Stock $0.001 par value,United States
 GDRX,GoodRx Holdings Inc. Class A Common Stock,United States
 GDST,Goldenstone Acquisition Limited Common Stock,United States
 GDSTR,Goldenstone Acquisition Limited Rights,United States
-GDSTU,Goldenstone Acquisition Limited Units,United States
 GDSTW,Goldenstone Acquisition Limited Warrants,United States
 GDV,Gabelli Dividend & Income Trust Common Shares of Beneficial Interest,United States
 GDV^H,The Gabelli Dividend & Income Trust 5.375% Series H Cumulative Preferred Shares,United States
@@ -2037,8 +2038,8 @@ GECCO,Great Elm Capital Corp. 5.875% Notes due 2026,United States
 GECCZ,Great Elm Capital Corp. 8.75% Notes due 2028,United States
 GEF,Greif Inc. Class A Common Stock,United States
 GEG,Great Elm Group Inc. Common Stock,United States
-GEGGL,Great Elm Group Inc.  7.25% Notes due 2027,United States
-GEHC,GE HealthCare Technologies Inc. Common Stock ,United States
+GEGGL,Great Elm Group Inc. 7.25% Notes due 2027,United States
+GEHC,GE HealthCare Technologies Inc. Common Stock,United States
 GEL,Genesis Energy L.P. Common Units,United States
 GEN,Gen Digital Inc. Common Stock,United States
 GENC,Gencor Industries Inc. Common Stock,United States
@@ -2074,10 +2075,10 @@ GIGGW,GigCapital7 Corp. Warrant,United States
 GIII,G-III Apparel Group LTD. Common Stock,United States
 GILD,Gilead Sciences Inc. Common Stock,United States
 GIPR,Generation Income Properties Inc. Common Stock,United States
+GIPRW,Generation Income Properties Inc Warrant,United States
 GIS,General Mills Inc. Common Stock,United States
 GJH,Synthetic Fixed-Income Securities Inc 6.375% (STRATS) Cl A-1,United States
 GJO,Synthetic Fixed-Income Securities Inc. on behalf of STRATS(SM) Trust for Wal-Mart Stores Inc. Securities Series 2004-5,United States
-GJP,Synthetic Fixed-Income Securities Inc. on behalf of STRATS (SM) Trust for Dominion Resources Inc. Securities Series 2005-6 Floating Rate Structured Repackaged Asset-Backed Trust Securities (STRATS) Certificates,United States
 GJR,Synthetic Fixed-Income Securities Inc. STRATS Trust for Procter&Gamble Securities Series 2006-1,United States
 GJS,Goldman Sachs Group Securities STRATS Trust for Goldman Sachs Group Securities Series 2006-2,United States
 GJT,Synthetic Fixed-Income Securities Inc. Floating Rate Structured Repackaged Asset-Backed Trust Securities Certificates Series 2006-3,United States
@@ -2146,7 +2147,6 @@ GOSS,Gossamer Bio Inc. Common Stock,United States
 GOVX,GeoVax Labs Inc. Common Stock,United States
 GOVXW,GeoVax Labs Inc. Warrants,United States
 GPAT,GP-Act III Acquisition Corp. Class A Ordinary Share,United States
-GPATU,GP-Act III Acquisition Corp. Units,United States
 GPATW,GP-Act III Acquisition Corp. Warrants,United States
 GPC,Genuine Parts Company Common Stock,United States
 GPCR,Structure Therapeutics Inc. American Depositary Shares,United States
@@ -2161,7 +2161,7 @@ GPRE,Green Plains Inc. Common Stock,United States
 GPRO,GoPro Inc. Class A Common Stock,United States
 GPUS,Hyperscale Data Inc. Common Stock,United States
 GPUS^D,Hyperscale Data Inc. 13.00% Series D Cumulative Redeemable Perpetual Preferred Stock,United States
-GRAL,GRAIL Inc. Common Stock ,United States
+GRAL,GRAIL Inc. Common Stock,United States
 GRBK,Green Brick Partners Inc. Common Stock,United States
 GRBK^A,Green Brick Partners Inc. Depositary Shares (each representing a 1/1000th fractional interest in a share of 5.75% Series A Cumulative Perpetual Preferred Stock),United States
 GRC,Gorman-Rupp Company (The) Common Stock,United States
@@ -2206,7 +2206,7 @@ GWRE,Guidewire Software Inc. Common Stock,United States
 GWRS,Global Water Resources Inc. Common Stock,United States
 GWW,W.W. Grainger Inc. Common Stock,United States
 GXAI,Gaxos.ai Inc. Common Stock,United States
-GXO,GXO Logistics Inc. Common Stock ,United States
+GXO,GXO Logistics Inc. Common Stock,United States
 GYRE,Gyre Therapeutics Inc. Common Stock,United States
 GYRO,Gyrodyne LLC Common Stock,United States
 H,Hyatt Hotels Corporation Class A Common Stock,United States
@@ -2222,7 +2222,7 @@ HBAN,Huntington Bancshares Incorporated Common Stock,United States
 HBANL,Huntington Bancshares Incorporated Depositary Shares Each Representing a 1/40th Interest in a Share of 6.875% Series J Non-Cumulative Perpetual Preferred Stock,United States
 HBANM,Huntington Bancshares Incorporated Depositary Shares each representing a 1/1000th interest in a share of Huntington Series I Preferred Stock,United States
 HBANP,Huntington Bancshares Incorporated Depositary Shares 4.500% Series H Non-Cumulative Perpetual Preferred Stock,United States
-HBB,Hamilton Beach Brands Holding Company Class A Common Stock ,United States
+HBB,Hamilton Beach Brands Holding Company Class A Common Stock,United States
 HBCP,Home Bancorp Inc. Common Stock,United States
 HBI,Hanesbrands Inc. Common Stock,United States
 HBIO,Harvard Bioscience Inc. Common Stock,United States
@@ -2237,6 +2237,8 @@ HCP,HashiCorp Inc. Class A Common Stock,United States
 HCSG,Healthcare Services Group Inc. Common Stock,United States
 HCTI,Healthcare Triangle Inc. Common Stock,United States
 HCVI,Hennessy Capital Investment Corp. VI Class A Common Stock,United States
+HCVIU,Hennessy Capital Investment Corp. VI Unit,United States
+HCVIW,Hennessy Capital Investment Corp. VI Warrant,United States
 HCWB,HCW Biologics Inc. Common Stock,United States
 HCXY,Hercules Capital Inc. 6.25% Notes due 2033,United States
 HD,Home Depot Inc. (The) Common Stock,United States
@@ -2246,7 +2248,7 @@ HEES,H&E Equipment Services Inc. Common Stock,United States
 HEI,Heico Corporation Common Stock,United States
 HEI/A,Heico Corporation,United States
 HEPA,Hepion Pharmaceuticals Inc. Common Stock,United States
-HEQ,John Hancock Hedged Equity & Income Fund Common Shares of Beneficial Interest,United States
+HEQ,John Hancock Diversified Income Fund Common Shares of Beneficial Interest,United States
 HES,Hess Corporation Common Stock,United States
 HESM,Hess Midstream LP Class A Representing Limited Partner Interests,United States
 HFBL,Home Federal Bancorp Inc. of Louisiana Common Stock,United States
@@ -2256,7 +2258,7 @@ HFRO^A,Highland Opportunities and Income Fund 5.375% Series A Cumulative Preferr
 HFWA,Heritage Financial Corporation Common Stock,United States
 HGBL,Heritage Global Inc. Common Stock,United States
 HGTY,Hagerty Inc. Class A Common Stock,United States
-HGV,Hilton Grand Vacations Inc. Common Stock ,United States
+HGV,Hilton Grand Vacations Inc. Common Stock,United States
 HHH,Howard Hughes Holdings Inc. Common Stock,United States
 HHS,Harte Hanks Inc. Common Stock,United States
 HI,Hillenbrand Inc Common Stock,United States
@@ -2278,7 +2280,7 @@ HLIT,Harmonic Inc. Common Stock,United States
 HLLY,Holley Inc. Common Stock,United States
 HLMN,Hillman Solutions Corp. Common Stock,United States
 HLNE,Hamilton Lane Incorporated Class A Common Stock,United States
-HLT,Hilton Worldwide Holdings Inc. Common Stock ,United States
+HLT,Hilton Worldwide Holdings Inc. Common Stock,United States
 HLVX,HilleVax Inc. Common Stock,United States
 HLX,Helix Energy Solutions Group Inc. Common Stock,United States
 HLXB,Helix Acquisition Corp. II Class A Ordinary Shares,United States
@@ -2302,7 +2304,6 @@ HOMB,Home BancShares Inc. Common Stock,United States
 HON,Honeywell International Inc. Common Stock,United States
 HOND,HCM II Acquisition Corp. Class A Ordinary Shares,United States
 HONDU,HCM II Acquisition Corp. Unit,United States
-HONDW,HCM II Acquisition Corp. Warrant,United States
 HONE,HarborOne Bancorp Inc. Common Stock,United States
 HOOD,Robinhood Markets Inc. Class A Common Stock,United States
 HOOK,HOOKIPA Pharma Inc. Common Stock,United States
@@ -2332,7 +2333,7 @@ HQL,abrdn Life Sciences Investors Shares of Beneficial Interest,United States
 HQY,HealthEquity Inc. Common Stock,United States
 HR,Healthcare Realty Trust Incorporated Common Stock,United States
 HRB,H&R Block Inc. Common Stock,United States
-HRI,Herc Holdings Inc. Common Stock ,United States
+HRI,Herc Holdings Inc. Common Stock,United States
 HRL,Hormel Foods Corporation Common Stock,United States
 HRMY,Harmony Biosciences Holdings Inc. Common Stock,United States
 HROW,Harrow Inc. Common Stock,United States
@@ -2350,6 +2351,8 @@ HSPO,Horizon Space Acquisition I Corp. Ordinary Shares,United States
 HSPOR,Horizon Space Acquisition I Corp. Right,United States
 HSPOU,Horizon Space Acquisition I Corp. Unit,United States
 HSPOW,Horizon Space Acquisition I Corp. Warrant,United States
+HSPT,Horizon Space Acquisition II Corp. Ordinary share,United States
+HSPTR,Horizon Space Acquisition II Corp. Right,United States
 HSPTU,Horizon Space Acquisition II Corp. Units,United States
 HST,Host Hotels & Resorts Inc. Common Stock,United States
 HSTM,HealthStream Inc. Common Stock,United States
@@ -2377,6 +2380,8 @@ HURN,Huron Consulting Group Inc. Common Stock,United States
 HUSA,Houston American Energy Corporation Common Stock,United States
 HUT,Hut 8 Corp. Common Stock,United States
 HUYA,HUYA Inc. American depositary shares each  representing one Class A ordinary share,United States
+HVII,Hennessy Capital Investment Corp. VII Ordinary Shares,United States
+HVIIR,Hennessy Capital Investment Corp. VII Rights,United States
 HVIIU,Hennessy Capital Investment Corp. VII Unit,United States
 HVT,Haverty Furniture Companies Inc. Common Stock,United States
 HVT/A,Haverty Furniture Companies Inc.,United States
@@ -2389,7 +2394,6 @@ HWM,Howmet Aerospace Inc. Common Stock,United States
 HWM^,Howmet Aerospace Inc. $3.75 Preferred Stock,United States
 HXL,Hexcel Corporation Common Stock,United States
 HY,Hyster-Yale Inc. Class A common stock,United States
-HYB,New America High Income Fund Inc. (The) Common Stock,United States
 HYFM,Hydrofarm Holdings Group Inc. Common Stock,United States
 HYLN,Hyliion Holdings Corp. Class A Common Stock,United States
 HYMC,Hycroft Mining Holding Corporation Class A Common Stock,United States
@@ -2397,7 +2401,7 @@ HYMCL,Hycroft Mining Holding Corporation Warrants,United States
 HYMCW,Hycroft Mining Holding Corporation  Warrant,United States
 HYPR,Hyperfine Inc. Class A Common Stock,United States
 HYT,Blackrock Corporate High Yield Fund Inc. Common Stock,United States
-HZO,MarineMax Inc.  (FL) Common Stock,United States
+HZO,MarineMax Inc. (FL) Common Stock,United States
 IAC,IAC Inc. Common Stock,United States
 IAE,Voya Asia Pacific High Dividend Equity Income Fund ING Asia Pacific High Dividend Equity Income Fund Common Shares of Beneficial Interest,United States
 IAF,abrdn Australia Equity Fund Inc. Common Stock,United States
@@ -2499,7 +2503,7 @@ INSE,Inspired Entertainment Inc. Common Stock,United States
 INSG,Inseego Corp. Common Stock,United States
 INSM,Insmed Incorporated Common Stock,United States
 INSP,Inspire Medical Systems Inc. Common Stock,United States
-INSW,International Seaways Inc. Common Stock ,United States
+INSW,International Seaways Inc. Common Stock,United States
 INTA,Intapp Inc. Common Stock,United States
 INTC,Intel Corporation Common Stock,United States
 INTG,Intergroup Corporation (The) Common Stock,United States
@@ -2526,7 +2530,7 @@ IPDN,Professional Diversity Network Inc. Common Stock,United States
 IPG,Interpublic Group of Companies Inc. (The) Common Stock,United States
 IPGP,IPG Photonics Corporation Common Stock,United States
 IPI,Intrepid Potash Inc Common Stock,United States
-IPM,Intelligent Protection Management Corp. Common Stock ,United States
+IPM,Intelligent Protection Management Corp. Common Stock,United States
 IPSC,Century Therapeutics Inc. Common Stock,United States
 IPW,iPower Inc. Common Stock,United States
 IPWR,Ideal Power Inc. Common Stock,United States
@@ -2554,7 +2558,6 @@ IRWD,Ironwood Pharmaceuticals Inc. Class A Common Stock,United States
 ISD,PGIM High Yield Bond Fund Inc.,United States
 ISPC,iSpecimen Inc. Common Stock,United States
 ISPO,Inspirato Incorporated Class A Common Stock,United States
-ISPOW,Inspirato Incorporated Warrant,United States
 ISPR,Ispire Technology Inc. Common Stock,United States
 ISRG,Intuitive Surgical Inc. Common Stock,United States
 ISRL,Israel Acquisitions Corp Class A Ordinary Shares,United States
@@ -2568,7 +2571,7 @@ ITGR,Integer Holdings Corporation Common Stock,United States
 ITIC,Investors Title Company Common Stock,United States
 ITOS,iTeos Therapeutics Inc. Common Stock,United States
 ITRI,Itron Inc. Common Stock,United States
-ITT,ITT Inc. Common Stock ,United States
+ITT,ITT Inc. Common Stock,United States
 ITW,Illinois Tool Works Inc. Common Stock,United States
 IVAC,Intevac Inc. Common Stock,United States
 IVDA,Iveda Solutions Inc. Common Stock,United States
@@ -2580,16 +2583,16 @@ IVT,InvenTrust Properties Corp. Common Stock,United States
 IVVD,Invivyd Inc. Common Stock,United States
 IVZ,Invesco Ltd Common Stock,United States
 IZEA,IZEA Worldwide Inc. Common Stock,United States
-IZTC,Invizyne Technologies Inc. Common Stock,United States
 J,Jacobs Solutions Inc. Common Stock,United States
 JACK,Jack In The Box Inc. Common Stock,United States
 JAGX,Jaguar Health Inc. Common Stock,United States
 JAKK,JAKKS Pacific Inc. Common Stock,United States
 JAMF,Jamf Holding Corp. Common Stock,United States
 JANX,Janux Therapeutics Inc. Common Stock,United States
-JBGS,JBG SMITH Properties Common Shares ,United States
+JBGS,JBG SMITH Properties Common Shares,United States
 JBHT,J.B. Hunt Transport Services Inc. Common Stock,United States
 JBI,Janus International Group Inc. Common Stock,United States
+JBK,Lehman ABS 3.50 3.50% Adjustable Corp Backed Tr Certs GS Cap I,United States
 JBL,Jabil Inc. Common Stock,United States
 JBLU,JetBlue Airways Corporation Common Stock,United States
 JBSS,John B. Sanfilippo & Son Inc. Common Stock,United States
@@ -2637,7 +2640,7 @@ JTAI,Jet.AI Inc. Common Stock,United States
 JUNS,Jupiter Neurosciences Inc. Common Stock,United States
 JVA,Coffee Holding Co. Inc. Common Stock,United States
 JWN,Nordstrom Inc. Common Stock,United States
-JXN,Jackson Financial Inc. Class A Common Stock ,United States
+JXN,Jackson Financial Inc. Class A Common Stock,United States
 JXN^A,Jackson Financial Inc. Depositary Shares each representing a 1/1000th interest in a share of Fixed-Rate Reset Noncumulative Perpetual Preferred Stock Series A,United States
 JYNT,The Joint Corp. Common Stock,United States
 K,Kellanova Common Stock,United States
@@ -2665,6 +2668,7 @@ KEY^L,KeyCorp Depositary Shares each representing a 1/40th ownership interest in
 KEYS,Keysight Technologies Inc. Common Stock,United States
 KF,Korea Fund Inc. (The) New Common Stock,United States
 KFFB,Kentucky First Federal Bancorp Common Stock,United States
+KFIIU,K&F Growth Acquisition Corp. II Unit,United States
 KFRC,Kforce Inc. Common Stock,United States
 KFY,Korn Ferry Common Stock,United States
 KGEI,Kolibri Global Energy Inc. Common stock,United States
@@ -2710,7 +2714,7 @@ KORE,KORE Group Holdings Inc. Common Stock,United States
 KOSS,Koss Corporation Common Stock,United States
 KPLT,Katapult Holdings Inc. Common Stock,United States
 KPLTW,Katapult Holdings Inc. Warrant,United States
-KPRX,Kiora Pharmaceuticals Inc.  Common Stock,United States
+KPRX,Kiora Pharmaceuticals Inc. Common Stock,United States
 KPTI,Karyopharm Therapeutics Inc. Common Stock,United States
 KR,Kroger Company (The) Common Stock,United States
 KRC,Kilroy Realty Corporation Common Stock,United States
@@ -2729,7 +2733,7 @@ KRUS,Kura Sushi USA Inc. Class A Common Stock,United States
 KRYS,Krystal Biotech Inc. Common Stock,United States
 KSCP,Knightscope Inc. Class A Common Stock,United States
 KSS,Kohl's Corporation Common Stock,United States
-KTB,Kontoor Brands Inc. Common Stock ,United States
+KTB,Kontoor Brands Inc. Common Stock,United States
 KTCC,Key Tronic Corporation Common Stock,United States
 KTF,DWS Municipal Income Trust,United States
 KTH,Structures Products Cp 8% CorTS Issued by Peco Energy Cap Tr II Preferred Stock,United States
@@ -2767,7 +2771,7 @@ LASE,Laser Photonics Corporation Common Stock,United States
 LASR,nLIGHT Inc. Common Stock,United States
 LAUR,Laureate Education Inc. Common Stock,United States
 LAW,CS Disco Inc. Common Stock,United States
-LAZR,Luminar Technologies Inc.  Class A Common Stock,United States
+LAZR,Luminar Technologies Inc. Class A Common Stock,United States
 LBRDA,Liberty Broadband Corporation Class A Common Stock,United States
 LBRDK,Liberty Broadband Corporation Class C Common Stock,United States
 LBRDP,Liberty Broadband Corporation Series A Cumulative Redeemable Preferred Stock,United States
@@ -2869,6 +2873,7 @@ LPAAU,Launch One Acquisition Corp. Unit,United States
 LPAAW,Launch One Acquisition Corp. Warrant,United States
 LPBB,Launch Two Acquisition Corp. Class A Ordinary Shares,United States
 LPBBU,Launch Two Acquisition Corp. Unit,United States
+LPBBW,Launch Two Acquisition Corp. Warrant,United States
 LPCN,Lipocine Inc. Common Stock,United States
 LPG,Dorian LPG Ltd. Common Stock,United States
 LPLA,LPL Financial Holdings Inc. Common Stock,United States
@@ -2911,7 +2916,7 @@ LVLU,Lulu's Fashion Lounge Holdings Inc. Common Stock,United States
 LVO,LiveOne Inc. Common Stock,United States
 LVS,Las Vegas Sands Corp. Common Stock,United States
 LVWR,LiveWire Group Inc. Common Stock,United States
-LW,Lamb Weston Holdings Inc. Common Stock ,United States
+LW,Lamb Weston Holdings Inc. Common Stock,United States
 LWAY,Lifeway Foods Inc. Common Stock,United States
 LWLG,Lightwave Logic Inc. Common Stock,United States
 LXEO,Lexeo Therapeutics Inc. Common Stock,United States
@@ -2932,7 +2937,6 @@ MAA,Mid-America Apartment Communities Inc. Common Stock,United States
 MAA^I,Mid-America Apartment Communities Inc. 8.50% Series I Cumulative Redeemable Preferred Stock,United States
 MAC,Macerich Company (The) Common Stock,United States
 MACI,Melar Acquisition Corp. I Class A Ordinary Shares,United States
-MACIU,Melar Acquisition Corp. I Unit,United States
 MACIW,Melar Acquisition Corp. I Warrant,United States
 MAGN,Magnera Corporation Common Stock,United States
 MAIN,Main Street Capital Corporation Common Stock,United States
@@ -2940,8 +2944,8 @@ MAMA,Mama's Creations Inc. Common Stock,United States
 MAMO,Massimo Group Common Stock,United States
 MAN,ManpowerGroup Common Stock,United States
 MANH,Manhattan Associates Inc. Common Stock,United States
-MAPS,WM Technology Inc. Class A Common Stock ,United States
-MAPSW,WM Technology Inc. Warrants ,United States
+MAPS,WM Technology Inc. Class A Common Stock,United States
+MAPSW,WM Technology Inc. Warrants,United States
 MAR,Marriott International Class A Common Stock,United States
 MARA,MARA Holdings Inc. Common Stock,United States
 MARPS,Marine Petroleum Trust Units of Beneficial Interest,United States
@@ -2994,7 +2998,7 @@ MDAIW,Spectral AI Inc. Warrants,United States
 MDB,MongoDB Inc. Class A Common Stock,United States
 MDBH,MDB Capital Holdings LLC Class A common,United States
 MDGL,Madrigal Pharmaceuticals Inc. Common Stock,United States
-MDIA,Mediaco Holding Inc. Class A Common Stock ,United States
+MDIA,Mediaco Holding Inc. Class A Common Stock,United States
 MDLZ,Mondelez International Inc. Class A Common Stock,United States
 MDRR,Medalist Diversified REIT Inc. Common Stock,United States
 MDT,Medtronic plc. Ordinary Shares,United States
@@ -3012,7 +3016,7 @@ MER^K,Bank of America Corporation Income Capital Obligation Notes initially due 
 MESA,Mesa Air Group Inc. Common Stock,United States
 MET,MetLife Inc. Common Stock,United States
 MET^A,MetLife Inc. Preferred Series A Floating Rate,United States
-MET^E,MetLife Inc. Depositary Shares ,United States
+MET^E,MetLife Inc. Depositary Shares,United States
 MET^F,MetLife Inc. Depositary Shares each representing a 1/1000th interest in a share of 4.75% Non-Cumulative Preferred Stock Series F,United States
 META,Meta Platforms Inc. Class A Common Stock,United States
 METC,Ramaco Resources Inc. Class A Common Stock,United States
@@ -3148,7 +3152,6 @@ MRIN,Marin Software Incorporated Common Stock,United States
 MRK,Merck & Company Inc. Common Stock (new),United States
 MRKR,Marker Therapeutics Inc. Common Stock,United States
 MRNA,Moderna Inc. Common Stock,United States
-MRNS,Marinus Pharmaceuticals Inc. Common Stock,United States
 MRSN,Mersana Therapeutics Inc. Common Stock,United States
 MRTN,Marten Transport Ltd. Common Stock,United States
 MRVI,Maravai LifeSciences Holdings Inc. Class A Common Stock,United States
@@ -3186,7 +3189,6 @@ MSPRZ,MSP Recovery Inc. Warrant,United States
 MSS,Maison Solutions Inc. Class A Common Stock,United States
 MSSA,Metal Sky Star Acquisition Corporation Ordinary shares,United States
 MSSAR,Metal Sky Star Acquisition Corporation Right,United States
-MSSAU,Metal Sky Star Acquisition Corporation Unit,United States
 MSSAW,Metal Sky Star Acquisition Corporation Warrant,United States
 MSTR,MicroStrategy Incorporated Common Stock Class A,United States
 MTAL,MAC Copper Limited Ordinary Shares,United States
@@ -3213,7 +3215,7 @@ MTX,Minerals Technologies Inc. Common Stock,United States
 MTZ,MasTec Inc. Common Stock,United States
 MU,Micron Technology Inc. Common Stock,United States
 MUA,Blackrock MuniAssets Fund Inc Common Stock,United States
-MUC,Blackrock MuniHoldings California Quality Fund Inc.  Common Stock,United States
+MUC,Blackrock MuniHoldings California Quality Fund Inc. Common Stock,United States
 MUE,Blackrock MuniHoldings Quality Fund II Inc. Common Stock,United States
 MUI,BlackRock Municipal Income Fund Inc. Common Stock,United States
 MUJ,Blackrock MuniHoldings New Jersey Quality Fund Inc. Common Stock,United States
@@ -3226,21 +3228,21 @@ MVIS,MicroVision Inc. Common Stock,United States
 MVO,MV Oil Trust Units of Beneficial Interests,United States
 MVST,Microvast Holdings Inc. Common Stock,United States
 MVSTW,Microvast Holdings Inc. Warrants,United States
-MVT,Blackrock MuniVest Fund II Inc.  Common Stock,United States
+MVT,Blackrock MuniVest Fund II Inc. Common Stock,United States
 MWA,MUELLER WATER PRODUCTS Common Stock,United States
 MXC,Mexco Energy Corporation Common Stock,United States
 MXCT,MaxCyte Inc. Common Stock,United States
 MXE,Mexico Equity and Income Fund Inc. (The) Common Stock,United States
 MXF,Mexico Fund Inc. (The) Common Stock,United States
 MXL,MaxLinear Inc. Common Stock,United States
-MYD,Blackrock MuniYield Fund Inc.  Common Stock,United States
+MYD,Blackrock MuniYield Fund Inc. Common Stock,United States
 MYE,Myers Industries Inc. Common Stock,United States
 MYFW,First Western Financial Inc. Common Stock,United States
 MYGN,Myriad Genetics Inc. Common Stock,United States
 MYI,Blackrock MuniYield Quality Fund III Inc Common Stock,United States
 MYN,Blackrock MuniYield New York Quality Fund Inc.Common Stock,United States
 MYO,Myomo Inc. Common Stock,United States
-MYPS,PLAYSTUDIOS Inc.  Class A Common Stock,United States
+MYPS,PLAYSTUDIOS Inc. Class A Common Stock,United States
 MYPSW,PLAYSTUDIOS Inc. Warrant,United States
 MYRG,MYR Group Inc. Common Stock,United States
 NABL,N-able Inc. Common Stock,United States
@@ -3273,7 +3275,6 @@ NCLH,Norwegian Cruise Line Holdings Ltd. Ordinary Shares,United States
 NCMI,National CineMedia Inc. Common Stock,United States
 NCNO,nCino Inc. Common Stock,United States
 NCPL,Netcapital Inc. Common Stock,United States
-NCPLW,Netcapital Inc. Warrants,United States
 NCSM,NCS Multistage Holdings Inc. Common Stock,United States
 NCV,Virtus Convertible & Income Fund Common Shares of Beneficial Interest,United States
 NCV^A,Virtus Convertible & Income Fund 5.625% Series A Cumulative Preferred Shares,United States
@@ -3305,6 +3306,7 @@ NESR,National Energy Services Reunited Corp Ordinary Shares,United States
 NESRW,National Energy Services Reunited Corp Warrants,United States
 NET,Cloudflare Inc. Class A Common Stock,United States
 NETD,Nabors Energy Transition Corp. II Class A Ordinary Shares,United States
+NETDU,Nabors Energy Transition Corp. II Unit,United States
 NETDW,Nabors Energy Transition Corp. II Warrant,United States
 NEU,NewMarket Corp Common Stock,United States
 NEUE,NeueHealth Inc. Common Stock,United States
@@ -3325,7 +3327,7 @@ NGL^B,NGL ENERGY PARTNERS LP 9.00% Class B Fixed-to-Floating Rate Cumulative Red
 NGL^C,NGL ENERGY PARTNERS LP 9.625% Class C Fixed-to-Floating Rate Cumulative  Redeemable Perpetual Preferred Units representing  limited partner interests,United States
 NGS,Natural Gas Services Group Inc. Common Stock,United States
 NGVC,Natural Grocers by Vitamin Cottage Inc. Common Stock,United States
-NGVT,Ingevity Corporation Common Stock ,United States
+NGVT,Ingevity Corporation Common Stock,United States
 NHC,National HealthCare Corporation Common Stock,United States
 NHI,National Health Investors Inc. Common Stock,United States
 NHPAP,National Healthcare Properties Inc. 7.375% Series A Cumulative Redeemable Perpetual Preferred Stock,United States
@@ -3344,6 +3346,7 @@ NIXXW,Nixxy Inc. Warrant,United States
 NJR,NewJersey Resources Corporation Common Stock,United States
 NKE,Nike Inc. Common Stock,United States
 NKGN,NKGen Biotech Inc. Common Stock,United States
+NKGNW,NKGen Biotech Inc. Warrants,United States
 NKLA,Nikola Corporation Common Stock,United States
 NKSH,National Bankshares Inc. Common Stock,United States
 NKTR,Nektar Therapeutics  Common Stock,United States
@@ -3363,7 +3366,7 @@ NMIH,NMI Holdings Inc. Common Stock,United States
 NML,Neuberger Berman Energy Infrastructure and Income Fund Inc. Common Stock,United States
 NMRA,Neumora Therapeutics Inc. Common Stock,United States
 NMRK,Newmark Group Inc. Class A Common Stock,United States
-NMS,Nuveen Minnesota Quality Municipal Income Fund ,United States
+NMS,Nuveen Minnesota Quality Municipal Income Fund,United States
 NMT,Nuveen Massachusetts Quality Municipal Income Fund Common Stock,United States
 NMTC,NeuroOne Medical Technologies Corporation Common Stock,United States
 NMZ,Nuveen Municipal High Income Opportunity Fund Common Stock $0.01 par value per share,United States
@@ -3378,10 +3381,10 @@ NNY,Nuveen New York Municipal Value Fund Common Stock,United States
 NOC,Northrop Grumman Corporation Common Stock,United States
 NODK,NI Holdings Inc. Common Stock,United States
 NOEM,CO2 Energy Transition Corp. Common Stock,United States
-NOEMU,CO2 Energy Transition Corp. Unit,United States
+NOEMR,CO2 Energy Transition Corp. Right,United States
 NOEMW,CO2 Energy Transition Corp. Warrant,United States
 NOG,Northern Oil and Gas Inc. Common Stock,United States
-NOM,Nuveen Missouri Quality Municipal Income Fund ,United States
+NOM,Nuveen Missouri Quality Municipal Income Fund,United States
 NOTE,FiscalNote Holdings Inc. Class A common stock,United States
 NOTV,Inotiv Inc. Common Stock,United States
 NOV,NOV Inc. Common Stock,United States
@@ -3406,7 +3409,7 @@ NRG,NRG Energy Inc. Common Stock,United States
 NRGV,Energy Vault Holdings Inc. Common Stock,United States
 NRIM,Northrim BanCorp Inc Common Stock,United States
 NRIX,Nurix Therapeutics Inc. Common stock,United States
-NRK,Nuveen New York AMT-Free Quality Municipal Income Fund ,United States
+NRK,Nuveen New York AMT-Free Quality Municipal Income Fund,United States
 NRO,Neuberger Berman Real Estate Securities Income Fund Inc.,United States
 NRP,Natural Resource Partners LP Limited Partnership,United States
 NRT,North European Oil Royality Trust Common Stock,United States
@@ -3439,7 +3442,6 @@ NTST,NetSTREIT Corp. Common Stock,United States
 NTWK,NetSol Technologies Inc. Common  Stock,United States
 NTWO,Newbury Street II Acquisition Corp Class A Ordinary Shares,United States
 NTWOU,Newbury Street II Acquisition Corp Unit,United States
-NTWOW,Newbury Street II Acquisition Corp Warrant,United States
 NUE,Nucor Corporation Common Stock,United States
 NURO,NeuroMetrix Inc. Common Stock,United States
 NUS,Nu Skin Enterprises Inc. Common Stock,United States
@@ -3455,7 +3457,7 @@ NVDA,NVIDIA Corporation Common Stock,United States
 NVEC,NVE Corporation Common Stock,United States
 NVEE,NV5 Global Inc. Common Stock,United States
 NVFY,Nova Lifestyle Inc. Common Stock,United States
-NVG,Nuveen AMT-Free Municipal Credit Income Fund ,United States
+NVG,Nuveen AMT-Free Municipal Credit Income Fund,United States
 NVNO,enVVeno Medical Corporation Common Stock,United States
 NVR,NVR Inc. Common Stock,United States
 NVRI,Enviri Corporation Common Stock,United States
@@ -3476,7 +3478,7 @@ NXDT,NexPoint Diversified Real Estate Trust Common Stock,United States
 NXDT^A,NexPoint Diversified Real Estate Trust 5.50% Series A Cumulative Preferred Shares ($25.00 liquidation preference per share),United States
 NXGL,NexGel Inc Common Stock,United States
 NXGLW,NexGel Inc Warrant,United States
-NXJ,Nuveen New Jersey Qualified Municipal Fund ,United States
+NXJ,Nuveen New Jersey Qualified Municipal Fund,United States
 NXL,Nexalin Technology Inc. Common Stock,United States
 NXLIW,Nexalin Technology Inc. Warrant,United States
 NXN,Nuveen New York Select Tax-Free Income Portfolio Common Stock,United States
@@ -3496,12 +3498,11 @@ NYMTM,New York Mortgage Trust Inc. 7.875% Series E Fixed-to-Floating Rate Cumula
 NYMTN,New York Mortgage Trust Inc. 8.00% Series D Fixed-to-Floating Rate Cumulative Redeemable Preferred Stock,United States
 NYMTZ,New York Mortgage Trust Inc. 7.000% Series G Cumulative Redeemable Preferred Stock $0.01 par value per share,United States
 NYT,New York Times Company (The) Common Stock,United States
-NZF,Nuveen Municipal Credit Income Fund ,United States
+NZF,Nuveen Municipal Credit Income Fund,United States
 O,Realty Income Corporation Common Stock,United States
 OABI,OmniAb Inc. Common Stock,United States
 OABIW,OmniAb Inc. Warrant,United States
 OACC,Oaktree Acquisition Corp. III Life Sciences Class A Ordinary Share,United States
-OACCU,Oaktree Acquisition Corp. III Life Sciences Unit,United States
 OACCW,Oaktree Acquisition Corp. III Life Sciences Warrant,United States
 OAK^A,Brookfield Oaktree Holdings LLC 6.625% Series A Preferred Units,United States
 OAK^B,Brookfield Oaktree Holdings LLC 6.550% Series B Preferred Units,United States
@@ -3534,7 +3535,7 @@ OFS,OFS Capital Corporation Common Stock,United States
 OFSSH,OFS Capital Corporation 4.95% Notes due 2028,United States
 OGE,OGE Energy Corp Common Stock,United States
 OGEN,Oragenics Inc. Common Stock,United States
-OGN,Organon & Co. Common Stock ,United States
+OGN,Organon & Co. Common Stock,United States
 OGS,ONE Gas Inc. Common Stock,United States
 OHI,Omega Healthcare Investors Inc. Common Stock,United States
 OI,O-I Glass Inc. Common Stock,United States
@@ -3583,6 +3584,7 @@ OPAL,OPAL Fuels Inc. Class A Common Stock,United States
 OPBK,OP Bancorp Common Stock,United States
 OPCH,Option Care Health Inc. Common Stock,United States
 OPEN,Opendoor Technologies Inc Common Stock,United States
+OPFI,OppFi Inc. Class A Common Stock,United States
 OPHC,OptimumBank Holdings Inc. Common Stock,United States
 OPI,Office Properties Income Trust Common Shares of Beneficial Interest,United States
 OPINL,Office Properties Income Trust 6.375% Senior Notes due 2050,United States
@@ -3620,7 +3622,7 @@ OSK,Oshkosh Corporation (Holding Company)Common Stock,United States
 OSPN,OneSpan Inc. Common Stock,United States
 OSS,One Stop Systems Inc. Common Stock,United States
 OSUR,OraSure Technologies Inc. Common Stock,United States
-OTIS,Otis Worldwide Corporation Common Stock ,United States
+OTIS,Otis Worldwide Corporation Common Stock,United States
 OTLK,Outlook Therapeutics Inc. Common Stock,United States
 OTRK,Ontrak Inc. Common Stock,United States
 OTTR,Otter Tail Corporation Common Stock,United States
@@ -3662,7 +3664,7 @@ PANW,Palo Alto Networks Inc. Common Stock,United States
 PAR,PAR Technology Corporation Common Stock,United States
 PARA,Paramount Global Class B Common Stock,United States
 PARAA,Paramount Global Class A Common Stock,United States
-PARR,Par Pacific Holdings Inc.  Common Stock,United States
+PARR,Par Pacific Holdings Inc. Common Stock,United States
 PASG,Passage Bio Inc. Common Stock,United States
 PATH,UiPath Inc. Class A Common Stock,United States
 PATK,Patrick Industries Inc. Common Stock,United States
@@ -3793,7 +3795,7 @@ PINE,Alpine Income Property Trust Inc. Common Stock,United States
 PINS,Pinterest Inc. Class A Common Stock,United States
 PIPR,Piper Sandler Companies Common Stock,United States
 PJT,PJT Partners Inc. Class A Common Stock,United States
-PK,Park Hotels & Resorts Inc. Common Stock ,United States
+PK,Park Hotels & Resorts Inc. Common Stock,United States
 PKBK,Parke Bancorp Inc. Common Stock,United States
 PKE,Park Aerospace Corp. Common Stock,United States
 PKG,Packaging Corporation of America Common Stock,United States
@@ -3843,7 +3845,7 @@ PNFPP,Pinnacle Financial Partners Inc. Depositary shares of Pinnacle Financial P
 PNI,Pimco New York Municipal Income Fund II Common Shares of Beneficial Interest,United States
 PNNT,PennantPark Investment Corporation Common Stock,United States
 PNRG,PrimeEnergy Resources Corporation Common Stock,United States
-PNTG,The Pennant Group Inc. Common Stock ,United States
+PNTG,The Pennant Group Inc. Common Stock,United States
 PNW,Pinnacle West Capital Corporation Common Stock,United States
 POAI,Predictive Oncology Inc. Common Stock,United States
 POCI,Precision Optics Corporation Inc. Common stock,United States
@@ -3892,7 +3894,7 @@ PROP,Prairie Operating Co. Common Stock,United States
 PROV,Provident Financial Holdings Inc. Common Stock,United States
 PRPH,ProPhase Labs Inc. Common Stock (DE),United States
 PRPL,Purple Innovation Inc. Common Stock,United States
-PRPO,Precipio Inc.  Common Stock,United States
+PRPO,Precipio Inc. Common Stock,United States
 PRS,Prudential Financial Inc. 5.625% Junior Subordinated Notes due 2058,United States
 PRSO,Peraso Inc. Common Stock,United States
 PRSU,Pursuit Attractions and Hospitality Inc. Common Stock,United States
@@ -3926,7 +3928,7 @@ PSN,Parsons Corporation Common Stock,United States
 PSNL,Personalis Inc. Common Stock,United States
 PSTG,Pure Storage Inc. Class A Common Stock,United States
 PSTL,Postal Realty Trust Inc. Class A Common Stock,United States
-PSTV,PLUS THERAPEUTICS Inc. Common Stock ,United States
+PSTV,PLUS THERAPEUTICS Inc. Common Stock,United States
 PSX,Phillips 66 Common Stock,United States
 PTA,Cohen & Steers Tax-Advantaged Preferred Securities and Income Fund Common Shares of Beneficial Interest,United States
 PTC,PTC Inc. Common Stock,United States
@@ -3946,7 +3948,7 @@ PULM,Pulmatrix Inc. Common Stock,United States
 PUMP,ProPetro Holding Corp. Common Stock,United States
 PVBC,Provident Bancorp Inc. (MD) Common Stock,United States
 PVH,PVH Corp. Common Stock,United States
-PVL,Permianville Royalty Trust Trust Units ,United States
+PVL,Permianville Royalty Trust Trust Units,United States
 PVLA,Palvella Therapeutics Inc. Common Stock,United States
 PW,Power REIT (MD) Common Stock,United States
 PW^A,Power REIT 7.75% Series A Cumulative Perpetual Preferred Stock,United States
@@ -3957,7 +3959,7 @@ PWUP,PowerUp Acquisition Corp. Class A Ordinary Shares,United States
 PWUPU,PowerUp Acquisition Corp. Unit,United States
 PWUPW,PowerUp Acquisition Corp. Warrant,United States
 PX,P10 Inc. Class A Common Stock,United States
-PXLW,Pixelworks Inc.  Common Stock,United States
+PXLW,Pixelworks Inc. Common Stock,United States
 PYCR,Paycor HCM Inc. Common Stock,United States
 PYN,PIMCO New York Municipal Income Fund III Common Shares of Beneficial Interest,United States
 PYPL,PayPal Holdings Inc. Common Stock,United States
@@ -4040,7 +4042,7 @@ RDIB,Reading International Inc Class B Common Stock,United States
 RDN,Radian Group Inc. Common Stock,United States
 RDNT,RadNet Inc. Common Stock,United States
 RDUS,Radius Recycling Inc. Class A Common Stock,United States
-RDVT,Red Violet Inc. Common Stock ,United States
+RDVT,Red Violet Inc. Common Stock,United States
 RDW,Redwire Corporation Common Stock,United States
 RDZN,Roadzen Inc. Ordinary Shares,United States
 RDZNW,Roadzen Inc. Warrants,United States
@@ -4060,6 +4062,7 @@ RELL,Richardson Electronics Ltd. Common Stock,United States
 RELY,Remitly Global Inc. Common Stock,United States
 RENB,Renovaro Inc. Common Stock,United States
 RENE,Cartesian Growth Corporation II Class A Ordinary Shares,United States
+RENEW,Cartesian Growth Corporation II Warrant,United States
 RENT,Rent the Runway Inc. Class A Common Stock,United States
 REPL,Replimune Group Inc. Common Stock,United States
 REPX,Riley Exploration Permian Inc. Common Stock,United States
@@ -4072,7 +4075,7 @@ REXR,Rexford Industrial Realty Inc. Common Stock,United States
 REXR^B,Rexford Industrial Realty Inc. 5.875% Series B Cumulative Redeemable Preferred Stock,United States
 REXR^C,Rexford Industrial Realty Inc. 5.625% Series C Cumulative Redeemable Preferred Stock par value $0.01 per share,United States
 REYN,Reynolds Consumer Products Inc. Common Stock,United States
-REZI,Resideo Technologies Inc. Common Stock ,United States
+REZI,Resideo Technologies Inc. Common Stock,United States
 RF,Regions Financial Corporation Common Stock,United States
 RF^C,Regions Financial Corporation Depositary Shares each Representing a 1/40th Interest in a  Share of 5.700% Fixed-to-Floating Rate Non-Cumulative  Perpetual Preferred Stock Series C,United States
 RF^E,Regions Financial Corporation Depositary Shares Each Representing a 1/40th Interest in a Share of 4.45% Non-Cumulative Perpetual Preferred Stock Series E,United States
@@ -4106,7 +4109,7 @@ RILYP,B. Riley Financial Inc. Depositary Shares each representing a 1/1000th fra
 RILYT,B. Riley Financial Inc. 6.00% Senior Notes Due 2028,United States
 RILYZ,B. Riley Financial Inc. 5.25% Senior Notes due 2028,United States
 RIME,Algorhythm Holdings Inc. Common Stock,United States
-RIOT,Riot Platforms Inc. Common Stock ,United States
+RIOT,Riot Platforms Inc. Common Stock,United States
 RITM,Rithm Capital Corp. Common Stock,United States
 RITM^A,Rithm Capital Corp. 7.50% Series A Fixed-to-Floating Rate Cumulative Redeemable Preferred Stock,United States
 RITM^B,Rithm Capital Corp. 7.125% Series B Fixed-to-Floating Rate Cumulative Redeemable Preferred Stock,United States
@@ -4135,6 +4138,7 @@ RMBL,RumbleOn Inc. Class B Common Stock,United States
 RMBS,Rambus Inc. Common Stock,United States
 RMCF,Rocky Mountain Chocolate Factory Inc. Common Stock,United States
 RMCO,Royalty Management Holding Corporation Class A Common Stock,United States
+RMCOW,Royalty Management Holding Corporation Warrant,United States
 RMD,ResMed Inc. Common Stock,United States
 RMNI,Rimini Street Inc. (DE) Common Stock,United States
 RMR,The RMR Group Inc. Class A Common Stock,United States
@@ -4165,7 +4169,7 @@ RPAY,Repay Holdings Corporation Class A Common Stock,United States
 RPD,Rapid7 Inc. Common Stock,United States
 RPID,Rapid Micro Biosystems Inc. Class A Common Stock,United States
 RPM,RPM International Inc. Common Stock,United States
-RPRX,Royalty Pharma plc Class A Ordinary Shares ,United States
+RPRX,Royalty Pharma plc Class A Ordinary Shares,United States
 RPT,Rithm Property Trust Inc. Common stock,United States
 RQI,Cohen & Steers Quality Income Realty Fund Inc Common Shares,United States
 RR,Richtech Robotics Inc. Class B Common Stock,United States
@@ -4191,9 +4195,8 @@ RUSHB,Rush Enterprises Inc. Class B,United States
 RVLV,Revolve Group Inc. Class A Common Stock,United States
 RVMD,Revolution Medicines Inc. Common Stock,United States
 RVMDW,Revolution Medicines Inc. Warrant,United States
-RVNC,Revance Therapeutics Inc. Common Stock,United States
 RVP,Retractable Technologies Inc. Common Stock,United States
-RVPH,Reviva Pharmaceuticals Holdings Inc. Common Stock ,United States
+RVPH,Reviva Pharmaceuticals Holdings Inc. Common Stock,United States
 RVPHW,Reviva Pharmaceuticals Holdings Inc. Warrants,United States
 RVSB,Riverview Bancorp Inc Common Stock,United States
 RVT,Royce Small-Cap Trust Inc. Common Stock,United States
@@ -4226,7 +4229,7 @@ SABS,SAB Biotherapeutics Inc. Common Stock,United States
 SABSW,SAB Biotherapeutics Inc. Warrant,United States
 SACH,Sachem Capital Corp. Common Shares,United States
 SACH^A,Sachem Capital Corp. 7.75% Series A Cumulative Redeemable Preferred Stock,United States
-SAFE,Safehold Inc. New Common Stock ,United States
+SAFE,Safehold Inc. New Common Stock,United States
 SAFT,Safety Insurance Group Inc. Common Stock,United States
 SAGE,Sage Therapeutics Inc. Common Stock,United States
 SAH,Sonic Automotive Inc. Common Stock,United States
@@ -4289,7 +4292,6 @@ SCS,Steelcase Inc. Common Stock,United States
 SCSC,ScanSource Inc. Common Stock,United States
 SCVL,Shoe Carnival Inc. Common Stock,United States
 SCWO,374Water Inc. Common Stock,United States
-SCWX,SecureWorks Corp. Class A Common Stock,United States
 SCYX,SCYNEXIS Inc. Common Stock,United States
 SD,SandRidge Energy Inc. Common Stock,United States
 SDGR,Schrodinger Inc. Common Stock,United States
@@ -4374,6 +4376,7 @@ SIMA,SIM Acquisition Corp. I Class A Ordinary Shares,United States
 SIMAU,SIM Acquisition Corp. I Unit,United States
 SIMAW,SIM Acquisition Corp. I Warrant,United States
 SINT,SiNtx Technologies Inc. Common Stock,United States
+SION,Sionna Therapeutics Inc. Common Stock,United States
 SIRI,SiriusXM Holdings Inc. Common Stock,United States
 SITC,SITE Centers Corp. Common Stock,United States
 SITE,SiteOne Landscape Supply Inc. Common Stock,United States
@@ -4409,7 +4412,7 @@ SLMBP,SLM Corporation Floating Rate Non-Cumulative Preferred Stock Series B,Unit
 SLND,Southland Holdings Inc. Common Stock,United States
 SLNG,Stabilis Solutions Inc. Common Stock,United States
 SLNH,Soluna Holdings Inc. Common Stock,United States
-SLNHP,Soluna Holdings Inc 9.0% Series A Cumulative Perpetual Preferred Stock ,United States
+SLNHP,Soluna Holdings Inc 9.0% Series A Cumulative Perpetual Preferred Stock,United States
 SLNO,Soleno Therapeutics Inc. Common Stock,United States
 SLP,Simulations Plus Inc. Common Stock,United States
 SLQT,SelectQuote Inc. Common Stock,United States
@@ -4424,14 +4427,10 @@ SMBK,SmartFinancial Inc. Common Stock,United States
 SMC,Summit Midstream Corporation Common Stock,United States
 SMCI,Super Micro Computer Inc. Common Stock,United States
 SMG,Scotts Miracle-Gro Company (The) Common Stock,United States
-SMHI,SEACOR Marine Holdings Inc. Common Stock ,United States
+SMHI,SEACOR Marine Holdings Inc. Common Stock,United States
 SMID,Smith-Midland Corporation Common Stock,United States
 SMLR,Semler Scientific Inc. Common Stock,United States
-SMMT,Summit Therapeutics Inc. Common Stock ,United States
-SMP,Standard Motor Products Inc. Common Stock,United States
-SMPL,The Simply Good Foods Company Common Stock,United States
-SMR,NuScale Power Corporation Class A Common Stock,United States
-SMRT,SmartRent Inc. Class A Common Stock,United States
+SMMT,Summit Therapeutics Inc. Common Stock,United States
 SMSI,Smith Micro Software Inc. Common Stock,United States
 SMTC,Semtech Corporation Common Stock,United States
 SMTI,Sanara MedTech Inc. Common Stock,United States
@@ -4440,8 +4439,6 @@ SN,SharkNinja Inc. Ordinary Shares,United States
 SNA,Snap-On Incorporated Common Stock,United States
 SNAL,Snail Inc. Class A Common Stock,United States
 SNAP,Snap Inc. Class A Common Stock,United States
-SNAX,Stryve Foods Inc. Class A Common Stock,United States
-SNAXW,Stryve Foods Inc. Warrant,United States
 SNBR,Sleep Number Corporation Common Stock,United States
 SNCR,Synchronoss Technologies Inc. Common Stock,United States
 SNCRL,Synchronoss Technologies Inc. 8.375% Senior Notes due 2026,United States
@@ -4468,7 +4465,7 @@ SNYR,Synergy CHC Corp. Common Stock,United States
 SO,Southern Company (The) Common Stock,United States
 SOBR,SOBR Safe Inc. Common Stock,United States
 SOC,Sable Offshore Corp. Common Stock,United States
-SOFI,SoFi Technologies Inc. Common Stock  ,United States
+SOFI,SoFi Technologies Inc. Common Stock ,United States
 SOHO,Sotherly Hotels Inc. Common Stock,United States
 SOHOB,Sotherly Hotels Inc. 8.0% Series B Cumulative Redeemable Perpetual Preferred Stock,United States
 SOHON,Sotherly Hotels Inc. 8.25% Series D Cumulative Redeemable Perpetual Preferred Stock,United States
@@ -4494,6 +4491,7 @@ SPAI,Safe Pro Group Inc. Common Stock,United States
 SPB,Spectrum Brands Holdings Inc. Common Stock,United States
 SPCE,Virgin Galactic Holdings Inc. Common Stock,United States
 SPE,Special Opportunities Fund Inc Common Stock,United States
+SPE^C,Special Opportunities Fund Inc. 2.75% Convertible Preferred Stock Series C,United States
 SPFI,South Plains Financial Inc. Common Stock,United States
 SPG,Simon Property Group Inc. Common Stock,United States
 SPG^J,Simon Property Group Inc. Simon Property Group 8 3/8% Series J Cumulative Redeemable Preferred Stock,United States
@@ -4506,7 +4504,6 @@ SPHAU,Shepherd Ave Capital Acquisition Corporation Unit,United States
 SPHR,Sphere Entertainment Co. Class A Common Stock,United States
 SPIR,Spire Global Inc. Class A Common Stock,United States
 SPKL,Spark I Acquisition Corp. Class A Ordinary Share,United States
-SPKLU,Spark I Acquisition Corp. Unit,United States
 SPKLW,Spark I Acquisition Corp. Warrant,United States
 SPLP,Steel Partners Holdings LP LTD PARTNERSHIP UNIT,United States
 SPLP^A,Steel Partners Holdings LP 6.0% Series A Preferred Units no par value,United States
@@ -4576,6 +4573,7 @@ STLD,Steel Dynamics Inc.,United States
 STOK,Stoke Therapeutics Inc. Common Stock,United States
 STR,Sitio Royalties Corp. Class A Common Stock,United States
 STRA,Strategic Education Inc. Common Stock,United States
+STRK,MicroStrategy Incorporated 8.00% Series A Perpetual Strike Preferred Stock,United States
 STRL,Sterling Infrastructure Inc. Common Stock,United States
 STRM,Streamline Health Solutions Inc. Common Stock,United States
 STRO,Sutro Biopharma Inc. Common Stock,United States
@@ -4592,7 +4590,6 @@ STWD,STARWOOD PROPERTY TRUST INC. Starwood Property Trust Inc.,United States
 STXS,Stereotaxis Inc. Common Stock,United States
 STZ,Constellation Brands Inc. Common Stock,United States
 SUI,Sun Communities Inc. Common Stock,United States
-SUM,Summit Materials Inc. Class A Common Stock,United States
 SUN,Sunoco LP Common Units representing limited partner interests,United States
 SUNE,SUNation Energy Inc. Common Stock,United States
 SUNS,Sunrise Realty Trust Inc. Common Stock,United States
@@ -4604,6 +4601,7 @@ SVCCU,Stellar V Capital Corp. Unit,United States
 SVCO,Silvaco Group Inc. Common Stock,United States
 SVII,Spring Valley Acquisition Corp. II Class A Ordinary Shares,United States
 SVIIR,Spring Valley Acquisition Corp. II Rights,United States
+SVIIW,Spring Valley Acquisition Corp. II Warrant,United States
 SVRA,Savara Inc. Common Stock,United States
 SVT,Servotronics Inc. Common Stock,United States
 SVV,Savers Value Village Inc. Common Stock,United States
@@ -4645,7 +4643,7 @@ TAIT,Taitron Components Incorporated Class A Common Stock,United States
 TALK,Talkspace Inc. Common Stock,United States
 TALKW,Talkspace Inc. Warrant,United States
 TALO,Talos Energy Inc. Common Stock,United States
-TARA,Protara Therapeutics Inc.  Common Stock,United States
+TARA,Protara Therapeutics Inc. Common Stock,United States
 TARS,Tarsus Pharmaceuticals Inc. Common Stock,United States
 TASK,TaskUs Inc. Class A Common Stock,United States
 TAVI,Tavia Acquisition Corp. Ordinary Shares,United States
@@ -4734,7 +4732,7 @@ TKR,Timken Company (The) Common Stock,United States
 TLF,Tandy Leather Factory Inc. Common Stock,United States
 TLN,Talen Energy Corporation Common Stock,United States
 TLPH,Talphera Inc. Common Stock,United States
-TLRY,Tilray Brands Inc. Common Stock ,United States
+TLRY,Tilray Brands Inc. Common Stock,United States
 TLS,Telos Corporation Common Stock,United States
 TLSI,TriSalus Life Sciences Inc. Common Stock,United States
 TLSIW,TriSalus Life Sciences Inc. Warrant,United States
@@ -4817,14 +4815,14 @@ TRVI,Trevi Therapeutics Inc. Common Stock,United States
 TSBK,Timberland Bancorp Inc. Common Stock,United States
 TSBX,Turnstone Biologics Corp. Common Stock,United States
 TSCO,Tractor Supply Company Common Stock,United States
-TSE,Trinseo PLC Ordinary Shares ,United States
+TSE,Trinseo PLC Ordinary Shares,United States
 TSHA,Taysha Gene Therapies Inc. Common Stock,United States
 TSI,TCW Strategic Income Fund Inc. Common Stock,United States
 TSLA,Tesla Inc. Common Stock,United States
 TSN,Tyson Foods Inc. Common Stock,United States
 TSQ,Townsquare Media Inc. Class A Common Stock,United States
 TSSI,TSS Inc. Common Stock,United States
-TSVT,2seventy bio Inc. Common Stock ,United States
+TSVT,2seventy bio Inc. Common Stock,United States
 TTAN,ServiceTitan Inc. Class A Common Stock,United States
 TTC,Toro Company (The) Common Stock,United States
 TTD,The Trade Desk Inc. Class A Common Stock,United States
@@ -4834,7 +4832,6 @@ TTGT,TechTarget Inc. Common Stock,United States
 TTI,Tetra Technologies Inc. Common Stock,United States
 TTMI,TTM Technologies Inc. Common Stock,United States
 TTNP,Titan Pharmaceuticals Inc. Common Stock,United States
-TTOO,T2 Biosystems Inc. Common Stock,United States
 TTSH,Tile Shop Holdings Inc. Common Stock,United States
 TTWO,Take-Two Interactive Software Inc. Common Stock,United States
 TURN,180 Degree Capital Corp. Common Stock,United States
@@ -4913,6 +4910,7 @@ ULTA,Ulta Beauty Inc. Common Stock,United States
 ULY,Urgent.ly Inc. Common Stock,United States
 UMAC,Unusual Machines Inc. Common Stock,United States
 UMBF,UMB Financial Corporation Common Stock,United States
+UMBFP,UMB Financial Corporation Depositary Shares each representing a 1/400th of 7.00% Fixed-Rate Reset Non-Cumulative Perpetual Preferred Stock,United States
 UMH,UMH Properties Inc. Common Stock,United States
 UMH^D,UMH Properties Inc. 6.375% Series D Cumulative Redeemable Preferred Stock Liquidation Preference $25 per share,United States
 UNB,Union Bankshares Inc. Common Stock,United States
@@ -4962,7 +4960,7 @@ UTHR,United Therapeutics Corporation Common Stock,United States
 UTI,Universal Technical Institute Inc Common Stock,United States
 UTL,UNITIL Corporation Common Stock,United States
 UTMD,Utah Medical Products Inc. Common Stock,United States
-UTZ,Utz Brands Inc Class A Common Stock ,United States
+UTZ,Utz Brands Inc Class A Common Stock,United States
 UUU,Universal Security Instruments Inc. Common Stock,United States
 UVE,UNIVERSAL INSURANCE HOLDINGS INC Common Stock,United States
 UVSP,Univest Financial Corporation Common Stock,United States
@@ -4988,6 +4986,7 @@ VC,Visteon Corporation Common Stock,United States
 VCEL,Vericel Corporation Common Stock,United States
 VCIC,Vine Hill Capital Investment Corp. Class A Ordinary Shares,United States
 VCICU,Vine Hill Capital Investment Corp. Unit,United States
+VCICW,Vine Hill Capital Investment Corp. Warrant,United States
 VCSA,Vacasa Inc. Class A Common Stock,United States
 VCTR,Victory Capital Holdings Inc. Class A Common Stock,United States
 VCV,Invesco California Value Municipal Income Trust Common Stock,United States
@@ -5023,8 +5022,6 @@ VINC,Vincerx Pharma Inc. Common Stock,United States
 VIR,Vir Biotechnology Inc. Common Stock,United States
 VIRC,Virco Manufacturing Corporation Common Stock,United States
 VIRT,Virtu Financial Inc. Class A Common Stock,United States
-VIRX,Viracta Therapeutics Inc. Common Stock,United States
-VISL,Vislink Technologies Inc. Common Stock,United States
 VITL,Vital Farms Inc. Common Stock,United States
 VIVK,Vivakor Inc. Common Stock,United States
 VKI,Invesco Advantage Municipal Income Trust II Common Shares of Beneficial Interest (DE),United States
@@ -5034,13 +5031,14 @@ VLCN,Volcon Inc. Common stock,United States
 VLGEA,Village Super Market Inc. Class A Common Stock,United States
 VLO,Valero Energy Corporation Common Stock,United States
 VLT,Invesco High Income Trust II,United States
-VLTO,Veralto Corp Common Stock ,United States
+VLTO,Veralto Corp Common Stock,United States
 VLY,Valley National Bancorp Common Stock,United States
 VLYPN,Valley National Bancorp 8.250% Fixed-Rate Reset Non-Cumulative Perpetual Preferred Stock Series C,United States
 VLYPO,Valley National Bancorp 5.50% Fixed-to-Floating Rate Non-Cumulative Perpetual Preferred Stock Series B,United States
 VLYPP,Valley National Bancorp 6.25% Fixed-to-Floating Rate Non-Cumulative Perpetual Preferred Stock Series A,United States
 VMC,Vulcan Materials Company (Holding Company) Common Stock,United States
 VMCA,Valuence Merger Corp. I Class A Ordinary Shares,United States
+VMCAU,Valuence Merger Corp. I Unit,United States
 VMCAW,Valuence Merger Corp. I Warrant,United States
 VMD,Viemed Healthcare Inc. Common Shares,United States
 VMEO,Vimeo Inc. Common Stock,United States
@@ -5053,7 +5051,7 @@ VNO^M,Vornado Realty Trust 5.25% Series M Cumulative Redeemable Preferred Shares
 VNO^N,Vornado Realty Trust 5.25% Series N Cumulative Redeemable Preferred Shares of Beneficial Interest liquidation preference $25.00 per share,United States
 VNO^O,Vornado Realty Trust 4.45% Series O Cumulative Redeemable Preferred Shares Liquidation Preference $25.00 Per Share,United States
 VNOM,Viper Energy Inc. Class A Common Stock,United States
-VNT,Vontier Corporation Common Stock ,United States
+VNT,Vontier Corporation Common Stock,United States
 VOC,VOC Energy Trust Units of Beneficial Interest,United States
 VOR,Vor Biopharma Inc. Common Stock,United States
 VOXX,VOXX International Corporation Class A Common Stock,United States
@@ -5079,9 +5077,10 @@ VRT,Vertiv Holdings LLC Class A Common Stock,United States
 VRTS,Virtus Investment Partners Inc. Common Stock,United States
 VRTX,Vertex Pharmaceuticals Incorporated Common Stock,United States
 VSAT,ViaSat Inc. Common Stock,United States
-VSCO,Victorias Secret & Co. Common Stock ,United States
+VSCO,Victorias Secret & Co. Common Stock,United States
 VSEC,VSE Corporation Common Stock,United States
 VSEE,VSee Health Inc. Common Stock,United States
+VSEEW,VSee Health Inc. Warrant,United States
 VSH,Vishay Intertechnology Inc. Common Stock,United States
 VST,Vistra Corp. Common Stock,United States
 VSTM,Verastem Inc. Common Stock,United States
@@ -5114,13 +5113,13 @@ WAFDP,WaFd Inc. Depositary Shares,United States
 WAL,Western Alliance Bancorporation Common Stock (DE),United States
 WAL^A,Western Alliance Bancorporation Depositary Shares Each Representing a 1/400th Interest in a Share of 4.250% Fixed-Rate Non-Cumulative Perpetual Preferred Stock Series A,United States
 WALD,Waldencast plc Class A Ordinary Share,United States
-WALDW,Waldencast plc Warrant ,United States
+WALDW,Waldencast plc Warrant,United States
 WASH,Washington Trust Bancorp Inc. Common Stock,United States
 WAT,Waters Corporation Common Stock,United States
 WATT,Energous Corporation Common Stock,United States
 WAY,Waystar Holding Corp. Common Stock,United States
 WBA,Walgreens Boots Alliance Inc. Common Stock,United States
-WBD,Warner Bros. Discovery Inc. Series A Common Stock ,United States
+WBD,Warner Bros. Discovery Inc. Series A Common Stock,United States
 WBS,Webster Financial Corporation Common Stock,United States
 WBS^F,Webster Financial Corporation Depositary Shares Each Representing 1/1000th Interest in a Share of 5.25% Series F Non-Cumulative Perpetual Preferred Stock,United States
 WBS^G,Webster Financial Corporation Depositary Shares each representing a 1/40th interest in a share of 6.50% Series G non-cumulative perpetual preferred stock,United States
@@ -5154,14 +5153,13 @@ WFRD,Weatherford International plc Ordinary Shares,United States
 WGO,Winnebago Industries Inc. Common Stock,United States
 WGS,GeneDx Holdings Corp. Class A Common Stock,United States
 WGSWW,GeneDx Holdings Corp. Warrant,United States
-WH,Wyndham Hotels & Resorts Inc. Common Stock ,United States
+WH,Wyndham Hotels & Resorts Inc. Common Stock,United States
 WHD,Cactus Inc. Class A Common Stock,United States
 WHF,WhiteHorse Finance Inc. Common Stock,United States
 WHFCL,WhiteHorse Finance Inc. 7.875% Notes due 2028,United States
 WHG,Westwood Holdings Group Inc Common Stock,United States
 WHLR,Wheeler Real Estate Investment Trust Inc. Common Stock,United States
 WHLRD,Wheeler Real Estate Investment Trust Inc. Series D Cumulative Preferred Stock,United States
-WHLRL,Wheeler Real Estate Investment Trust Inc. 7.00% Senior Subordinated Convertible Notes Due 2031,United States
 WHLRP,Wheeler Real Estate Investment Trust Inc. Class B Preferred Stock,United States
 WHR,Whirlpool Corporation Common Stock,United States
 WIA,Western Asset Inflation-Linked Income Fund,United States
@@ -5169,9 +5167,7 @@ WINA,Winmark Corporation Common Stock,United States
 WING,Wingstop Inc. Common Stock,United States
 WINT,Windtree Therapeutics Inc. Common Stock,United States
 WINV,WinVest Acquisition Corp. Common Stock,United States
-WINVR,WinVest Acquisition Corp. Right,United States
 WINVU,WinVest Acquisition Corp. Unit,United States
-WINVW,WinVest Acquisition Corp. Warrant,United States
 WISA,WiSA Technologies Inc. Common Stock,United States
 WIW,Western Asset Inflation-Linked Opportunities & Income Fund,United States
 WK,Workiva Inc. Class A Common Stock,United States
@@ -5256,7 +5252,7 @@ XFLT^A,XAI Octagon Floating Rate & Alternative Income Trust 6.50% Series 2026 Te
 XFOR,X4 Pharmaceuticals Inc. Common Stock,United States
 XGN,Exagen Inc. Common Stock,United States
 XHR,Xenia Hotels & Resorts Inc. Common Stock,United States
-XIFR,XPLR Infrastructure LP,United States
+XIFR,XPLR Infrastructure LP Common Units representing limited partner interests,United States
 XLO,Xilio Therapeutics Inc. Common Stock,United States
 XMTR,Xometry Inc. Class A Common Stock,United States
 XNCR,Xencor Inc. Common Stock,United States
@@ -5267,7 +5263,7 @@ XOMAP,XOMA Royalty Corporation 8.625% Series A Cumulative Perpetual Preferred St
 XOS,Xos Inc. Common Stock,United States
 XOSWW,Xos Inc. Warrants,United States
 XPEL,XPEL Inc. Common Stock,United States
-XPER,Xperi Inc. Common Stock ,United States
+XPER,Xperi Inc. Common Stock,United States
 XPL,Solitario Resources Corp. Common Stock,United States
 XPO,XPO Inc. Common Stock,United States
 XPOF,Xponential Fitness Inc. Class A Common Stock,United States
@@ -5293,7 +5289,6 @@ YORW,York Water Company (The) Common Stock,United States
 YOSH,Yoshiharu Global Co. Class A Common Stock,United States
 YOTA,Yotta Acquisition Corporation Common Stock,United States
 YOTAR,Yotta Acquisition Corporation Right,United States
-YOTAU,Yotta Acquisition Corporation Unit,United States
 YOTAW,Yotta Acquisition Corporation Warrant,United States
 YOU,Clear Secure Inc. Class A Common Stock,United States
 YUM,Yum! Brands Inc.,United States
