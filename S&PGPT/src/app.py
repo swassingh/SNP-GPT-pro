@@ -60,7 +60,7 @@ def submit():
     if not isinstance(filing, dict):
         return jsonify({'error': filing}), 500
 
-    link_to_filing = f"https://www.sec.gov/Archives/edgar/data/789019/000095017023035122/{ticker.lower()}-20230630.htm"
+    link_to_filing = filing['filings'][0]['linkToFilingDetails']
 
     # Extract all parts of the 10-K filing
     extracted_parts = extract_all_10k_parts(api_key=api_key, filing_url=link_to_filing, items=["1A"]) # items=resp)
