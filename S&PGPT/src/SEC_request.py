@@ -57,7 +57,7 @@ def extract_10k_part(api_key, filing_url, item, return_type="text"):
         return f"Error: {response.status_code}, {response.text}"
 
 
-def extract_all_10k_parts(api_key, filing_url,items=["7", "7A"]):
+def extract_all_10k_parts(api_key, filing_url,items):
                           # items=["1", "1A", "1B", "1C", "2", "3", "4", "5", "6", "7", "7A", "8", "9", "9A", "9B", "10", "11", "12", "13", "14", "15"]):
     extracted_parts = {}
     for item in items:
