@@ -1,6 +1,12 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from SEC_request import get_10k_filing, extract_all_10k_parts, analyze_question, analyze_prompt
+# Libraries used for .env file retrieval
+import os
+from dotenv import load_dotenv
+
+# loading variables from .env file
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)  # Allow cross-origin requests from any origin
@@ -9,8 +15,8 @@ CORS(app)  # Allow cross-origin requests from any origin
 @app.route('/submit', methods=['POST'])
 def submit():
     data = request.json
-    api_key = '6b84d8e0f08b476c15b4334cbdb4dd1c8edf6214c2aa1c350d61e7f8eb1b1d8a'  # SEC API key
-    openai_api_key = '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'  # OpenAI API key
+    api_key = os.getenv('SEC_API_KEY')  # SEC API key
+    openai_api_key = os.getenv('OPENAI_API_KEY')  # OpenAI API key
     ticker = data.get('ticker')
     year = data.get('year')
     prompt = data.get('prompt')
@@ -63,9 +69,9 @@ def submit():
     link_to_filing = filing['filings'][0]['linkToFilingDetails']
 
     # Extract all parts of the 10-K filing
-    extracted_parts = extract_all_10k_parts(api_key=api_key, filing_url=link_to_filing, items=["1A"]) # items=resp)
+    extracted_parts = extract_all_10k_parts(api_key=api_key, filing_url=link_to_filing, items=["7"]) # items=resp)
     # Assuming the 10-K filing contains a summary or relevant section as text
-    filing_content = [extracted_parts.get("1A", "")]
+    filing_content = [extracted_parts.get("7", "")]
     # for response in sections_list:
     #     filing_content.append(
     #         extracted_parts.get(response, ""))
