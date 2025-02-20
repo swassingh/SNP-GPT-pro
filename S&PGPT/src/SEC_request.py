@@ -1,6 +1,5 @@
 import requests
 import json
-import ast
 
 
 def get_10k_filing(api_key, ticker, year):
