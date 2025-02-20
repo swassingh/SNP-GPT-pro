@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Finance Mode - S&PGPT</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>S&PGPT</h1>
+        <button onclick="clearUsername()" class="logout-btn">Log Out</button>
+    </header>
+
+    <main>
+        <h2 id="greeting">Welcome!</h2>
+        <p>Welcome to the <span class="highlight">General Finance Mode.</span></p>
+        <p>To go in-depth with SEC files, please click the SEC button under the chat bar.</p>
+
+        <div class="query-buttons">
+            <button>How has [selected company's] Revenue changed over the last five years?</button>
+            <button>Summarize [selected company's] growth from its most recent 10-Q report.</button>
+            <button>What are the key numbers in [selected company's] 10-K?</button>
+            <button>Breakdown [selected company's] assets from 2023.</button>
+        </div>
+
+        <div class="search-bar">
+            <button class="mode-toggle-btn" onclick="window.location.href='learningmode.html'">Switch to learning mode</button>
+            <input type="text" placeholder="Message S&PGPT">
+            <button class="search-icon"><i class="fas fa-search"></i></button>
+        </div>
+
+    <script>
+        // Function to display the greeting with the stored username
+        function displayGreeting() {
+            const username = localStorage.getItem("username");
+            if (username) {
+                document.getElementById("greeting").innerHTML = `Welcome ${username}!`;
+            }
+        }
+
+        // Run function when the page loads
+        window.onload = displayGreeting();
+
+        function clearUsername() {
+          localStorage.removeItem("username"); // Remove username from storage
+          window.location.href = "Initial.html"; // Redirect to the login page
+        }
+    </script>
+</body>
+</html>

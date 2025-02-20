@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S&PGPT - AI for SEC Expertise</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Popup container - can be anything you want */
+        .popup {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Popup content */
+        .popup-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        /* Close button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>S&PGPT</h1>
+        <nav>
+            <button onclick="openPopup()" class="login">LOG IN</button>
+            <button onclick="openPopup()" class="signup">SIGN UP</button>
+            <!-- <button onclick="clearUsername()" class="logout-btn">Log Out</button> -->
+        </nav>
+    </header>
+
+    <main>
+        <h2>Your <span class="highlight">AI-powered resource</span> for <span class="highlight">SEC Expertise.</span></h2>
+
+        <div class="query-buttons">
+            <button onclick="openPopup()">How has Microsoft’s Revenue changed over the last five years?</button>
+            <button onclick="openPopup()">Summarize Amazon’s AWS growth from its most recent 10-Q report.</button>
+            <button onclick="openPopup()">What are the key numbers in Amazon’s 10-K?</button>
+            <button onclick="openPopup()">Breakdown Apple’s assets from 2023.</button>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Message S&PGPT" onclick="openPopup()">
+            <button onclick="openPopup()" class="search-icon"><i class="fas fa-search"></i></button>
+            <!-- <button class="search-icon"><i class="fas fa-search"></i></button> -->
+        </div>
+
+        <!-- The Popup -->
+        <div id="myPopup" class="popup">
+            <!-- Popup content -->
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <form onsubmit="saveUsername(event)">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required><br><br>
+                  <label for="password">Password:</label>
+                  <input type="password" id="password" name="password" required><br><br>
+                  <button type="submit">Submit</button>
+              </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Function to open the popup
+        function openPopup() {
+            document.getElementById("myPopup").style.display = "block";
+        }
+
+        // Function to close the popup
+        function closePopup() {
+            document.getElementById("myPopup").style.display = "none";
+        }
+
+        function saveUsername(event) {
+            event.preventDefault();
+            const email = document.getElementById("email").value;
+            const username = email.substring(0, email.indexOf('@'));
+
+            localStorage.setItem("username", username); // Store username
+            closePopup(); // Close login popup
+
+            window.location.href = "generalmode.html"; // Redirect to General Finance Mode
+        }
+    </script>
+</body>
+</html>
