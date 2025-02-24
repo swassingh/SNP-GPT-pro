@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Learning Mode - S&PGPT</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <h1>S&PGPT</h1>
+            <button onclick="clearUsername()" class="logout-btn">Log Out</button>
+        </header>
+
+        <main>
+            <h2 id="greeting">Welcome!</h2>
+            <noscript>
+                You need to enable JavaScript to run this app.
+            </noscript>
+            <p id="greeting p"></p>
+
+            <div class="query-buttons">
+                <button>How has Microsoft’s Revenue changed over the last five years?</button>
+                <button>Summarize Amazon’s AWS growth from its most recent 10-Q report.</button>
+                <button>What are the key numbers in Amazon’s 10-K?</button>
+                <button>Breakdown Apple’s assets from 2023.</button>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Message S&PGPT">
+                <button class="search-icon"><i class="fas fa-search"></i></button>
+            </div>
+        </main>
+        <script src="js/index.js"></script>
+    </body>
+</html>
