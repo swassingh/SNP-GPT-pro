@@ -36,3 +36,8 @@ function displayUsername() {
         return "Unknown";
     }
 }
+
+function clearUsername() {
+    localStorage.removeItem("username"); // Remove username from storage
+    window.location.href = "Initial.html"; // Redirect to the login page
+}

@@ -105,6 +105,7 @@ header {
 
 .query-buttons button {
   background-color: rgba(115, 115, 115, 0.4);
+  justify-content: left;
   color: var(--text-light);
   border: none;
   padding: 12px 20px;
