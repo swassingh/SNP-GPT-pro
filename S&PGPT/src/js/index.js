@@ -101,3 +101,28 @@ function saveUsername(event) {
 }
 
 console.log(localStorage);
+
+// Function to display the greeting with the stored username
+function displayGreeting() {
+    const username = localStorage.getItem("username");
+    if (username) {
+        document.getElementById("greeting").innerHTML = `Welcome ${username}!`;
+    }
+}
+
+// // Run function when the page loads
+// window.onload = displayGreeting();
+
+function clearUsername() {
+  localStorage.removeItem("username"); // Remove username from storage
+  window.location.href = "Initial.html"; // Redirect to the login page
+}
+
+function toggleSubmenu(id) {
+    var submenu = document.getElementById(id);
+    if (submenu.style.display === "block") {
+        submenu.style.display = "none";
+    } else {
+        submenu.style.display = "block";
+    }
+}

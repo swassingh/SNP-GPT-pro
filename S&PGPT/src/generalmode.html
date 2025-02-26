@@ -31,22 +31,6 @@
             <button class="search-icon"><i class="fas fa-search"></i></button>
         </div>
 
-    <script>
-        // Function to display the greeting with the stored username
-        function displayGreeting() {
-            const username = localStorage.getItem("username");
-            if (username) {
-                document.getElementById("greeting").innerHTML = `Welcome ${username}!`;
-            }
-        }
-
-        // Run function when the page loads
-        window.onload = displayGreeting();
-
-        function clearUsername() {
-          localStorage.removeItem("username"); // Remove username from storage
-          window.location.href = "Initial.html"; // Redirect to the login page
-        }
-    </script>
+    <script src="js/index.js"></script>
 </body>
 </html>
