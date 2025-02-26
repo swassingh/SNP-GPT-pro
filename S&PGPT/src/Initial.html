@@ -67,51 +67,6 @@
         </div>
     </main>
 
-    <script>
-        // Function to open the popup
-        function openloginPopup() {
-            closesignupPopup(); // Close signup popup
-            document.getElementById("loginPopup").style.display = "flex";
-        }
-
-        // Function to close the popup
-        function closeloginPopup() {
-            document.getElementById("loginPopup").style.display = "none";
-        }
-
-        // Function to open the popup
-        function opensignupPopup() {
-            closeloginPopup(); // Close login popup
-            document.getElementById("signupPopup").style.display = "flex";
-        }
-
-        // Function to close the popup
-        function closesignupPopup() {
-            document.getElementById("signupPopup").style.display = "none";
-        }
-
-        function saveUsername(event) {
-            event.preventDefault();
-
-            // Determine which popup form was submitted
-            let loginEmail = document.querySelector("#loginPopup input[type='email']");
-            let signupEmail = document.querySelector("#signupPopup input[type='email']");
-
-            let email = loginEmail?.value || signupEmail?.value; // Get email from either form
-            if (!email) return; // Stop execution if no email is found
-
-            const username = email.substring(0, email.indexOf('@'));
-
-            localStorage.setItem("username", username); // Store username
-
-            // Close relevant popups
-            closeloginPopup();
-            closesignupPopup();
-
-            // Redirect to General Finance Mode
-            window.location.href = "learningmode.html";
-        }
-
-    </script>
+    <script src="js/index.js"></script>
 </body>
 </html>
