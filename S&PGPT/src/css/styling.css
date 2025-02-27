@@ -13,6 +13,7 @@
   --secondary-color: #5A5AD2;
   --background-dark: #212121;
   --text-light: #ececec;
+  --text-dark: rgba(255, 255, 255, 0.1);
 }
 
 /* CSS Reset */
@@ -143,6 +144,10 @@ header {
   margin-left: auto;
   margin-right: auto;
   background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+}
+
+#chat-input {
+  color: black;
 }
 
 .search-bar input {
