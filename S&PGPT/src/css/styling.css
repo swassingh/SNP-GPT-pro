@@ -283,6 +283,15 @@ select {
   border: none;
 }
 
+select#year, select#report {
+  width: 49%;
+}
+
+.date-report {
+  display: flex;
+  justify-content: space-between;
+}
+
 .menu {
   margin-top: 20px;
 }

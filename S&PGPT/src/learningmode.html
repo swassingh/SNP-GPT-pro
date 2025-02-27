@@ -15,72 +15,87 @@
 
         <div class="sidebar">
             <div class="dropdown-container">
-                <select>
-                    <option>Apple</option>
-                    <option>Microsoft</option>
-                    <option>Amazon</option>
+                <select id="company" class="ligmaballs">
+                    <option>A - Agilent Technologies Inc</option>
+                    <option>AA - Alcoa Corporation</option>
+                    <option>AADI - Aadi Bioscience Inc</option>
+                    <option>AAL - American Airlines Group Inc</option>
+                    <option>AAME - Atlantic American Corporation</option>
+                    <option>AAOI - Applied Optoelectronics Inc</option>
+                    <option>AAON - AAON Inc</option>
+                    <option>AAP - Advance Auto Parts Inc</option>
+                    <option>AAPL - Apple Inc</option>
+                    <option>AAT - American Assets Trust Inc</option>
+                    <option>AB - AllianceBernstein Holding L.P.</option>
+                    <option>ABAT - American Battery Technology Company</option>
+                    <option>ABBV - AbbVie Inc</option>
+                    <option>ABCB - Ameris Bancorp</option>
+                    <option>ABEO - Abeona Therapeutics Inc</option>
+                    <option>ABG - Asbury Automotive Group Inc</option>
                 </select>
-                <select>
-                    <option>2025</option>
-                    <option>2024</option>
-                    <option>2023</option>
-                    <option>2022</option>
-                    <option>2021</option>
-                    <option>2020</option>
-                    <option>2019</option>
-                    <option>2018</option>
-                    <option>2017</option>
-                    <option>2016</option>
-                    <option>2015</option>
-                    <option>2014</option>
-                    <option>2013</option>
-                    <option>2012</option>
-                    <option>2011</option>
-                    <option>2010</option>
-                </select>
-                <select>
-                    <option>10-K</option>
-                    <option>10-Q</option>
-                    <option>8-K</option>
-                </select>
+                <div class="date-report">
+                    <select id="year" class="ligmaballs">
+                        <option>2025</option>
+                        <option>2024</option>
+                        <option>2023</option>
+                        <option>2022</option>
+                        <option>2021</option>
+                        <option>2020</option>
+                        <option>2019</option>
+                        <option>2018</option>
+                        <option>2017</option>
+                        <option>2016</option>
+                        <option>2015</option>
+                        <option>2014</option>
+                        <option>2013</option>
+                        <option>2012</option>
+                        <option>2011</option>
+                        <option>2010</option>
+                    </select>
+                    <select id="report" class="ligmaballs">
+                        <option>10-K</option>
+                        <option>10-Q</option>
+                        <option>8-K</option>
+                    </select>
+                </div>
             </div>
 
             <div class="menu">
                 <div class="menu-item" onclick="toggleSubmenu('business')">Part I: Business & Risk Factors</div>
                 <div id="business" class="submenu">
-                    <div class="submenu-item">Item 1: Business</div>
-                    <div class="submenu-item">Item 1A: Risk Factors</div>
-                    <div class="submenu-item">Item 1B: Unresolved Staff Comments</div>
-                    <div class="submenu-item">Item 2: Properties</div>
-                    <div class="submenu-item">Item 3: Legal Proceedings</div>
-                    <div class="submenu-item">Item 4: Mine Safety Disclosures</div>
+                    <div id="1" class="submenu-item">Item 1: Business</div>
+                    <div id="1A" class="submenu-item">Item 1A: Risk Factors</div>
+                    <div id="1B" class="submenu-item">Item 1B: Unresolved Staff Comments</div>
+                    <div id="2" class="submenu-item">Item 2: Properties</div>
+                    <div id="3" class="submenu-item">Item 3: Legal Proceedings</div>
+                    <div id="4" class="submenu-item">Item 4: Mine Safety Disclosures</div>
                 </div>
 
                 <div class="menu-item" onclick="toggleSubmenu('financial')">Part II: Financial & Performance Reports</div>
                 <div id="financial" class="submenu">
-                    <div class="submenu-item">Item 5: Market for Stock</div>
-                    <div class="submenu-item">Item 6: Selected Financial Data</div>
-                    <div class="submenu-item">Item 7: Management’s Discussion & Analysis</div>
-                    <div class="submenu-item">Item 7A: Quantitative & Qualitative Disclosures</div>
-                    <div class="submenu-item">Item 8: Financial Statements</div>
-                    <div class="submenu-item">Item 9: Changes in & Disagreements with Accountants</div>
-                    <div class="submenu-item">Item 9A: Controls & Procedures</div>
-                    <div class="submenu-item">Item 9B: Other Information</div>
+                    <div id="5" class="submenu-item">Item 5: Market for Stock</div>
+                    <div id="6" class="submenu-item">Item 6: Selected Financial Data</div>
+                    <div id="7" class="submenu-item">Item 7: Management’s Discussion & Analysis</div>
+                    <div id="7A" class="submenu-item">Item 7A: Quantitative & Qualitative Disclosures</div>
+                    <div id="8" class="submenu-item">Item 8: Financial Statements</div>
+                    <div id="9" class="submenu-item">Item 9: Changes in & Disagreements with Accountants</div>
+                    <div id="9A" class="submenu-item">Item 9A: Controls & Procedures</div>
+                    <div id="9B" class="submenu-item">Item 9B: Other Information</div>
                 </div>
 
                 <div class="menu-item" onclick="toggleSubmenu('ownership')">Part III: Ownership & Governance</div>
                 <div id="ownership" class="submenu">
-                    <div class="submenu-item">Item 10: Directors, Executive Officers, & Corporate Governance</div>
-                    <div class="submenu-item">Item 11: Executive Compensation</div>
-                    <div class="submenu-item">Item 12: Security Ownership of Certain Beneficial Owners</div>
-                    <div class="submenu-item">Item 13: Certain Relationships & Related Transactions</div>
-                    <div class="submenu-item">Item 14: Principal Accountant Fees & Services</div>
+                    <div id="10" class="submenu-item">Item 10: Directors, Executive Officers, & Corporate Governance</div>
+                    <div id="11" class="submenu-item">Item 11: Executive Compensation</div>
+                    <div id="12" class="submenu-item">Item 12: Security Ownership of Certain Beneficial Owners</div>
+                    <div id="13" class="submenu-item">Item 13: Certain Relationships & Related Transactions</div>
+                    <div id="14" class="submenu-item">Item 14: Principal Accountant Fees & Services</div>
                 </div>
 
                 <div class="menu-item" onclick="toggleSubmenu('ending')">Part IV: Exhibits & Financial Statement Schedules</div>
                 <div id="ending" class="submenu">
-                    <div class="submenu-item">Item 15: Exhibits, Financial Statement Schedules</div>
-                    <div class="submenu-item">Item 16: Form 10-K Summary</div>
+                    <div id="15" class="submenu-item">Item 15: Exhibits, Financial Statement Schedules</div>
+                    <div id="16" class="submenu-item">Item 16: Form 10-K Summary</div>
                 </div>
             </div>
         </div>
@@ -101,7 +116,7 @@
 
             <div class="search-bar">
                 <button class="mode-toggle-btn" onclick="window.location.href='generalmode.html'">Switch to general mode</button>
-                <input type="text" placeholder="Message S&PGPT">
+                <input type="text" placeholder="Message S&PGPT" id="chat-input">
                 <button class="search-icon"><i class="fas fa-search"></i></button>
             </div>
         </main>
