@@ -1,6 +1,5 @@
 'use strict';
 
-let idk;
 
 function saveUsername(event) {
     event.preventDefault();
@@ -14,13 +13,9 @@ function saveUsername(event) {
         return; // Stop execution if no email is found
     }
 
-    console.log("test?"); // THIS CONSOLE.LOG ISN'T RUNNING???
     const username = email.substring(0, email.indexOf('@'));
-    console.log("THIS IS USERNAME IN saveUsername: ", username);
-    idk = username; // THIS GLOBAL VARIABLE MAY NOT BE GETTING UPDATED?!
 
-    localStorage.setItem("username", username); // Store username
-    console.log("Here is proof of localstorage set before heading to learningmode: ", localStorage.username);
+    sessionStorage['username'] = username;
 
     // Close relevant popups
     closeloginPopup();
@@ -32,8 +27,7 @@ function saveUsername(event) {
 
 // Function to grab the stored username; 'Unknown' otherwise
 function displayUsername() {
-    console.log("This is idk: ", idk);
-    const username = localStorage.getItem("username");
+    const username = sessionStorage['username'];
     if (username) {
         return username;
     } else {
@@ -74,40 +68,6 @@ function opensignupPopup() {
 // Function to close the popup
 function closesignupPopup() {
     document.getElementById("signupPopup").style.display = "none";
-}
-
-function saveUsername(event) {
-    event.preventDefault();
-
-    // Determine which popup form was submitted
-    let loginEmail = document.querySelector("#loginPopup input[type='email']");
-    let signupEmail = document.querySelector("#signupPopup input[type='email']");
-
-    let email = loginEmail?.value || signupEmail?.value; // Get email from either form
-    if (!email) return; // Stop execution if no email is found
-
-    const username = email.substring(0, email.indexOf('@'));
-
-    localStorage.setItem("username", username); // Store username
-    console.log("Here is proof of localstorage set before heading to learningmode: ", localStorage.username);
-    console.log(localStorage);
-
-    // Close relevant popups
-    closeloginPopup();
-    closesignupPopup();
-
-    // Redirect to General Finance Mode
-    window.location.href = "learningmode.html";
-}
-
-console.log(localStorage);
-
-// Function to display the greeting with the stored username
-function displayGreeting() {
-    const username = localStorage.getItem("username");
-    if (username) {
-        document.getElementById("greeting").innerHTML = `Welcome ${username}!`;
-    }
 }
 
 // // Run function when the page loads
