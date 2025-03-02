@@ -86,3 +86,60 @@ function toggleSubmenu(id) {
         submenu.style.display = "block";
     }
 }
+
+
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Collect form data
+    const company = document.getElementById('company').value;
+    const year = document.getElementById('year').value;
+    const prompt = document.getElementById('prompt').value;
+
+    console.log(company, year, prompt);
+
+    const ticker = company.split(' ').join('').split('-')[0]; // Remove spaces from ticker
+
+    console.log(ticker);
+
+    // Replace with your API endpoint
+    const apiUrl = 'http://localhost:8000/submit';
+
+    fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ ticker, year, prompt })
+    })
+    .then(response => response.json())
+    .then(data => {
+        displayApiResponse(data);
+    })
+    .catch(error => {
+        document.getElementById('api-response').textContent = 'Error: ' + error;
+    });
+});
+
+function displayApiResponse(data) {
+    const container = document.getElementById("api-response");
+    container.innerHTML = ""; // Clear previous content
+
+    for (const key in data) {
+        const value = data[key];
+
+        const element = document.createElement("p");
+
+        if (typeof value === "string" && value.startsWith("http")) {
+            element.innerHTML = `<strong>${formatKey(key)}:</strong> <a href="${value}" target="_blank">View Here</a>`;
+        } else {
+            element.innerHTML = `<strong>${formatKey(key)}:</strong> ${value}`;
+        }
+
+        container.appendChild(element);
+    }
+}
+
+function formatKey(key) {
+    return key.replace(/_/g, " ").replace(/\b\w/g, l => l.toUpperCase());
+}

@@ -146,7 +146,7 @@ header {
   background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
 }
 
-#chat-input {
+#prompt {
   color: black;
 }
 
@@ -276,6 +276,50 @@ header {
   overflow-y: auto;
 }
 
+/* Target the scrollbar */
+.sidebar::-webkit-scrollbar {
+    width: 4px; /* Adjust the width */
+}
+
+/* Track (background) */
+.sidebar::-webkit-scrollbar-track {
+    background: var(--background-dark); /* Light gray background */
+    border-radius: 4px;
+}
+
+/* Handle (thumb) */
+.sidebar::-webkit-scrollbar-thumb {
+    background: #888; /* Darker gray */
+    border-radius: 4px;
+}
+
+/* Handle on hover */
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Even darker gray */
+}
+
+/* Target the scrollbar */
+.main-content::-webkit-scrollbar {
+  width: 4px; /* Adjust the width */
+}
+
+/* Track (background) */
+.main-content::-webkit-scrollbar-track {
+  background: var(--background-dark); /* Light gray background */
+  border-radius: 4px;
+}
+
+/* Handle (thumb) */
+.main-content::-webkit-scrollbar-thumb {
+  background: #888; /* Darker gray */
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+.main-content::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Even darker gray */
+}
+
 .dropdown-container {
   margin-top: 10px;
 }
@@ -299,6 +343,7 @@ select#year, select#report {
 
 .menu {
   margin-top: 20px;
+  text-align: left;
 }
 
 .menu-item {
