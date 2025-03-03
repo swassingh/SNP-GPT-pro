@@ -36,12 +36,16 @@ function displayUsername() {
 }
 
 // Grab the username and display it for the user when signed in.
-let h2 = document.getElementById("greeting");
-h2.textContent = "Hi, " + displayUsername() + "!";
 
-let beginningDescription = document.getElementById("greeting p");
-// Add <span class='highlight'> to 'Learning Mode'
-beginningDescription.textContent = "Welcome to Learning Mode.";
+if (document.getElementById("greeting") && document.getElementById("greeting p")) {
+    let h2 = document.getElementById("greeting");
+    h2.textContent = "Hi, " + displayUsername() + "!";
+
+    let beginningDescription = document.getElementById("greeting p");
+    // Add <span class='highlight'> to 'Learning Mode'
+    beginningDescription.textContent = "Welcome to Learning Mode.";
+}
+
 
 function clearUsername() {
     localStorage.removeItem("username"); // Remove username from storage
@@ -70,9 +74,6 @@ function closesignupPopup() {
     document.getElementById("signupPopup").style.display = "none";
 }
 
-// // Run function when the page loads
-// window.onload = displayGreeting();
-
 function clearUsername() {
   localStorage.removeItem("username"); // Remove username from storage
   window.location.href = "Initial.html"; // Redirect to the login page
@@ -92,7 +93,16 @@ document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
 
     // Collect form data
-    const company = document.getElementById('company').value;
+
+    /*
+     * This code will likely need to be changed depending
+     * on our implementation of the Company Trie Search
+     * code.
+     *
+     * Currently, company throws an error.
+     */
+
+    // const company = document.getElementById('company').value;
     const year = document.getElementById('year').value;
     const prompt = document.getElementById('prompt').value;
 
@@ -120,6 +130,81 @@ document.querySelector('form').addEventListener('submit', function(event) {
         document.getElementById('api-response').textContent = 'Error: ' + error;
     });
 });
+
+
+/*
+ * This code currently does not work, as we do not have a server or container
+ * to run our database. As such, when directly loading the HTML page on a
+ * browser, we hit a Cross-Origin Resource Sharing (CORS) error.
+ *
+ * We may want to look into developing a Node.js or Docker container to
+ * implement the Trie structure to operate properly.
+ */
+if (document.getElementById('company') && document.getElementById('suggestionsList')) {
+    const companyInput = document.getElementById('company');
+    const suggestionsList = document.getElementById('suggestionsList');
+
+    const fetchCompanies = async (prefix) => {
+        try {
+            const response = await fetch(`/get-companies?prefix=${prefix}`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            displaySuggestions(data.companies); // Call function to display suggestions
+        } catch (error) {
+            console.error('Could not fetch companies:', error);
+            suggestionsList.innerHTML = `<li>Error fetching data</li>`; // Display error in suggestions
+            suggestionsList.style.display = 'block'; // Make sure suggestion box is visible to show error
+        }
+    };
+
+    const displaySuggestions = (companies) => {
+        suggestionsList.innerHTML = ''; // Clear previous suggestions
+        if (companies && companies.length > 0) {
+            companies.forEach(company => {
+                const li = document.createElement('li');
+                li.textContent = company;
+
+                li.addEventListener('click', () => { // Add click handler to fill input on suggestion click
+                    companyInput.value = company;     // Fill the input with the clicked suggestion
+                    suggestionsList.style.display = 'none'; // Hide suggestions after selection
+                    // You can add further action here if needed, e.g., submit a form, display more info, etc.
+                });
+
+                suggestionsList.appendChild(li);
+            });
+            suggestionsList.style.display = 'block'; // Show suggestions box
+        } else {
+            suggestionsList.style.display = 'none'; // Hide suggestions box if no results
+        }
+    };
+
+    // Initial load - Top 10 companies
+    fetchCompanies('');
+
+    companyInput.addEventListener('input', (event) => {
+        const prefix = companyInput.value;
+        if (prefix.trim().length >= 0) { // You can adjust the minimum prefix length if needed (e.g., >= 1 to start searching after first char)
+            fetchCompanies(prefix);
+        } else {
+            suggestionsList.style.display = 'none'; // Hide suggestions if input is empty or whitespace
+            suggestionsList.innerHTML = ''; // Clear suggestions when input is cleared
+                fetchCompanies(''); // Re-fetch top 10 when input is empty, if desired. Remove if you don't want to re-show initial list
+        }
+    });
+
+    // Initially hide suggestions list on page load
+    suggestionsList.style.display = 'none';
+
+    // Optional: Hide suggestions list when clicking outside input/suggestions
+    document.addEventListener('click', (event) => {
+        if (!companyInput.contains(event.target) && !suggestionsList.contains(event.target)) {
+            suggestionsList.style.display = 'none';
+        }
+    });
+}
+
 
 function displayApiResponse(data) {
     const container = document.getElementById("api-response");
