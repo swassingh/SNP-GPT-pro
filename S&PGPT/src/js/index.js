@@ -233,12 +233,27 @@ function displayApiResponse(data) {
     for (const key in data) {
         const value = data[key];
 
-        const element = document.createElement("p");
+        const element = document.createElement("div");
 
+        // SEC Citation Source
         if (typeof value === "string" && value.startsWith("http")) {
-            element.innerHTML = `<strong>${formatKey(key)}:</strong> <a href="${value}" target="_blank">View Here</a>`;
+            let citation = document.createElement('md-block');
+            // citation.setAttribute = ("id", "citation");
+            citation.textContent = `**${formatKey(key)}:**`;
+
+            let source = document.createElement('a');
+            source.href = value;
+            source.target = "_blank";
+            source.textContent = "View Here";
+
+            citation.appendChild(source);
+            element.appendChild(citation);
         } else {
-            element.innerHTML = `<strong>${formatKey(key)}:</strong> ${value}`;
+            // EDGAR Response
+            let EDGAR_Response = document.createElement("md-block");
+            // EDGAR_Response.setAttribute = ("id", "EDGAR_response");
+            EDGAR_Response.textContent = `**${formatKey(key)}:** ${value}`;
+            element.appendChild(EDGAR_Response);
         }
 
         container.appendChild(element);

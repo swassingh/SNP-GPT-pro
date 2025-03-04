@@ -92,7 +92,7 @@ def submit():
     })
 
 # Load tickers from a CSV (Modify path as needed)
-df = pd.read_csv("S&PGPT/data/nasdaq_listed_companies.csv")
+df = pd.read_csv("../data/nasdaq_listed_companies.csv")
 
 # Initialize Trie and insert tickers
 trie = pygtrie.CharTrie()
