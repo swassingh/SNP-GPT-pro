@@ -1,9 +1,11 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Blueprint
 from flask_cors import CORS
 from SEC_request import get_10k_filing, extract_all_10k_parts, analyze_question, analyze_prompt
 # Libraries used for .env file retrieval
 import os
 from dotenv import load_dotenv
+import pygtrie
+import pandas as pd
 
 # loading variables from .env file
 load_dotenv()
@@ -11,8 +13,11 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)  # Allow cross-origin requests from any origin
 
+# Create Blueprints
+search_bp = Blueprint('search', __name__)
+submit_bp = Blueprint('submit', __name__)
 
-@app.route('/submit', methods=['POST'])
+@submit_bp.route('/submit', methods=['POST'])
 def submit():
     data = request.json
     api_key = os.getenv('SEC_API_KEY')  # SEC API key
@@ -86,6 +91,24 @@ def submit():
         'answer': answer,
     })
 
+# Load tickers from a CSV (Modify path as needed)
+df = pd.read_csv("S&PGPT/data/nasdaq_listed_companies.csv")
+
+# Initialize Trie and insert tickers
+trie = pygtrie.CharTrie()
+for symbol in df['symbol'].astype(str):
+    trie[symbol.upper()] = True  # Ensure uppercase consistency
+
+@search_bp.route('/search', methods=['GET'])
+def search():
+    query = request.args.get('query', '').upper()  # Ensure uppercase search
+    results = list(trie.keys(prefix=query)) if query else []
+    return jsonify(results)
+
+
+# Register Blueprints
+app.register_blueprint(search_bp)
+app.register_blueprint(submit_bp)
 
 if __name__ == "__main__":
     app.run(debug=True, port=8000)

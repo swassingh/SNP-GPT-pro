@@ -93,16 +93,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
 
     // Collect form data
-
-    /*
-     * This code will likely need to be changed depending
-     * on our implementation of the Company Trie Search
-     * code.
-     *
-     * Currently, company throws an error.
-     */
-
-    // const company = document.getElementById('company').value;
+    const company = document.getElementById('company').value;
     const year = document.getElementById('year').value;
     const prompt = document.getElementById('prompt').value;
 
@@ -139,8 +130,8 @@ document.querySelector('form').addEventListener('submit', function(event) {
  *
  * We may want to look into developing a Node.js or Docker container to
  * implement the Trie structure to operate properly.
- */
-if (document.getElementById('company') && document.getElementById('suggestionsList')) {
+ * 
+ * if (document.getElementById('company') && document.getElementById('suggestionsList')) {
     const companyInput = document.getElementById('company');
     const suggestionsList = document.getElementById('suggestionsList');
 
@@ -204,6 +195,35 @@ if (document.getElementById('company') && document.getElementById('suggestionsLi
         }
     });
 }
+
+ */
+document.getElementById("company").addEventListener("input", function () {
+    let query = this.value.toUpperCase();
+
+    if (query.length > 0) {
+        fetch(`http://localhost:8000/search?query=${query}`)
+            .then(response => response.json())
+            .then(data => {
+                let suggestionsList = document.getElementById("suggestionsList");
+                suggestionsList.innerHTML = ""; // Clear previous results
+
+                data.forEach(ticker => {
+                    let listItem = document.createElement("li");
+                    listItem.textContent = ticker;
+                    listItem.addEventListener("click", function () {
+                        document.getElementById("company").value = ticker;
+                        suggestionsList.innerHTML = ""; // Hide suggestions after selection
+                    });
+                    suggestionsList.appendChild(listItem);
+                });
+
+                suggestionsList.style.display = data.length > 0 ? "block" : "none"; // Hide if no results
+            })
+            .catch(error => console.error("Error fetching tickers:", error));
+    } else {
+        document.getElementById("suggestionsList").innerHTML = "";
+    }
+});
 
 
 function displayApiResponse(data) {
