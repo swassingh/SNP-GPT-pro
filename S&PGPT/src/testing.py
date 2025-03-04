@@ -26,6 +26,11 @@ df = pd.DataFrame(rows, columns=columns).filter(['symbol', 'name', 'country'])
 # Filter the DataFrame to include only companies where the country is United States
 df = df[df['country'] == 'United States']
 
+# find the rows where there is no preferred stock
+df = df[~df['symbol'].str.contains('\^')]
+df = df[~df['name'].str.contains('preferred')] # Remove preferred stocks
+df = df[~df['name'].str.contains('Preferred')]
+
 # Save the DataFrame to a CSV file
 df.to_csv('S&PGPT/data/nasdaq_listed_companies.csv', index=False)
 
