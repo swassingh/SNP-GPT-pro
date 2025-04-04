@@ -11,7 +11,9 @@
   --font-family-roboto-mono: 'Roboto Mono', sans-serif;
   --primary-color: #BAE7F4;
   --secondary-color: #5A5AD2;
+  --tertiary-color: #71a7b6;
   --background-dark: #212121;
+  --button-color: rgba(115, 115, 115, 0.4);
   --text-light: #ececec;
   --text-dark: rgba(255, 255, 255, 0.1);
 }
@@ -80,7 +82,7 @@ header {
 .heading {
   font-size: 2.5rem;
   font-weight: bold;
-  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  background: var(--primary-color);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-top: 50px;
@@ -90,7 +92,7 @@ header {
 /* Highlighted Text */
 .highlight {
   font-size: 4.5rem;
-  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  background: var(--primary-color);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
@@ -100,7 +102,7 @@ header {
 
 .highlight-smaller {
   font-size: 2rem;
-  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  background: var(--primary-color);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
@@ -118,7 +120,7 @@ header {
 }
 
 .query-buttons button {
-  background-color: rgba(115, 115, 115, 0.4);
+  background-color: var(--button-color);
   justify-content: left;
   color: var(--text-light);
   border: none;
@@ -136,14 +138,14 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgb(255, 255, 255);
   border-radius: 20px;
-  padding: 12px 20px;
+  padding: 8px 20px;
   width: 100%;
   max-width: 1025px;
   margin-left: auto;
   margin-right: auto;
-  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  background: var(--primary-color);
 }
 
 #prompt {
@@ -153,8 +155,8 @@ header {
 .search-bar input {
   background: transparent;
   border: none;
-  color: var(--text-light);
-  font-size: 1rem;
+  color: rgb(75, 75, 75);
+  font-size: 1.1rem;
   flex: 1;
   padding: 10px;
   outline: none;
@@ -163,7 +165,7 @@ header {
 .search-bar .search-icon {
   background: none;
   border: none;
-  color: var(--text-light);
+  color: rgb(115, 115, 115);
   cursor: pointer;
   font-size: 1.2rem;
 }
@@ -215,8 +217,8 @@ header {
 }
 
 .popup-content button {
-  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-  color: white;
+  background: var(--primary-color);
+  color: black;
   border: none;
   padding: 12px 20px;
   border-radius: 5px;
@@ -322,6 +324,11 @@ header {
 
 .dropdown-container {
   margin-top: 10px;
+}
+
+#company, #year, #report {
+  background-color: var(--button-color);
+  color: var(--text-light);
 }
 
 #company {
