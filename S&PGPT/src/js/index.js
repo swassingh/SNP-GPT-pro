@@ -120,8 +120,6 @@ document.querySelector('form').addEventListener('submit', function(event) {
 
     console.log(company, year, prompt, selectedItemId);
 
-    console.log(p);
-
     const ticker = company.split(' ').join('').split('-')[0]; // Remove spaces from ticker
 
     console.log(ticker);
