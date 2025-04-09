@@ -88,6 +88,25 @@ function toggleSubmenu(id) {
     }
 }
 
+// Store the selected item's ID and text
+let selectedItemId = "";
+let selectedItemText = "";
+
+let chatprompt = ""
+
+// Get all submenu items
+const submenuItems = document.querySelectorAll(".submenu-item");
+
+submenuItems.forEach(item => {
+  item.addEventListener("click", () => {
+    selectedItemId = item.id;
+    selectedItemText = item.textContent;
+
+    console.log("Selected ID:", selectedItemId);
+    console.log("Selected Text:", selectedItemText);
+  });
+});
+
 
 document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
@@ -97,7 +116,11 @@ document.querySelector('form').addEventListener('submit', function(event) {
     const year = document.getElementById('year').value;
     const prompt = document.getElementById('prompt').value;
 
-    console.log(company, year, prompt);
+    chatprompt = prompt
+
+    console.log(company, year, prompt, selectedItemId);
+
+    console.log(p);
 
     const ticker = company.split(' ').join('').split('-')[0]; // Remove spaces from ticker
 
@@ -111,7 +134,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ ticker, year, prompt })
+        body: JSON.stringify({ ticker, year, prompt, selectedItemId })
     })
     .then(response => response.json())
     .then(data => {
@@ -120,6 +143,8 @@ document.querySelector('form').addEventListener('submit', function(event) {
     .catch(error => {
         document.getElementById('api-response').textContent = 'Error: ' + error;
     });
+
+    document.getElementById('prompt').value = ''; // Clear the prompt input field
 });
 
 
@@ -235,6 +260,13 @@ function displayApiResponse(data) {
 
         const element = document.createElement("div");
 
+        const p = document.createElement("div");
+
+        let XD = document.createElement("md-block");
+        XD.setAttribute = ("class", "chatprompt");
+        XD.textContent = chatprompt;
+        p.appendChild(XD);
+
         // SEC Citation Source
         if (typeof value === "string" && value.startsWith("http")) {
             let citation = document.createElement('md-block');
@@ -251,7 +283,7 @@ function displayApiResponse(data) {
         } else {
             // EDGAR Response
             let EDGAR_Response = document.createElement("md-block");
-            // EDGAR_Response.setAttribute = ("id", "EDGAR_response");
+            EDGAR_Response.setAttribute = ("class", "EDGAR_response");
             EDGAR_Response.textContent = `**${formatKey(key)}:** ${value}`;
             element.appendChild(EDGAR_Response);
         }
