@@ -107,7 +107,7 @@ submenuItems.forEach(item => {
   });
 });
 
-
+// Function to handle form submission
 document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
 
@@ -145,81 +145,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
     document.getElementById('prompt').value = ''; // Clear the prompt input field
 });
 
-
-/*
- * This code currently does not work, as we do not have a server or container
- * to run our database. As such, when directly loading the HTML page on a
- * browser, we hit a Cross-Origin Resource Sharing (CORS) error.
- *
- * We may want to look into developing a Node.js or Docker container to
- * implement the Trie structure to operate properly.
- * 
- * if (document.getElementById('company') && document.getElementById('suggestionsList')) {
-    const companyInput = document.getElementById('company');
-    const suggestionsList = document.getElementById('suggestionsList');
-
-    const fetchCompanies = async (prefix) => {
-        try {
-            const response = await fetch(`/get-companies?prefix=${prefix}`);
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            const data = await response.json();
-            displaySuggestions(data.companies); // Call function to display suggestions
-        } catch (error) {
-            console.error('Could not fetch companies:', error);
-            suggestionsList.innerHTML = `<li>Error fetching data</li>`; // Display error in suggestions
-            suggestionsList.style.display = 'block'; // Make sure suggestion box is visible to show error
-        }
-    };
-
-    const displaySuggestions = (companies) => {
-        suggestionsList.innerHTML = ''; // Clear previous suggestions
-        if (companies && companies.length > 0) {
-            companies.forEach(company => {
-                const li = document.createElement('li');
-                li.textContent = company;
-
-                li.addEventListener('click', () => { // Add click handler to fill input on suggestion click
-                    companyInput.value = company;     // Fill the input with the clicked suggestion
-                    suggestionsList.style.display = 'none'; // Hide suggestions after selection
-                    // You can add further action here if needed, e.g., submit a form, display more info, etc.
-                });
-
-                suggestionsList.appendChild(li);
-            });
-            suggestionsList.style.display = 'block'; // Show suggestions box
-        } else {
-            suggestionsList.style.display = 'none'; // Hide suggestions box if no results
-        }
-    };
-
-    // Initial load - Top 10 companies
-    fetchCompanies('');
-
-    companyInput.addEventListener('input', (event) => {
-        const prefix = companyInput.value;
-        if (prefix.trim().length >= 0) { // You can adjust the minimum prefix length if needed (e.g., >= 1 to start searching after first char)
-            fetchCompanies(prefix);
-        } else {
-            suggestionsList.style.display = 'none'; // Hide suggestions if input is empty or whitespace
-            suggestionsList.innerHTML = ''; // Clear suggestions when input is cleared
-                fetchCompanies(''); // Re-fetch top 10 when input is empty, if desired. Remove if you don't want to re-show initial list
-        }
-    });
-
-    // Initially hide suggestions list on page load
-    suggestionsList.style.display = 'none';
-
-    // Optional: Hide suggestions list when clicking outside input/suggestions
-    document.addEventListener('click', (event) => {
-        if (!companyInput.contains(event.target) && !suggestionsList.contains(event.target)) {
-            suggestionsList.style.display = 'none';
-        }
-    });
-}
-
- */
+// Function to handle the search input for company tickers
 document.getElementById("company").addEventListener("input", function () {
     let query = this.value.toUpperCase();
 
@@ -248,22 +174,24 @@ document.getElementById("company").addEventListener("input", function () {
     }
 });
 
-
+// Dislplay the API response
 function displayApiResponse(data) {
     const container = document.getElementById("api-response");
     container.innerHTML = ""; // Clear previous content
 
+    const element = document.createElement("div");
+
+    let p = document.createElement("div");
+
+    let XD = document.createElement("md-block");
+    XD.setAttribute = ("class", "chatprompt");
+    XD.textContent = chatprompt;
+    p.appendChild(XD);
+
+    element.appendChild(p);
+
     for (const key in data) {
         const value = data[key];
-
-        const element = document.createElement("div");
-
-        const p = document.createElement("div");
-
-        let XD = document.createElement("md-block");
-        XD.setAttribute = ("class", "chatprompt");
-        XD.textContent = chatprompt;
-        p.appendChild(XD);
 
         // SEC Citation Source
         if (typeof value === "string" && value.startsWith("http")) {
