@@ -176,8 +176,10 @@ document.getElementById("company").addEventListener("input", function () {
 
 // Dislplay the API response
 function displayApiResponse(data) {
+    const pain = document.getElementById("container");
+    pain.innerHTML = ""; // Clear previous content
+
     const container = document.getElementById("api-response");
-    container.innerHTML = ""; // Clear previous content
 
     const element = document.createElement("div");
 
@@ -187,6 +189,9 @@ function displayApiResponse(data) {
     XD.classList.add("chatprompt");
     XD.textContent = chatprompt;
     p.appendChild(XD);
+
+    let cringe = document.createElement("br");
+    p.appendChild(cringe);
 
     element.appendChild(p);
 
