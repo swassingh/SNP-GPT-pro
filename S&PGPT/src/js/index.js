@@ -184,7 +184,7 @@ function displayApiResponse(data) {
     let p = document.createElement("div");
 
     let XD = document.createElement("md-block");
-    XD.setAttribute = ("class", "chatprompt");
+    XD.classList.add("class", "chatprompt");
     XD.textContent = chatprompt;
     p.appendChild(XD);
 
@@ -209,7 +209,7 @@ function displayApiResponse(data) {
         } else {
             // EDGAR Response
             let EDGAR_Response = document.createElement("md-block");
-            EDGAR_Response.setAttribute = ("class", "EDGAR_response");
+            EDGAR_Response.classList.add("class", "EDGAR_response");
             EDGAR_Response.textContent = `**${formatKey(key)}:** ${value}`;
             element.appendChild(EDGAR_Response);
         }
