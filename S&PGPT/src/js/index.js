@@ -223,6 +223,10 @@ function displayApiResponse(data) {
     }
 }
 
+function openConfig() {
+    
+}
+
 function formatKey(key) {
     return key.replace(/_/g, " ").replace(/\b\w/g, l => l.toUpperCase());
 }
