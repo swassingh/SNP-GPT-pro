@@ -153,6 +153,10 @@ header {
   justify-content: center;
 }
 
+#api-response {
+  padding-bottom: 10%;
+}
+
 /* Search Bar */
 .search-bar {
   margin-top: 50px;

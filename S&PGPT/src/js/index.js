@@ -220,6 +220,11 @@ function displayApiResponse(data) {
         }
 
         container.appendChild(element);
+
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth' // or 'auto'
+          });
     }
 }
 
