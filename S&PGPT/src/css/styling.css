@@ -173,6 +173,15 @@ header {
   background: var(--primary-color);
 }
 
+.config-icon {
+  color: var(--button-color);
+}
+
+#gearPopup-Container {
+  position: relative;
+  display: inline-block;
+}
+
 .fas {
   margin-top: 12px;
 }

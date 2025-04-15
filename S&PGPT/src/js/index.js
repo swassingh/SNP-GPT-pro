@@ -229,7 +229,34 @@ function displayApiResponse(data) {
 }
 
 function openConfig() {
-    
+    const container = document.getElementById("gearPopup-Container");
+    let configMenu = document.createElement("div");
+    configMenu.setAttribute("id", "config-menu");
+
+    let guidedMode = document.createElement("button");
+    // guidedMode.classList.add("popup");
+    guidedMode.setAttribute("id", "tutorial");
+    let guidedModeTitle = document.createElement("h5");
+    guidedModeTitle.textContent = "Guided Mode";
+    let guidedModeDesc = document.createElement("p");
+    guidedModeDesc.textContent = "Disabling Guided Mode removes instructional pop-ups";
+    guidedMode.appendChild(guidedModeTitle);
+    guidedMode.appendChild(guidedModeDesc);
+
+    let definitions = document.createElement("button");
+    // definitions.classList.add("popup");
+    definitions.setAttribute("id", "definitions");
+    let definitionsTitle = document.createElement("h5");
+    definitionsTitle.textContent = "Definitions";
+    let definitionsDesc = document.createElement("p");
+    definitionsDesc.textContent = "Provides definitions for financial and legal jargons in responses";
+    definitions.appendChild(definitionsTitle);
+    definitions.appendChild(definitionsDesc);
+
+    configMenu.appendChild(guidedMode);
+    configMenu.appendChild(definitions);
+
+    container.appendChild(configMenu);
 }
 
 function formatKey(key) {
