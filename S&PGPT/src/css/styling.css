@@ -137,7 +137,6 @@ header {
   flex-grow: 1;
   padding: 20px;
   margin-left: 320px;
-  margin-bottom: 433px;
 }
 
 #search-container {
@@ -151,15 +150,20 @@ header {
 }
 
 #config-menu {
-  background-color: var(--background-dark);
+  /* background-color: var(--background-dark); */
+  background-color: var(--text-dark);
+  z-index: 1;
   position: fixed;
   left: 0;
   top: 0;
+  /* padding: 8px 20px; */
+  gap: 5px;
+  translate: 0px -14px;
   box-shadow: 0 1px 1px 0 #ffffff0d;
 }
 
 #tutorial:hover, #definitions:hover {
-  background-color: var(--hover-light);
+  background-color: #555;
 }
 
 #query-form {
@@ -174,7 +178,7 @@ header {
 /* Search Bar */
 .search-bar {
   margin-top: 50px;
-  z-index: 1;
+  /* z-index: 1; */
   justify-content: center;
   display: flex;
   background-color: rgb(255, 255, 255);
@@ -191,7 +195,7 @@ header {
   color: var(--button-color);
 }
 
-.fas {
+.fa-sliders {
   margin-top: 12px;
 }
 
