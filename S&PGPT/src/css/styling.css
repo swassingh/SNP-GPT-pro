@@ -150,15 +150,14 @@ header {
 }
 
 #config-menu {
-  /* background-color: var(--background-dark); */
-  background-color: var(--text-dark);
+  background-color: var(--background-dark);
   z-index: 1;
   position: fixed;
   left: 0;
   top: 0;
   /* padding: 8px 20px; */
   gap: 5px;
-  translate: 0px -14px;
+  translate: 0px -16px;
   box-shadow: 0 1px 1px 0 #ffffff0d;
 }
 
