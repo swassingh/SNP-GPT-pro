@@ -247,7 +247,7 @@ function openConfig() {
         let guidedModeTitle = document.createElement("h5");
         guidedModeTitle.textContent = "Guided Mode";
         let guidedModeDesc = document.createElement("p");
-        guidedModeDesc.textContent = "Disabling Guided Mode removes instructional pop-ups";
+        guidedModeDesc.textContent = "Removes instructional pop-ups";
         guidedMode.appendChild(guidedModeTitle);
         guidedMode.appendChild(guidedModeDesc);
 
@@ -257,7 +257,7 @@ function openConfig() {
         let definitionsTitle = document.createElement("h5");
         definitionsTitle.textContent = "Definitions";
         let definitionsDesc = document.createElement("p");
-        definitionsDesc.textContent = "Provides definitions for financial and legal jargons in responses";
+        definitionsDesc.textContent = "Provides jargon definitions";
         definitions.appendChild(definitionsTitle);
         definitions.appendChild(definitionsDesc);
 
