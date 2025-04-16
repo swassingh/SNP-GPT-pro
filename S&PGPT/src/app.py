@@ -76,6 +76,9 @@ def submit():
 
     # Extract all parts of the 10-K filing
     extracted_parts = extract_all_10k_parts(api_key=api_key, filing_url=link_to_filing, items=[selectedItemId]) # items=resp)
+
+    # print(extracted_parts)
+
     # Assuming the 10-K filing contains a summary or relevant section as text
     filing_content = [extracted_parts.get(selectedItemId, "")]
     # for response in sections_list:

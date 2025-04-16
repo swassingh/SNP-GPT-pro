@@ -100,7 +100,8 @@ def analyze_question(api_key, text, filing_content):
     messages = [
         {"role": "system",
          "content": "You are a helpful assistant who can only answer questions about financial statements.",
-         "content": "Please give the definition of the financial terms that the analysis provides."},
+         "content": "Please give the definition of the financial terms that the analysis provides.",
+         "content": "If you can not find the information in the section, please respond with the following phrase 'The information is not in this section.'."},
     ]
 
     # Add each item in filing_content as a separate message
