@@ -16,6 +16,7 @@
   --button-color: rgba(115, 115, 115, 0.4);
   --text-light: #ececec;
   --text-dark: rgba(255, 255, 255, 0.1);
+  --hover-light: #444;
 }
 
 /* CSS Reset */
@@ -136,6 +137,7 @@ header {
   flex-grow: 1;
   padding: 20px;
   margin-left: 320px;
+  margin-bottom: 433px;
 }
 
 #search-container {
@@ -146,6 +148,18 @@ header {
   width: calc(89% - 300px);
   max-width: 1025px;
   z-index: 1000;
+}
+
+#config-menu {
+  background-color: var(--background-dark);
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 0 1px 1px 0 #ffffff0d;
+}
+
+#tutorial:hover, #definitions:hover {
+  background-color: var(--hover-light);
 }
 
 #query-form {
@@ -175,11 +189,6 @@ header {
 
 .config-icon {
   color: var(--button-color);
-}
-
-#gearPopup-Container {
-  position: relative;
-  display: inline-block;
 }
 
 .fas {
@@ -402,7 +411,7 @@ select#year, select#report {
 }
 
 .menu-item:hover {
-  background-color: #444;
+  background-color: var(--hover-light);
 }
 
 .submenu {
