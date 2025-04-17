@@ -150,15 +150,26 @@ header {
 }
 
 #config-menu {
-  background-color: var(--background-dark);
+  background-color: rgb(115, 115, 115);
   z-index: 1;
   position: fixed;
   left: 0;
   top: 0;
-  gap: 100px;
-  translate: 0px -26%;
-  box-shadow: 0 1px 1px 0 #ffffff0d;
+  translate: 0px -53%;
+  padding: 6px;
   border-radius: 8px;
+}
+
+#tutorial, #definitions {
+  padding: 8px;
+}
+
+#tutorial {
+  border-radius: 8px 8px 0px 0px;
+}
+
+#definitions {
+  border-radius: 0px 0px 8px 8px;
 }
 
 #tutorial:hover, #definitions:hover {
