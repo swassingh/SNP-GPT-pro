@@ -1,5 +1,8 @@
 'use strict';
 
+window.onload = function() {
+    attachFormSubmitHandler();
+};
 
 function saveUsername(event) {
     event.preventDefault();
@@ -107,43 +110,44 @@ submenuItems.forEach(item => {
   });
 });
 
-// Function to handle form submission
-document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+function attachFormSubmitHandler() {
+    document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
 
-    // Collect form data
-    const company = document.getElementById('company').value;
-    const year = document.getElementById('year').value;
-    const prompt = document.getElementById('prompt').value;
+        // Collect form data
+        const company = document.getElementById('company').value;
+        const year = document.getElementById('year').value;
+        const prompt = document.getElementById('prompt').value;
 
-    chatprompt = prompt
+        chatprompt = prompt;
 
-    console.log(company, year, prompt, selectedItemId);
+        console.log(company, year, prompt, selectedItemId);
 
-    const ticker = company.split(' ').join('').split('-')[0]; // Remove spaces from ticker
+        const ticker = company.split(' ').join('').split('-')[0]; // Remove spaces from ticker
 
-    console.log(ticker);
+        console.log(ticker);
 
-    // Replace with your API endpoint
-    const apiUrl = 'http://localhost:8000/submit';
+        // Replace with your API endpoint
+        const apiUrl = 'http://localhost:8000/submit';
 
-    fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ ticker, year, prompt, selectedItemId })
-    })
-    .then(response => response.json())
-    .then(data => {
-        displayApiResponse(data);
-    })
-    .catch(error => {
-        document.getElementById('api-response').textContent = 'Error: ' + error;
+        fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ ticker, year, prompt, selectedItemId })
+        })
+        .then(response => response.json())
+        .then(data => {
+            displayApiResponse(data);
+        })
+        .catch(error => {
+            document.getElementById('api-response').textContent = 'Error: ' + error;
+        });
+
+        document.getElementById('prompt').value = ''; // Clear the prompt input field
     });
-
-    document.getElementById('prompt').value = ''; // Clear the prompt input field
-});
+}
 
 // Function to handle the search input for company tickers
 document.getElementById("company").addEventListener("input", function () {
@@ -271,4 +275,21 @@ function openConfig() {
 
 function formatKey(key) {
     return key.replace(/_/g, " ").replace(/\b\w/g, l => l.toUpperCase());
+}
+
+
+function buttonquery() {
+    const buttonText = event.target.textContent;
+    const buttonId = event.target.id; // Get the ID of the clicked button
+    console.log("Button clicked:", buttonText);
+    console.log("Button ID:", buttonId); // Log the button ID
+
+    const x = buttonText.split(" ")[1]; // Get the second word of the button text
+    const button = buttonId.split(" ")[0]; // Get the first word of the button ID
+
+    selectedItemId = x; // Store the button ID in the global variable
+    document.getElementById("company").value = button; // Set the input value to the button text
+    document.getElementById("prompt").value = buttonText; // Set the input value to the button text
+
+    attachFormSubmitHandler(); // Attach the form submit handler to the form
 }
