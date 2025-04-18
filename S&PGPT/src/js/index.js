@@ -4,6 +4,9 @@ window.onload = function() {
     attachFormSubmitHandler();
 };
 
+// Global event-listener checking every user click for popups
+document.addEventListener('click', handleClickOutside);
+
 // Global variables indicating user config options
 // Want to change these to be localstorage in the future!
 let guidedModeActive = true;
@@ -176,7 +179,7 @@ function attachFormSubmitHandler() {
 // prevents initial.html popups from working correctly in its current
 // implementation. Not sure why.
 
-// if (window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1) === "learningmode.html") {
+if (window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1) === "learningmode.html") {
     document.getElementById("company").addEventListener("input", function () {
         let query = this.value.toUpperCase();
 
@@ -204,7 +207,7 @@ function attachFormSubmitHandler() {
             document.getElementById("suggestionsList").innerHTML = "";
         }
     });
-// }
+}
 
 // Dislplay the API response
 function displayApiResponse(data) {
@@ -323,9 +326,6 @@ function openConfig() {
 // Function to drop popups if user clicked outside of popup
 function handleClickOutside(event) {
 
-    console.log("clicked!");
-    // This only happens in learningmode??? Not working in initial.html
-
     const path = window.location.pathname;
     const currentPage = path.substring(path.lastIndexOf('/') + 1); // gets the HTML name
 
@@ -365,10 +365,6 @@ function handleClickOutside(event) {
         }
     }
 }
-
-// Global event-listener checking every user click for popups
-// Does NOT work for initial.html for some reason
-document.addEventListener('click', handleClickOutside);
 
 
 
