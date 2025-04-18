@@ -4,6 +4,12 @@ window.onload = function() {
     attachFormSubmitHandler();
 };
 
+// Global variables indicating user config options
+// Want to change these to be localstorage in the future!
+let guidedModeActive = true;
+let definitionsActive = false;
+
+
 function saveUsername(event) {
     event.preventDefault();
 
@@ -26,6 +32,8 @@ function saveUsername(event) {
 
     // Redirect to General Finance Mode
     window.location.href = "learningmode.html";
+
+    introGuidedModePopup();
 }
 
 // Function to grab the stored username; 'Unknown' otherwise
@@ -77,6 +85,11 @@ function closesignupPopup() {
     document.getElementById("signupPopup").style.display = "none";
 }
 
+// Helper function to remove object from DOM
+function closePopup(container, object) {
+    container.removeChild(object);
+}
+
 function clearUsername() {
   localStorage.removeItem("username"); // Remove username from storage
   window.location.href = "Initial.html"; // Redirect to the login page
@@ -105,8 +118,16 @@ submenuItems.forEach(item => {
     selectedItemId = item.id;
     selectedItemText = item.textContent;
 
+    // Remove previous highlighted sections (querySelectorAll for redundancy)
+    document.querySelectorAll(".submenu-item-selected").forEach(previous => {
+        previous.classList.remove("submenu-item-selected");
+    });
+
+    /* Highlight selected section.
+       Once a user selects a submenu, they can't unselect all options again. */
+    document.getElementById(selectedItemId).classList.add("submenu-item-selected");
+
     console.log("Selected ID:", selectedItemId);
-    console.log("Selected Text:", selectedItemText);
   });
 });
 
@@ -115,7 +136,7 @@ function attachFormSubmitHandler() {
         event.preventDefault(); // Prevent the default form submission
 
         // Collect form data
-        const company = document.getElementById('company').value;
+        const company = document.getElementById('company').value; // Strange NULL error when loading learningMode from initial?
         const year = document.getElementById('year').value;
         const prompt = document.getElementById('prompt').value;
 
@@ -150,33 +171,40 @@ function attachFormSubmitHandler() {
 }
 
 // Function to handle the search input for company tickers
-document.getElementById("company").addEventListener("input", function () {
-    let query = this.value.toUpperCase();
 
-    if (query.length > 0) {
-        fetch(`http://localhost:8000/search?query=${query}`)
-            .then(response => response.json())
-            .then(data => {
-                let suggestionsList = document.getElementById("suggestionsList");
-                suggestionsList.innerHTML = ""; // Clear previous results
+// This line below is to prevent a non-critical initial.html null error, but
+// prevents initial.html popups from working correctly in its current
+// implementation. Not sure why.
 
-                data.forEach(ticker => {
-                    let listItem = document.createElement("li");
-                    listItem.textContent = ticker;
-                    listItem.addEventListener("click", function () {
-                        document.getElementById("company").value = ticker;
-                        suggestionsList.innerHTML = ""; // Hide suggestions after selection
+// if (window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1) === "learningmode.html") {
+    document.getElementById("company").addEventListener("input", function () {
+        let query = this.value.toUpperCase();
+
+        if (query.length > 0) {
+            fetch(`http://localhost:8000/search?query=${query}`)
+                .then(response => response.json())
+                .then(data => {
+                    let suggestionsList = document.getElementById("suggestionsList");
+                    suggestionsList.innerHTML = ""; // Clear previous results
+
+                    data.forEach(ticker => {
+                        let listItem = document.createElement("li");
+                        listItem.textContent = ticker;
+                        listItem.addEventListener("click", function () {
+                            document.getElementById("company").value = ticker;
+                            suggestionsList.innerHTML = ""; // Hide suggestions after selection
+                        });
+                        suggestionsList.appendChild(listItem);
                     });
-                    suggestionsList.appendChild(listItem);
-                });
 
-                suggestionsList.style.display = data.length > 0 ? "block" : "none"; // Hide if no results
-            })
-            .catch(error => console.error("Error fetching tickers:", error));
-    } else {
-        document.getElementById("suggestionsList").innerHTML = "";
-    }
-});
+                    suggestionsList.style.display = data.length > 0 ? "block" : "none"; // Hide if no results
+                })
+                .catch(error => console.error("Error fetching tickers:", error));
+        } else {
+            document.getElementById("suggestionsList").innerHTML = "";
+        }
+    });
+// }
 
 // Dislplay the API response
 function displayApiResponse(data) {
@@ -205,7 +233,7 @@ function displayApiResponse(data) {
         // SEC Citation Source
         if (typeof value === "string" && value.startsWith("http")) {
             let citation = document.createElement('md-block');
-            // citation.setAttribute = ("id", "citation");
+            citation.setAttribute("id", "citation-source");
             citation.textContent = `**${formatKey(key)}:**`;
 
             let source = document.createElement('a');
@@ -232,22 +260,32 @@ function displayApiResponse(data) {
     }
 }
 
+// Settings Config Menu on Searchbar Toggle
 function openConfig() {
     const container = document.getElementById("search-container");
     let configMenu = document.getElementById("config-menu");
 
-    if (configMenu) {
+    if (configMenu) { // If displayed, toggle off Config Menu
 
         container.removeChild(configMenu);
 
     } else {
 
-        configMenu = document.createElement("div");
+        configMenu = document.createElement("div"); // Config Menu
         configMenu.setAttribute("id", "config-menu");
 
-        let guidedMode = document.createElement("div");
-        // guidedMode.classList.add("popup");
+        let guidedMode = document.createElement("div"); // Guided Mode Option
+
         guidedMode.setAttribute("id", "tutorial");
+
+        // Toggle Guided Mode
+        guidedMode.setAttribute("onclick", "selectConfigOption('tutorial')");
+
+        // Show highlight if applicable
+        if (guidedModeActive) {
+            guidedMode.classList.add("highlight-dark");
+        }
+
         let guidedModeTitle = document.createElement("h5");
         guidedModeTitle.textContent = "Guided Mode";
         let guidedModeDesc = document.createElement("p");
@@ -255,9 +293,18 @@ function openConfig() {
         guidedMode.appendChild(guidedModeTitle);
         guidedMode.appendChild(guidedModeDesc);
 
-        let definitions = document.createElement("div");
-        // definitions.classList.add("popup");
+        let definitions = document.createElement("div"); // Definitions Option
+
         definitions.setAttribute("id", "definitions");
+
+        // Toggle Definitions Mode
+        definitions.setAttribute("onclick", "selectConfigOption('definitions')");
+
+        // Show highlight if applicable
+        if (definitionsActive) {
+            definitions.classList.add("highlight-dark");
+        }
+
         let definitionsTitle = document.createElement("h5");
         definitionsTitle.textContent = "Definitions";
         let definitionsDesc = document.createElement("p");
@@ -272,6 +319,83 @@ function openConfig() {
 
     }
 }
+
+// Function to drop popups if user clicked outside of popup
+function handleClickOutside(event) {
+
+    console.log("clicked!");
+    // This only happens in learningmode??? Not working in initial.html
+
+    const path = window.location.pathname;
+    const currentPage = path.substring(path.lastIndexOf('/') + 1); // gets the HTML name
+
+    // Handles Popups in Landing Page (initial.html)
+    if (currentPage === "initial.html") {
+        const clickedElement = event.target;
+        const allPopups = document.querySelectorAll('popup-content');
+
+        console.log("This is allpopups: ", allPopups);
+
+        allPopups.forEach(popup => {
+          if (!popup.contains(clickedElement)) {
+            if (popup.style.display === "none") {
+                popup.style.display = "block";
+              } else {
+                popup.style.display = "none";
+              }
+          }
+        });
+    }
+
+    // Handles Popups in Learning Mode
+    else if (currentPage === "learningmode.html") {
+        const configMenu = document.getElementById('config-menu');
+        const searchContainer = document.getElementById('search-container');
+
+        if (!configMenu) return; // No menu to remove
+
+        const clickedElement = event.target;
+
+        const clickedConfigButton = clickedElement.classList.contains('fa-sliders');
+
+        const clickedInsideMenu = configMenu.contains(clickedElement);
+
+        if (!clickedConfigButton && !clickedInsideMenu) {
+        searchContainer.removeChild(configMenu);
+        }
+    }
+}
+
+// Global event-listener checking every user click for popups
+// Does NOT work for initial.html for some reason
+document.addEventListener('click', handleClickOutside);
+
+
+
+// Maintain config menu options and currently selected options
+function selectConfigOption(selectedOption) {
+
+    // Toggle Guided Mode
+    if (selectedOption === 'tutorial') {
+        guidedModeActive = !guidedModeActive;
+        if (guidedModeActive) {
+            document.getElementById('tutorial').classList.add("highlight-dark");
+        } else {
+            document.getElementById('tutorial').classList.remove("highlight-dark");
+        }
+
+    // Toggle Definitions
+    } else if (selectedOption === 'definitions') {
+        definitionsActive = !definitionsActive;
+        if (definitionsActive) {
+            document.getElementById('definitions').classList.add("highlight-dark");
+        } else {
+            document.getElementById('definitions').classList.remove("highlight-dark");
+        }
+    }
+}
+
+
 
 function formatKey(key) {
     return key.replace(/_/g, " ").replace(/\b\w/g, l => l.toUpperCase());
@@ -292,4 +416,20 @@ function buttonquery() {
     document.getElementById("prompt").value = buttonText; // Set the input value to the button text
 
     attachFormSubmitHandler(); // Attach the form submit handler to the form
+}
+
+// Display initial popup on learningmode telling users to select a company,
+// year, and file type. Should appear to the right of the sidebar.
+function introGuidedModePopup() {
+    if (guidedModeActive) {
+        const container = document.getElementsByClassName("main-content");
+        let popup = document.createElement("div");
+
+        let closePopup = document.createElement("span");
+        closePopup.setAttribute("onclick", closePopup(container, popup))
+        closePopup.textContent = '&times;'
+
+        popup.appendChild(closePopup);
+        container.appendChild(popup);
+    }
 }

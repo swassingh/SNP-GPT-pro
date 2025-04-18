@@ -16,7 +16,8 @@
   --button-color: rgba(115, 115, 115, 0.4);
   --text-light: #ececec;
   --text-dark: rgba(255, 255, 255, 0.1);
-  --hover-light: #444;
+  --hover-highlight-light: #444;
+  --hover-highlight-dark: #555;
 }
 
 /* CSS Reset */
@@ -155,25 +156,27 @@ header {
   position: fixed;
   left: 0;
   top: 0;
-  translate: 0px -53%;
+  translate: 0px -58%;
   padding: 6px;
   border-radius: 8px;
 }
 
 #tutorial, #definitions {
   padding: 8px;
+  margin: 4px;
+  border-radius: 8px;
 }
 
-#tutorial {
+/* #tutorial {
   border-radius: 8px 8px 0px 0px;
 }
 
 #definitions {
   border-radius: 0px 0px 8px 8px;
-}
+} */
 
 #tutorial:hover, #definitions:hover {
-  background-color: #555;
+  background-color: var(--hover-highlight-dark);
 }
 
 #query-form {
@@ -202,7 +205,7 @@ header {
 }
 
 .config-icon {
-  color: var(--button-color);
+  color: rgb(115, 115, 115);
 }
 
 .fa-sliders {
@@ -352,7 +355,7 @@ header {
 
 /* Handle on hover */
 .sidebar::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Even darker gray */
+    background: var(--hover-highlight-dark); /* Even darker gray */
 }
 
 /* Target the scrollbar */
@@ -374,7 +377,7 @@ header {
 
 /* Handle on hover */
 .main-content::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Even darker gray */
+  background: var(--hover-highlight-dark); /* Even darker gray */
 }
 
 .dropdown-container {
@@ -438,8 +441,17 @@ select#year, select#report {
   cursor: pointer;
 }
 
-.submenu .submenu-item:hover {
-  background-color: #555;
+.submenu .submenu-item:hover, .submenu-item-selected {
+  background-color: var(--hover-highlight-dark);
+  border-radius: 5px;
+}
+
+.highlight-light {
+  background-color: var(--hover-highlight-light);
+}
+
+.highlight-dark {
+  background-color: var(--hover-highlight-dark);
 }
 
 .chatprompt {
@@ -464,4 +476,8 @@ select#year, select#report {
   font-size: 16px;
   line-height: 1.5; /* More spacing between lines for readability */
   white-space: pre-wrap; /* Supports line breaks and spacing in response */
+}
+
+#citation-source {
+  text-align: left;
 }
