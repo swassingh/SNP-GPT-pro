@@ -385,7 +385,7 @@ header {
 }
 
 #company, #year, #report {
-  background-color: var(--button-color);
+  background-color: #333;
   color: var(--text-light);
 }
 

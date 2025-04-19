@@ -139,7 +139,7 @@ function attachFormSubmitHandler() {
         event.preventDefault(); // Prevent the default form submission
 
         // Collect form data
-        const company = document.getElementById('company').value; // Strange NULL error when loading learningMode from initial?
+        const company = document.getElementById('company').value;
         const year = document.getElementById('year').value;
         const prompt = document.getElementById('prompt').value;
 
@@ -411,7 +411,7 @@ function buttonquery() {
     document.getElementById("company").value = button; // Set the input value to the button text
     document.getElementById("prompt").value = buttonText; // Set the input value to the button text
 
-    attachFormSubmitHandler(); // Attach the form submit handler to the form
+    attachFormSubmitHandler(); // Attach the form submit handler to the form\
 }
 
 // Display initial popup on learningmode telling users to select a company,
@@ -421,9 +421,9 @@ function introGuidedModePopup() {
         const container = document.getElementsByClassName("main-content");
         let popup = document.createElement("div");
 
-        let closePopup = document.createElement("span");
-        closePopup.setAttribute("onclick", closePopup(container, popup))
-        closePopup.textContent = '&times;'
+        let x_button = document.createElement("span");
+        x_button.setAttribute("onclick", closePopup(container, popup));
+        x_button.textContent = '&times;'
 
         popup.appendChild(closePopup);
         container.appendChild(popup);
