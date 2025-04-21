@@ -411,7 +411,7 @@ function buttonquery() {
     document.getElementById("company").value = button; // Set the input value to the button text
     document.getElementById("prompt").value = buttonText; // Set the input value to the button text
 
-    attachFormSubmitHandler(); // Attach the form submit handler to the form\
+    attachFormSubmitHandler(); // Attach the form submit handler to the form
 }
 
 // Display initial popup on learningmode telling users to select a company,
