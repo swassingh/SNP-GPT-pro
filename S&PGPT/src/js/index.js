@@ -230,6 +230,8 @@ function displayApiResponse(data) {
 
     element.appendChild(p);
 
+    container.appendChild(element);
+
     for (const key in data) {
         const value = data[key];
 
@@ -254,7 +256,7 @@ function displayApiResponse(data) {
             element.appendChild(EDGAR_Response);
         }
 
-        container.appendChild(element);
+        // container.appendChild(element);
 
         window.scrollTo({
             top: document.body.scrollHeight,
