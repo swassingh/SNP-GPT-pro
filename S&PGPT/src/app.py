@@ -91,7 +91,7 @@ def submit():
     # Return the extracted parts, link, and the answer to the question
     return jsonify({
         'filing_url': link_to_filing,
-        # 'extracted_parts': extracted_parts,
+        # 'extracted_parts': extracted_parts[selectedItemId],
         'answer': answer,
     })
 

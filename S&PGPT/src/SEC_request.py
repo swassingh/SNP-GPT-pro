@@ -81,7 +81,7 @@ def analyze_prompt(api_key, context, question):
     data = {
         "model": "gpt-4o",
         "messages": messages,
-        "max_tokens": 500
+        "max_tokens": 1200
     }
     response = requests.post(chat_url, json=data, headers=headers)
     if response.status_code == 200:
@@ -99,7 +99,7 @@ def analyze_question(api_key, text, filing_content):
     }
     messages = [
         {"role": "system",
-         "content": "You are a helpful assistant who can only answer questions about financial statements. If you are asked about something that you cannot answer with the context provided by the user, please state that 'This information is not in this section.' and then give a potential location in the SEC file it would be in.",},
+         "content": "You are a helpful assistant who can only answer questions for people learning about business about financial statements.",},
         # {"role": "system",
         # "content": "Please give the definition of the financial terms that the analysis provides.",},
         #  "content": "If you can not find the queried information in the section, please respond with the following phrase 'The information is not in this section.'."},
@@ -107,12 +107,12 @@ def analyze_question(api_key, text, filing_content):
 
     # Add each item in filing_content as a separate message
     for item in filing_content:
-        messages.append({"role": "user", "content": f"Here is a part of the financial statement data: {item}"})
+        messages.append({"role": "user", "content": f"Here is a part of the financial statement data: {item}. Please read and reference this to answer my query."})
 
     # Add the final question message
-    messages.append({"role": "user", "content": f"Question: {text}"})
+    messages.append({"role": "user", "content": f"Query: {text}, Answer the query using the context and then please tell me what section of the document I need to look in and why."})
     data = {
-        "model": "gpt-4o",
+        "model": "gpt-4o-mini",
         "messages": messages,
         "max_tokens": 500
     }
