@@ -8,9 +8,9 @@ window.onload = function() {
 document.addEventListener('click', handleClickOutside);
 
 // Global variables indicating user config options
-// Want to change these to be localstorage in the future!
-let guidedModeActive = true;
-let definitionsActive = false;
+// TODO: This resets everytime at page reload, may need to turn into cookies!
+sessionStorage['guidedModeActive'] = true;
+sessionStorage['definitionsActive'] = false;
 
 
 function saveUsername(event) {
@@ -35,9 +35,10 @@ function saveUsername(event) {
 
     // Redirect to General Finance Mode
     window.location.href = "learningmode.html";
-
-    introGuidedModePopup();
 }
+
+// Show the Guided Mode popup
+introGuidedModePopup();
 
 // Function to grab the stored username; 'Unknown' otherwise
 function displayUsername() {
@@ -104,6 +105,19 @@ function toggleSubmenu(id) {
         submenu.style.display = "none";
     } else {
         submenu.style.display = "block";
+    }
+}
+
+// Helper function to get the current value of config settings
+function getConfigFlag(key) {
+    return sessionStorage.getItem(key) === "true";
+}
+
+// Helper Function to toggle the user's config preferences within cookies
+function toggleConfigFlag(key) {
+    const current = getConfigFlag(key);
+    if (typeof current === "boolean") {
+        sessionStorage.setItem(key, !current);
     }
 }
 
@@ -179,7 +193,7 @@ function attachFormSubmitHandler() {
 // prevents initial.html popups from working correctly in its current
 // implementation. Not sure why.
 
-if (window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1) === "learningmode.html") {
+if (document.URL.includes("learningmode.html")) {
     document.getElementById("company").addEventListener("input", function () {
         let query = this.value.toUpperCase();
 
@@ -287,7 +301,7 @@ function openConfig() {
         guidedMode.setAttribute("onclick", "selectConfigOption('tutorial')");
 
         // Show highlight if applicable
-        if (guidedModeActive) {
+        if (getConfigFlag('guidedModeActive')) {
             guidedMode.classList.add("highlight-dark");
         }
 
@@ -306,7 +320,7 @@ function openConfig() {
         definitions.setAttribute("onclick", "selectConfigOption('definitions')");
 
         // Show highlight if applicable
-        if (definitionsActive) {
+        if (getConfigFlag('definitionsActive')) {
             definitions.classList.add("highlight-dark");
         }
 
@@ -328,11 +342,10 @@ function openConfig() {
 // Function to drop popups if user clicked outside of popup
 function handleClickOutside(event) {
 
-    const path = window.location.pathname;
-    const currentPage = path.substring(path.lastIndexOf('/') + 1); // gets the HTML name
+    const currentPage = document.URL; // gets the HTML page
 
     // Handles Popups in Landing Page (initial.html)
-    if (currentPage === "initial.html") {
+    if (currentPage.includes("initial.html")) {
         const clickedElement = event.target;
         const allPopups = document.querySelectorAll('popup-content');
 
@@ -350,7 +363,7 @@ function handleClickOutside(event) {
     }
 
     // Handles Popups in Learning Mode
-    else if (currentPage === "learningmode.html") {
+    else if (currentPage.includes("learningmode.html")) {
         const configMenu = document.getElementById('config-menu');
         const searchContainer = document.getElementById('search-container');
 
@@ -375,8 +388,8 @@ function selectConfigOption(selectedOption) {
 
     // Toggle Guided Mode
     if (selectedOption === 'tutorial') {
-        guidedModeActive = !guidedModeActive;
-        if (guidedModeActive) {
+        toggleConfigFlag('guidedModeActive'); // toggle the Guided Mode selection
+        if (getConfigFlag('guidedModeActive')) {
             document.getElementById('tutorial').classList.add("highlight-dark");
         } else {
             document.getElementById('tutorial').classList.remove("highlight-dark");
@@ -384,8 +397,8 @@ function selectConfigOption(selectedOption) {
 
     // Toggle Definitions
     } else if (selectedOption === 'definitions') {
-        definitionsActive = !definitionsActive;
-        if (definitionsActive) {
+        toggleConfigFlag('definitionsActive'); // toggle the Definitions selection
+        if (getConfigFlag('definitionsActive')) {
             document.getElementById('definitions').classList.add("highlight-dark");
         } else {
             document.getElementById('definitions').classList.remove("highlight-dark");
@@ -406,28 +419,62 @@ function buttonquery() {
     console.log("Button clicked:", buttonText);
     console.log("Button ID:", buttonId); // Log the button ID
 
-    const x = buttonText.split(" ")[1]; // Get the second word of the button text
+    const x = buttonId.split(" ")[1]; // Get the second word of the button text
     const button = buttonId.split(" ")[0]; // Get the first word of the button ID
 
     selectedItemId = x; // Store the button ID in the global variable
     document.getElementById("company").value = button; // Set the input value to the button text
     document.getElementById("prompt").value = buttonText; // Set the input value to the button text
-
-    attachFormSubmitHandler(); // Attach the form submit handler to the form
 }
 
+
 // Display initial popup on learningmode telling users to select a company,
-// year, and file type. Should appear to the right of the sidebar.
+// year, and file type. Appears to the right of the sidebar.
 function introGuidedModePopup() {
-    if (guidedModeActive) {
-        const container = document.getElementsByClassName("main-content");
-        let popup = document.createElement("div");
+    // If a Guided Mode popup should be shown to the user
+    if (getConfigFlag('guidedModeActive') && document.URL.includes("learningmode.html")) {
+        let container = document.getElementById("report");
+        let target = document.getElementById("dropdown-container");
+
+        let popup = document.createElement("span");
+        popup.classList.add("guidedpopup");
+
+        let popupMessage = document.createElement("p");
+        popupMessage.classList.add("popup-message");
+        popupMessage.textContent = "Select a company, year, and file type.";
 
         let x_button = document.createElement("span");
-        x_button.setAttribute("onclick", closePopup(container, popup));
-        x_button.textContent = '&times;'
+        x_button.classList.add("popup-close");
+        // x_button.setAttribute("onclick", closePopup(container, popup));
+        x_button.textContent = "x";
 
-        popup.appendChild(closePopup);
-        container.appendChild(popup);
+        popup.appendChild(x_button);
+        popup.appendChild(popupMessage);
+
+        document.body.appendChild(popup);
+
+        // Modify the HTML location of the popup
+        const rect = container.getBoundingClientRect();
+        const targetHeight = target.offsetHeight;
+
+        // "pins" the popup to the right of the company info + popup sizing
+        requestAnimationFrame(() => {
+            popup.style.position = "absolute";
+            popup.style.top = `${window.scrollY + rect.top}px`;
+            popup.style.left = `${window.scrollX + rect.right + 10}px`;
+            popup.style.height = `${targetHeight - 10}px`; // Height is related to size of target container
+        });
+
+        // Remove the popup if the 'x' is clicked
+        x_button.addEventListener("click", () => {
+            popup.remove();
+        });
+    // Remove any Guided Mode popups otherwise
+    } else {
+        // Assuming only 1 Guided Popup at a time
+        const existingPopup = document.querySelector(".guidedpopup");
+        if (existingPopup) {
+            existingPopup.remove();
+        }
     }
 }

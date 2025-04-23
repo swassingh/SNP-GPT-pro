@@ -304,6 +304,7 @@ header {
   text-decoration: underline;
 }
 
+/* Closes the Guided Mode popups */
 .close {
   position: absolute;
   top: 10px;
@@ -380,7 +381,7 @@ header {
   background: var(--hover-highlight-dark); /* Even darker gray */
 }
 
-.dropdown-container {
+#dropdown-container {
   margin-top: 10px;
 }
 
@@ -409,7 +410,7 @@ select#year, select#report {
   width: 49%;
 }
 
-.date-report {
+#date-report {
   display: flex;
   justify-content: space-between;
 }
@@ -480,4 +481,38 @@ select#year, select#report {
 
 #citation-source {
   text-align: left;
+}
+
+.guidedpopup {
+  background-color: var(--button-color);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 1;
+  max-width: 190px;            /* Force line wrapping */
+  width: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.popup-close {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px; /* x size */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.popup-message {
+  padding-right: 20px;
 }
