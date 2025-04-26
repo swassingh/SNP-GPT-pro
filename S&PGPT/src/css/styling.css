@@ -304,7 +304,7 @@ header {
   text-decoration: underline;
 }
 
-/* Closes the Guided Mode popups */
+/* Closes the Initial.HTML popup */
 .close {
   position: absolute;
   top: 10px;
@@ -501,6 +501,7 @@ select#year, select#report {
   word-break: break-word;
 }
 
+/* Closes the Guided Mode popups */
 .popup-close {
   position: absolute;
   top: 5px;

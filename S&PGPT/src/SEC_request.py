@@ -110,7 +110,7 @@ def analyze_question(api_key, text, filing_content):
         messages.append({"role": "user", "content": f"Here is a part of the financial statement data: {item}. Please read and reference this to answer my query."})
 
     # Add the final question message
-    messages.append({"role": "user", "content": f"Query: {text}, Answer the query using the context and then please tell me what section of the document I need to look in and why."})
+    messages.append({"role": "user", "content": f"Query: {text}, Answer the query using the context provided. If the section provided is unable to answer the question, please tell me what section of the document I need to look in and why."})
     data = {
         "model": "gpt-4o-mini",
         "messages": messages,

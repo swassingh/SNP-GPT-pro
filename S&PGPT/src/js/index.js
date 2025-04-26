@@ -70,7 +70,13 @@ function clearUsername() {
 // Function to open the popup
 function openloginPopup() {
     closesignupPopup(); // Close signup popup
-    document.getElementById("loginPopup").style.display = "flex";
+    let popup = document.getElementById("loginPopup");
+    popup.style.display = "flex";
+
+    requestAnimationFrame(() => {
+        let emailLine = document.getElementById("email");
+        emailLine.select(); // Automatically selects the text
+    });
 }
 
 // Function to close the popup
@@ -81,7 +87,13 @@ function closeloginPopup() {
 // Function to open the popup
 function opensignupPopup() {
     closeloginPopup(); // Close login popup
-    document.getElementById("signupPopup").style.display = "flex";
+    let popup = document.getElementById("signupPopup");
+    popup.style.display = "flex";
+
+    requestAnimationFrame(() => {
+        let emailLine = document.getElementById("email");
+        emailLine.select(); // Automatically selects the text
+    });
 }
 
 // Function to close the popup
