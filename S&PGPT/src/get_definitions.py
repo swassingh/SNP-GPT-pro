@@ -1,30 +1,16 @@
-import requests
-from bs4 import BeautifulSoup
-import pandas as pd
+import csv
+import json
 
-# 1. Fetch the glossary page
-url = "https://www.investmentctr.com/client/learning-center/financial-glossary"
-resp = requests.get(url)
-resp.raise_for_status()
-
-# 2. Parse HTML
-soup = BeautifulSoup(resp.text, "html.parser")
-
-# 3. Extract terms and definitions
-entries = []
-for h4 in soup.find_all("h4"):
-    term = h4.get_text(strip=True)
-    # collect all <p> siblings up until the next <h4> or <h2>/<h3>
-    defs = []
-    for sib in h4.find_next_siblings():
-        if sib.name in ("h2", "h3", "h4"):
-            break
-        if sib.name == "p":
-            defs.append(sib.get_text(strip=True))
-    def_text = " ".join(defs)
-    entries.append({"Term": term, "Definition": def_text})
-
-# 4. Save to CSV
-df = pd.DataFrame(entries)
-df.to_csv("../data/financial_glossary.csv", index=False)
-print(f"Saved {len(df)} entries to financial_glossary.csv")
+# Converts the Definitions CSV into a JSON format
+def convert_csv_to_json(file_path='../data/financial_glossary.csv', as_string=True):
+    try:
+        with open(file_path, newline='', encoding='utf-8') as csvfile:
+            reader = csv.DictReader(csvfile)
+            data = [row for row in reader]  # list of dictionaries
+        if as_string:
+            return json.dumps(data, indent=4)
+        else:
+            return data  # raw Python list of dicts
+    except Exception as e:
+        print(f"Error converting CSV to JSON: {e}")
+        return None

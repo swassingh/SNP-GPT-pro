@@ -424,6 +424,7 @@ select#year, select#report {
   cursor: pointer;
   padding: 10px;
   background-color: #333;
+  color: var(--text-light);
   border-radius: 5px;
   margin-top: 5px;
 }
@@ -492,6 +493,23 @@ select#year, select#report {
   z-index: 1;
   max-width: 190px;            /* Force line wrapping */
   width: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.definitionpopup {
+  background-color: var(--button-color);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 1;
+  max-width: 190px;            /* Force line wrapping */
   height: auto;
   display: flex;
   flex-direction: column;

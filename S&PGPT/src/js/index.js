@@ -2,6 +2,7 @@
 
 window.onload = function() {
     attachFormSubmitHandler();
+    getDefinitionsList();
 };
 
 // Global event-listener checking every user click for popups
@@ -12,6 +13,7 @@ document.addEventListener('click', handleClickOutside);
 sessionStorage['guidedModeActive'] = true;
 sessionStorage['definitionsActive'] = false;
 
+let definitions = [{}];
 
 function saveUsername(event) {
     event.preventDefault();
@@ -177,7 +179,6 @@ function attachFormSubmitHandler() {
 
         console.log(ticker);
 
-        // Replace with your API endpoint
         const apiUrl = 'http://localhost:8000/submit';
 
         fetch(apiUrl, {
@@ -199,12 +200,42 @@ function attachFormSubmitHandler() {
     });
 }
 
+// Get Definitions JSON data from Python Server
+function getDefinitionsList() {
+    const apiUrl = 'http://localhost:8000/submitDef';
+
+    fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        // definitions = data;
+        console.log("This is data at initiation:", data);
+        definitions = data;
+        console.log(definitions.map(entry => entry.Term.toLowerCase()));
+        // console.log("GOOFY AAH FUNCTION BE LIKE:", Object.values(definitions).map(entry => entry.Term));
+    })
+    .catch(error => {
+        document.getElementById('api-response').textContent = error + '\nServer likely not online!';
+    });
+
+}
+
+// // Displays all known definitons words as hoverable popups within the LLM response section.
+// function displayHoverDefinitions(data) {
+//     // Check to see if Definitions mode is active
+//     if (getConfigFlag('definitionsActive')) {
+//         document.getElementById('api-response').addEventListener('Asynchronous data fetching', function(event) {
+
+//         });
+//     }
+// }
+
+
 // Function to handle the search input for company tickers
-
-// This line below is to prevent a non-critical initial.html null error, but
-// prevents initial.html popups from working correctly in its current
-// implementation. Not sure why.
-
 if (document.URL.includes("learningmode.html")) {
     document.getElementById("company").addEventListener("input", function () {
         let query = this.value.toUpperCase();
@@ -259,6 +290,7 @@ function displayApiResponse(data) {
     container.appendChild(element);
 
     for (const key in data) {
+        // Value is the LLM API response
         const value = data[key];
 
         // SEC Citation Source
@@ -278,7 +310,7 @@ function displayApiResponse(data) {
             // EDGAR Response
             let EDGAR_Response = document.createElement("md-block");
             EDGAR_Response.classList.add("EDGAR_response");
-            EDGAR_Response.textContent = `**${formatKey(key)}:** ${value}`;
+            addDefinitionPopups(value, EDGAR_Response); // EDGAR_Response.textContent = `**${formatKey(key)}:** ${value}`;
             element.appendChild(EDGAR_Response);
         }
 
@@ -287,7 +319,78 @@ function displayApiResponse(data) {
         window.scrollTo({
             top: document.body.scrollHeight,
             behavior: 'smooth' // or 'auto'
-          });
+        });
+    }
+}
+
+// Adds definition popups to the returned LLM response
+function addDefinitionPopups(value, mdBlock) {
+    // Clear mdBlock
+    while (mdBlock.firstChild) {
+        mdBlock.removeChild(mdBlock.firstChild);
+    }
+
+    // Build term-to-definition map (lowercase for matching)
+    const termDefinitionMap = {};
+    const definitionsTerms = definitions.map(entry => {
+        const term = entry.Term.toLowerCase();
+        termDefinitionMap[term] = entry.Definition;
+        return term;
+    });
+
+    // RegExp to tokenize the string into words, spaces, punctuation, etc.
+    const tokens = value.match(/(\*\*[^*]+\*\*|\b\w+\b|\s+|[^\w\s])/g);
+
+    tokens.forEach(token => {
+        const cleanToken = token.replace(/[*]/g, '').toLowerCase();
+
+        if (definitionsTerms.includes(cleanToken)) {
+            const span = document.createElement('span');
+            span.className = 'highlighted-term';
+            span.textContent = token;
+            span.setAttribute('data-definition', termDefinitionMap[cleanToken]);
+            span.addEventListener('mouseenter', showDefinitionPopup);
+            span.addEventListener('mouseleave', hideDefinitionPopup);
+            mdBlock.appendChild(span);
+        // } else if (token === '\n') {
+        //     mdBlock.appendChild(document.createElement('br'));
+        } else {
+            mdBlock.appendChild(document.createTextNode(token));
+        }
+    });
+}
+
+let popupEl = null;
+
+function showDefinitionPopup(e) {
+    const definition = e.target.getAttribute('data-definition');
+
+    // Remove existing popup if any
+    if (popupEl) {
+        document.body.removeChild(popupEl);
+        popupEl = null;
+    }
+
+    // Create popup
+    popupEl = document.createElement('div');
+    popupEl.className = 'definitionpopup';
+    popupEl.textContent = definition;
+    document.body.appendChild(popupEl);
+
+    // Position near the hovered word
+    const rect = e.target.getBoundingClientRect();
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
+
+    popupEl.style.position = 'absolute';
+    popupEl.style.top = `${rect.bottom + scrollTop + 6}px`;
+    popupEl.style.left = `${rect.left + scrollLeft}px`;
+}
+
+function hideDefinitionPopup() {
+    if (popupEl) {
+        document.body.removeChild(popupEl);
+        popupEl = null;
     }
 }
 

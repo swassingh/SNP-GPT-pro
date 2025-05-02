@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, Blueprint
 from flask_cors import CORS
 from SEC_request import get_10k_filing, extract_all_10k_parts, analyze_question, analyze_prompt
+from get_definitions import convert_csv_to_json
 # Libraries used for .env file retrieval
 import os
 from dotenv import load_dotenv
@@ -94,6 +95,12 @@ def submit():
         # 'extracted_parts': extracted_parts[selectedItemId],
         'answer': answer,
     })
+
+# Returns a JSON of the definitions
+@submit_bp.route('/submitDef', methods=['POST'])
+def definitions_return():
+    # Retrieve the definitions library
+    return convert_csv_to_json()
 
 # Load tickers from a CSV (Modify path as needed)
 df = pd.read_csv("../data/nasdaq_listed_companies.csv")
