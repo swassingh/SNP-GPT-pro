@@ -113,6 +113,7 @@ header {
 /* Suggested Query Buttons */
 .query-buttons {
   margin-top: 30px;
+  margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -156,7 +157,7 @@ header {
   position: fixed;
   left: 0;
   top: 0;
-  translate: 0px -58%;
+  translate: 0px -100%;
   padding: 6px;
   border-radius: 8px;
 }
@@ -190,7 +191,7 @@ header {
 
 /* Search Bar */
 .search-bar {
-  margin-top: 50px;
+  /* margin-top: 50px; */
   /* z-index: 1; */
   justify-content: center;
   display: flex;
@@ -534,4 +535,25 @@ select#year, select#report {
 
 .popup-message {
   padding-right: 20px;
+}
+
+.definition-word {
+  cursor: help; /* Cursor changes to a question mark when hovering over a definition */
+  background-color: rgba(48, 197, 255, 0.5);
+  border-bottom: 1px dotted gray;
+}
+
+.definition-tooltip {
+  position: absolute;
+  z-index: 1;
+  padding: 8px 12px;
+  color: white;
+  background: #333;
+  border: 1px solid gray;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-size: 14px;
+  max-width: 300px;
+  display: none;
+  pointer-events: none;
 }

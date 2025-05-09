@@ -7,7 +7,7 @@ def get_10k_filing(api_key, ticker, year):
     query = {
         "query": {
             "query_string": {
-                "query": f"ticker:{ticker} AND formType:\"10-K\" AND filedAt:[{year}-01-01 TO {year}-12-31]"
+                "query": f"ticker:{ticker} AND formType:\"10-K\" AND filedAt:[{year}-04-01 TO {int(year)+1}-04-01]"
             }
         },
         "from": "0",

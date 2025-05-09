@@ -9,11 +9,15 @@ window.onload = function() {
 document.addEventListener('click', handleClickOutside);
 
 // Global variables indicating user config options
-// TODO: This resets everytime at page reload, may need to turn into cookies!
-sessionStorage['guidedModeActive'] = true;
-sessionStorage['definitionsActive'] = false;
+// Check to see if already set, if not set to default values
+if (localStorage.getItem('guidedModeActive') === null) {
+    localStorage.setItem('guidedModeActive', true);
+}
+if (localStorage.getItem('definitionsActive') === null) {
+    localStorage.setItem('definitionsActive', true); // CURRENTLY SET TO TRUE! CHANGE LATER!
+}
 
-let definitions = [{}];
+let definitions = {};
 
 function saveUsername(event) {
     event.preventDefault();
@@ -124,14 +128,14 @@ function toggleSubmenu(id) {
 
 // Helper function to get the current value of config settings
 function getConfigFlag(key) {
-    return sessionStorage.getItem(key) === "true";
+    return localStorage.getItem(key) === "true";
 }
 
 // Helper Function to toggle the user's config preferences within cookies
 function toggleConfigFlag(key) {
     const current = getConfigFlag(key);
     if (typeof current === "boolean") {
-        sessionStorage.setItem(key, !current);
+        localStorage.setItem(key, !current);
     }
 }
 
@@ -212,27 +216,16 @@ function getDefinitionsList() {
     })
     .then(response => response.json())
     .then(data => {
-        // definitions = data;
-        console.log("This is data at initiation:", data);
+        // Definitions is defined at this point
         definitions = data;
-        console.log(definitions.map(entry => entry.Term.toLowerCase()));
-        // console.log("GOOFY AAH FUNCTION BE LIKE:", Object.values(definitions).map(entry => entry.Term));
+        // Setup the definition tooltips for hover definitions
+        setupDefinitionHover();
     })
     .catch(error => {
-        document.getElementById('api-response').textContent = error + '\nServer likely not online!';
+        document.getElementById('api-response').textContent = error;
     });
 
 }
-
-// // Displays all known definitons words as hoverable popups within the LLM response section.
-// function displayHoverDefinitions(data) {
-//     // Check to see if Definitions mode is active
-//     if (getConfigFlag('definitionsActive')) {
-//         document.getElementById('api-response').addEventListener('Asynchronous data fetching', function(event) {
-
-//         });
-//     }
-// }
 
 
 // Function to handle the search input for company tickers
@@ -266,7 +259,7 @@ if (document.URL.includes("learningmode.html")) {
     });
 }
 
-// Dislplay the API response
+// Display the API response
 function displayApiResponse(data) {
     const pain = document.getElementById("container");
     pain.innerHTML = ""; // Clear previous content
@@ -297,7 +290,7 @@ function displayApiResponse(data) {
         if (typeof value === "string" && value.startsWith("http")) {
             let citation = document.createElement('md-block');
             citation.setAttribute("id", "citation-source");
-            citation.textContent = `**${formatKey(key)}:**`;
+            citation.textContent = `**${formatKey(key)}:**` + " ";
 
             let source = document.createElement('a');
             source.href = value;
@@ -310,11 +303,10 @@ function displayApiResponse(data) {
             // EDGAR Response
             let EDGAR_Response = document.createElement("md-block");
             EDGAR_Response.classList.add("EDGAR_response");
-            addDefinitionPopups(value, EDGAR_Response); // EDGAR_Response.textContent = `**${formatKey(key)}:** ${value}`;
+            EDGAR_Response.textContent = `**${formatKey(key)}:** ${value}`;
+            createDefinitionTags(EDGAR_Response);
             element.appendChild(EDGAR_Response);
         }
-
-        // container.appendChild(element);
 
         window.scrollTo({
             top: document.body.scrollHeight,
@@ -323,76 +315,149 @@ function displayApiResponse(data) {
     }
 }
 
-// Adds definition popups to the returned LLM response
-function addDefinitionPopups(value, mdBlock) {
-    // Clear mdBlock
-    while (mdBlock.firstChild) {
-        mdBlock.removeChild(mdBlock.firstChild);
+
+
+// Function to add definition tags to definition words
+// Created using ChatGPT and Claude with numerous (30+) revisions to get the desired functionality
+function createDefinitionTags(mdElement) {
+    if (!(getConfigFlag('definitionsActive')) || !Array.isArray(definitions) || definitions.length === 0)
+        return;
+
+    // Get all unique terms from the definitions array
+    const terms = definitions.map(d => d.Term.trim()).filter(Boolean);
+
+    // Escape and prepare the regex to support optional surrounding quotes/parens
+    const escapedTerms = terms.map(term => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+
+    // Match term with optional leading/trailing quotes, parentheses, etc.
+    const regex = new RegExp(
+        `(["'"“‘(\\[]*)(\\b(?:${escapedTerms.join("|")})\\b)([\\])”’"'.,;!?)]*)`,
+        "gi"
+    );
+
+    // Flag to ensure the tagging only runs once (No double divs)
+    let hasRun = false;
+
+    // Function to apply definition tags to the LLM response
+    function applyTagging() {
+        if (hasRun) return;
+        hasRun = true;
+
+        const walker = document.createTreeWalker(mdElement, NodeFilter.SHOW_TEXT, null, false);
+        const nodesToUpdate = [];
+
+        let node;
+        while ((node = walker.nextNode())) {
+            if (regex.test(node.nodeValue)) {
+                nodesToUpdate.push(node);
+            }
+        }
+
+        nodesToUpdate.forEach(textNode => {
+            const parent = textNode.parentNode;
+            const text = textNode.nodeValue;
+            const fragment = document.createDocumentFragment();
+            let lastIndex = 0;
+
+            regex.lastIndex = 0;
+            const matches = [...text.matchAll(regex)];
+
+            matches.forEach(match => {
+                const leading = match[1];
+                const word = match[2];
+                const trailing = match[3];
+                const matchStart = match.index;
+                const matchEnd = matchStart + match[0].length;
+
+                if (matchStart > lastIndex) {
+                    fragment.appendChild(document.createTextNode(text.slice(lastIndex, matchStart)));
+                }
+
+                if (leading) fragment.appendChild(document.createTextNode(leading));
+
+                const cleanedWord = word.toLowerCase().replace(/\s+/g, "-"); // Add .replace(/\s+/g, "-") if want spaces to be dashes
+
+                // Create div for the matched term
+                const div = document.createElement("div");
+                div.textContent = word;
+                div.className = "definition-word";
+                div.id = `def-${cleanedWord}`;
+                div.style.display = "inline";
+                fragment.appendChild(div);
+
+                if (trailing) fragment.appendChild(document.createTextNode(trailing));
+
+                lastIndex = matchEnd;
+            });
+
+            if (lastIndex < text.length) {
+                fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
+            }
+
+            parent.replaceChild(fragment, textNode);
+        });
     }
 
-    // Build term-to-definition map (lowercase for matching)
-    const termDefinitionMap = {};
-    const definitionsTerms = definitions.map(entry => {
-        const term = entry.Term.toLowerCase();
-        termDefinitionMap[term] = entry.Definition;
-        return term;
+    // MutationObserver: Wait for md-block to render its parsed Markdown
+    const observer = new MutationObserver((mutations, obs) => {
+        if (mdElement.innerText && mdElement.innerText.trim().length > 0) {
+            obs.disconnect();
+            applyTagging();
+        }
     });
 
-    // RegExp to tokenize the string into words, spaces, punctuation, etc.
-    const tokens = value.match(/(\*\*[^*]+\*\*|\b\w+\b|\s+|[^\w\s])/g);
+    observer.observe(mdElement, { childList: true, subtree: true });
 
-    tokens.forEach(token => {
-        const cleanToken = token.replace(/[*]/g, '').toLowerCase();
+    // If the LLM response fails to render, re-run the tagging function after 1 second
+    setTimeout(() => {
+        if (!hasRun && mdElement.innerText && mdElement.innerText.trim().length > 0) {
+            observer.disconnect();
+            applyTagging();
+        }
+    }, 1000);
+}
 
-        if (definitionsTerms.includes(cleanToken)) {
-            const span = document.createElement('span');
-            span.className = 'highlighted-term';
-            span.textContent = token;
-            span.setAttribute('data-definition', termDefinitionMap[cleanToken]);
-            span.addEventListener('mouseenter', showDefinitionPopup);
-            span.addEventListener('mouseleave', hideDefinitionPopup);
-            mdBlock.appendChild(span);
-        // } else if (token === '\n') {
-        //     mdBlock.appendChild(document.createElement('br'));
-        } else {
-            mdBlock.appendChild(document.createTextNode(token));
+
+// Function to setup the definition hover tooltips
+// Created using ChatGPT using the following prompt (and a few revisions):
+// "I now want a separate function that triggers whenever an icon with a definition-word is hovered,
+//  displaying the definition (under the key 'Definition') of the hovered word depending on its ID."
+function setupDefinitionHover() {
+    if (!Array.isArray(definitions) || definitions.length === 0) return;
+
+    // Create tooltip element once
+    const tooltip = document.createElement("div");
+    tooltip.id = "definition-tooltip";
+    tooltip.className = "definition-tooltip";
+    document.body.appendChild(tooltip);
+
+    // Show tooltip on hover
+    document.addEventListener("mouseover", (event) => {
+        const el = event.target.closest(".definition-word");
+        if (!el) return;
+
+        const cleanedId = el.id.replace(/^def-/, "").replace(/-/g, " ").toLowerCase();
+        const match = definitions.find(def => def.Term.toLowerCase() === cleanedId);
+        if (!match) return;
+
+        tooltip.textContent = match.Definition;
+        tooltip.style.display = "block";
+
+        const rect = el.getBoundingClientRect();
+        tooltip.style.top = `${window.scrollY + rect.bottom + 8}px`;
+        tooltip.style.left = `${window.scrollX + rect.left}px`;
+    });
+
+    // Hide tooltip on mouseout
+    document.addEventListener("mouseout", (event) => {
+        const el = event.target.closest(".definition-word");
+        if (el) {
+            tooltip.style.display = "none";
         }
     });
 }
 
-let popupEl = null;
 
-function showDefinitionPopup(e) {
-    const definition = e.target.getAttribute('data-definition');
-
-    // Remove existing popup if any
-    if (popupEl) {
-        document.body.removeChild(popupEl);
-        popupEl = null;
-    }
-
-    // Create popup
-    popupEl = document.createElement('div');
-    popupEl.className = 'definitionpopup';
-    popupEl.textContent = definition;
-    document.body.appendChild(popupEl);
-
-    // Position near the hovered word
-    const rect = e.target.getBoundingClientRect();
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
-
-    popupEl.style.position = 'absolute';
-    popupEl.style.top = `${rect.bottom + scrollTop + 6}px`;
-    popupEl.style.left = `${rect.left + scrollLeft}px`;
-}
-
-function hideDefinitionPopup() {
-    if (popupEl) {
-        document.body.removeChild(popupEl);
-        popupEl = null;
-    }
-}
 
 // Settings Config Menu on Searchbar Toggle
 function openConfig() {
