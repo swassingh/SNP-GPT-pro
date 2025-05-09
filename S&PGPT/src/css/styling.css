@@ -543,6 +543,10 @@ select#year, select#report {
   border-bottom: 1px dotted gray;
 }
 
+a {
+  color: rgb(48, 197, 255);
+}
+
 .definition-tooltip {
   position: absolute;
   z-index: 1;
