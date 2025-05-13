@@ -485,6 +485,7 @@ select#year, select#report {
   text-align: left;
 }
 
+/* Guided Mode Popups use this class! */
 .guidedpopup {
   background-color: var(--button-color);
   color: white;
@@ -492,7 +493,7 @@ select#year, select#report {
   border-radius: 8px;
   position: absolute;
   z-index: 1;
-  max-width: 190px;            /* Force line wrapping */
+  max-width: 225px;            /* Force line wrapping */
   width: fit-content;
   height: auto;
   display: flex;
@@ -503,6 +504,7 @@ select#year, select#report {
   word-break: break-word;
 }
 
+/* Definition Popups use this class! */
 .definitionpopup {
   background-color: var(--button-color);
   color: white;

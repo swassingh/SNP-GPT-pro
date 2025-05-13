@@ -436,8 +436,18 @@ function setupDefinitionHover() {
         const el = event.target.closest(".definition-word");
         if (!el) return;
 
-        const cleanedId = el.id.replace(/^def-/, "").replace(/-/g, " ").toLowerCase();
-        const match = definitions.find(def => def.Term.toLowerCase() === cleanedId);
+        // Remove the def- prefix
+        const cleanedId = el.id.replace(/^def-/, "").toLowerCase();
+        
+        // Try exact match first (for special terms like 10-K)
+        let match = definitions.find(def => def.Term.toLowerCase() === cleanedId);
+        
+        // If no match found, try with dashes replaced by spaces
+        if (!match) {
+            const cleanedIdNoDashes = cleanedId.replace(/-/g, " ");
+            match = definitions.find(def => def.Term.toLowerCase() === cleanedIdNoDashes);
+        }
+        // If no match found, exit
         if (!match) return;
 
         tooltip.textContent = match.Definition;
@@ -621,7 +631,7 @@ function introGuidedModePopup() {
 
         let popupMessage = document.createElement("p");
         popupMessage.classList.add("popup-message");
-        popupMessage.textContent = "Select a company, year, and file type.";
+        popupMessage.textContent = "Select a company ticker, year, and file type.";
 
         let x_button = document.createElement("span");
         x_button.classList.add("popup-close");
