@@ -185,6 +185,22 @@ function attachFormSubmitHandler() {
 
         const apiUrl = 'http://localhost:8000/submit';
 
+        // Create and append loading spinner
+        const spinner = document.createElement('div');
+        spinner.id = 'spinner';
+        spinner.className = 'spinner';
+        
+        // Create the 4 inner divs
+        for (let i = 0; i < 4; i++) {
+            const innerDiv = document.createElement('div');
+            spinner.appendChild(innerDiv);
+        }
+
+        // Append spinner to api-response
+        document.getElementById('api-response').appendChild(spinner);
+        // Scroll to the bottom of the page when loading bar is displayed
+        window.scrollTo(0, document.body.scrollHeight);
+
         fetch(apiUrl, {
             method: 'POST',
             headers: {
@@ -194,6 +210,8 @@ function attachFormSubmitHandler() {
         })
         .then(response => response.json())
         .then(data => {
+            // Remove the spinner after the API response is received
+            document.getElementById('spinner').remove();
             displayApiResponse(data);
         })
         .catch(error => {
@@ -240,11 +258,15 @@ if (document.URL.includes("learningmode.html")) {
                     let suggestionsList = document.getElementById("suggestionsList");
                     suggestionsList.innerHTML = ""; // Clear previous results
 
-                    data.forEach(ticker => {
+                    data.forEach(item => {
                         let listItem = document.createElement("li");
-                        listItem.textContent = ticker;
+                        // Display just the symbol in the dropdown
+                        listItem.textContent = item.symbol;
+                        // Store the full name as a data attribute
+                        listItem.dataset.fullName = item.fullName;
                         listItem.addEventListener("click", function () {
-                            document.getElementById("company").value = ticker;
+                            // When clicked, set the input value to just the fullName
+                            document.getElementById("company").value = item.fullName;
                             suggestionsList.innerHTML = ""; // Hide suggestions after selection
                         });
                         suggestionsList.appendChild(listItem);
