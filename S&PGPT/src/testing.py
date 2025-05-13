@@ -35,13 +35,3 @@ df = df[~df['name'].str.contains('Preferred')]
 df.to_csv('S&PGPT/data/nasdaq_listed_companies.csv', index=False)
 
 print("CSV file 'nasdaq_listed_companies.csv' has been created successfully.")
-
-# Create a Trie data structure
-trie = pygtrie.CharTrie()
-
-# Insert symbols into the Trie
-for symbol in df['symbol'].astype(str):
-    trie[symbol] = True
-
-print(list(trie.keys(prefix='AB')))
-print("Trie data structure has been created successfully.")

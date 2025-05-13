@@ -107,14 +107,23 @@ df = pd.read_csv("../data/nasdaq_listed_companies.csv")
 
 # Initialize Trie and insert tickers
 trie = pygtrie.CharTrie()
-for symbol in df['symbol'].astype(str):
+
+df['clean_name'] = df['name'].str.replace(r'\s+(Common Stock|Units|Common Stock |Units )$', '', regex=True)
+df['Response'] = df['symbol'] + ' - ' + df['clean_name']
+
+for symbol in df['Response'].astype(str):
     trie[symbol.upper()] = True  # Ensure uppercase consistency
 
 @search_bp.route('/search', methods=['GET'])
 def search():
     query = request.args.get('query', '').upper()  # Ensure uppercase search
     results = list(trie.keys(prefix=query)) if query else []
-    return jsonify(results)
+    # Return both symbol and full name in a structured format
+    formatted_results = [{
+        'symbol': result.split(' ')[0],
+        'fullName': result
+    } for result in results]
+    return jsonify(formatted_results)
 
 
 # Register Blueprints
