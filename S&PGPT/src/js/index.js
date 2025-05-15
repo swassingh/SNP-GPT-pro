@@ -643,50 +643,80 @@ function buttonquery() {
 // Display initial popup on learningmode telling users to select a company,
 // year, and file type. Appears to the right of the sidebar.
 function introGuidedModePopup() {
-    // If a Guided Mode popup should be shown to the user
+    // If Guided Mode popups should be shown to the user
     if (getConfigFlag('guidedModeActive') && document.URL.includes("learningmode.html")) {
-        let container = document.getElementById("report");
-        let target = document.getElementById("dropdown-container");
 
-        let popup = document.createElement("span");
-        popup.classList.add("guidedpopup");
+        let target = document.getElementById("company");
+        let container = document.getElementById("dropdown-container");
 
-        let popupMessage = document.createElement("p");
-        popupMessage.classList.add("popup-message");
-        popupMessage.textContent = "Select a company ticker, year, and file type.";
+        createGuidedModePopup(target, container, "right", "Select a company ticker, year, and file type.");
 
-        let x_button = document.createElement("span");
-        x_button.classList.add("popup-close");
-        // x_button.setAttribute("onclick", closePopup(container, popup));
-        x_button.textContent = "x";
+        target = document.getElementById("menu");
+        container = document.getElementById("financialContainer");
 
-        popup.appendChild(x_button);
-        popup.appendChild(popupMessage);
+        createGuidedModePopup(target, container, "right", "Select an SEC section to analyze.");
 
-        document.body.appendChild(popup);
+        target = document.querySelector("#query-form .config-icon");
+        container = document.querySelector("#query-form");
+        createGuidedModePopup(target, container, "top", "You can change User Settings here.");
 
-        // Modify the HTML location of the popup
-        const rect = container.getBoundingClientRect();
-        const targetHeight = target.offsetHeight;
-
-        // "pins" the popup to the right of the company info + popup sizing
-        requestAnimationFrame(() => {
-            popup.style.position = "absolute";
-            popup.style.top = `${window.scrollY + rect.top}px`;
-            popup.style.left = `${window.scrollX + rect.right + 10}px`;
-            popup.style.height = `${targetHeight - 10}px`; // Height is related to size of target container
-        });
-
-        // Remove the popup if the 'x' is clicked
-        x_button.addEventListener("click", () => {
-            popup.remove();
-        });
-    // Remove any Guided Mode popups otherwise
     } else {
-        // Assuming only 1 Guided Popup at a time
-        const existingPopup = document.querySelector(".guidedpopup");
-        if (existingPopup) {
-            existingPopup.remove();
+        // Remove all Guided Mode popups
+        const existingPopup = document.querySelectorAll(".guidedpopup");
+        if (existingPopup.length > 0) {
+            existingPopup.forEach(popup => {
+                popup.remove();
+            });
         }
     }
+}
+
+// Helper Function to create a Guided Mode popup.
+// Needs the target DOM object, the container for the target, and the message to display.
+function createGuidedModePopup(target, container, location, message) {
+    let popup = document.createElement("span");
+    popup.classList.add("guidedpopup");
+
+    let popupMessage = document.createElement("p");
+    popupMessage.classList.add("popup-message");
+    popupMessage.textContent = message;
+
+    let x_button = document.createElement("span");
+    x_button.classList.add("popup-close");
+    x_button.textContent = "x";
+
+    popup.appendChild(x_button);
+    popup.appendChild(popupMessage);
+
+    // Remove the popup if the 'x' is clicked
+    x_button.addEventListener("click", () => {
+        popup.remove();
+    });
+
+    document.body.appendChild(popup);
+
+    // Get dimensions of target element
+    const rect = target.getBoundingClientRect();
+    const messageLength = message.length;
+
+    // Calculate popup width based on message length. Generated using Claude.
+    const popupWidth = Math.min(300, Math.max(200, messageLength * 8)); // Width between 200-300px
+
+    // Position popup based on location parameter
+    requestAnimationFrame(() => {
+        popup.style.position = "absolute";
+        popup.style.width = `${popupWidth}px`;
+        
+        if (location === "top") {
+            popup.style.top = `${window.scrollY + rect.top - 70}px`; // 70px offset from element
+            popup.style.left = `${window.scrollX + rect.left - 20}px`; // 20px offset due to config icon size in searchbar
+            popup.style.height = "auto"; // Let height adjust to content
+        } else if (location === "right") {
+            popup.style.top = `${window.scrollY + rect.top}px`;
+            popup.style.left = `${window.scrollX + rect.right + 10}px`; // 10px offset from element
+            popup.style.height = "auto"; // Let height adjust to content
+        }
+
+        popup.style.minHeight = "50px"; // Minimum height of 50px
+    });
 }

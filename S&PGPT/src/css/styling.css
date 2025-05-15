@@ -416,7 +416,7 @@ select#year, select#report {
   justify-content: space-between;
 }
 
-.menu {
+#menu {
   margin-top: 20px;
   text-align: left;
 }
