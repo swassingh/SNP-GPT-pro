@@ -1,0 +1,617 @@
+/* Add font files for Roboto Mono */
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('fonts/roboto-mono.woff2') format('woff2'),
+       url('fonts/roboto-mono.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --font-family-roboto: 'Roboto', sans-serif;
+  --font-family-roboto-mono: 'Roboto Mono', sans-serif;
+  --primary-color: #BAE7F4;
+  --secondary-color: #5A5AD2;
+  --tertiary-color: #71a7b6;
+  --background-dark: #212121;
+  --button-color: rgba(115, 115, 115, 0.4);
+  --text-light: #ececec;
+  --text-dark: rgba(255, 255, 255, 0.1);
+  --hover-highlight-light: #444;
+  --hover-highlight-dark: #555;
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  font-family: var(--font-family-roboto);
+  text-align: center;
+}
+
+/* Header Styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Logo */
+.sp-gpt {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+/* Navigation Buttons */
+.nav-bar {
+  display: flex;
+  justify-content: center;
+}
+
+.login {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+}
+
+.signup {
+  background-color: white;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  font-size: 0.9rem;
+}
+
+/* Main Heading */
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: var(--primary-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 50px;
+  text-align: center;
+}
+
+/* Highlighted Text */
+.highlight {
+  font-size: 4.5rem;
+  background: var(--primary-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  max-width: 1025px;
+  font-weight: bold;
+}
+
+.highlight-smaller {
+  font-size: 2rem;
+  background: var(--primary-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* Suggested Query Buttons */
+.query-buttons {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.query-buttons button {
+  background-color: var(--button-color);
+  justify-content: left;
+  color: var(--text-light);
+  border: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 45%;
+  max-width: 500px;
+  text-align: left;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 320px;
+}
+
+#search-container {
+  position: fixed;
+  bottom: 20px;
+  left: calc(156px + 50%);
+  transform: translateX(-50%);
+  width: calc(89% - 300px);
+  max-width: 1025px;
+  z-index: 1000;
+}
+
+#config-menu {
+  background-color: #333;
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  translate: 0px -100%;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+#tutorial, #definitions {
+  padding: 8px;
+  margin: 4px;
+  border-radius: 8px;
+}
+
+/* #tutorial {
+  border-radius: 8px 8px 0px 0px;
+}
+
+#definitions {
+  border-radius: 0px 0px 8px 8px;
+} */
+
+#tutorial:hover, #definitions:hover {
+  background-color: var(--hover-highlight-dark);
+}
+
+#query-form {
+  bottom: 20%;
+  justify-content: center;
+}
+
+#api-response {
+  padding-bottom: 10%;
+}
+
+/* Search Bar */
+.search-bar {
+  /* margin-top: 50px; */
+  /* z-index: 1; */
+  justify-content: center;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  padding: 8px 20px;
+  width: 100%;
+  max-width: 1025px;
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--primary-color);
+}
+
+.config-icon {
+  color: rgb(115, 115, 115);
+}
+
+.fa-sliders {
+  margin-top: 12px;
+}
+
+#prompt {
+  color: black;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  color: rgb(75, 75, 75);
+  font-size: 1.1rem;
+  flex: 1;
+  padding: 10px;
+  outline: none;
+}
+
+.search-bar .search-icon {
+  background: none;
+  border: none;
+  color: rgb(115, 115, 115);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;  /* Full width */
+  height: 100%; /* Full height */
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Popup content */
+.popup-content {
+  background-color: var(--background-dark);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: left;
+  width: 400px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.popup-content form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.popup-content input {
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.popup-content button {
+  background: var(--primary-color);
+  color: black;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.popup-content button:hover {
+  opacity: 0.9;
+}
+
+.popup-content a {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.popup-content a:hover {
+  text-decoration: underline;
+}
+
+/* Closes the Initial.HTML popup */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--text-light);
+}
+
+.logout-btn {
+  background-color: white;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background-color: #1e1e1e;
+  color: var(--text-light);
+  padding: 15px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+}
+
+/* Target the scrollbar */
+.sidebar::-webkit-scrollbar {
+    width: 4px; /* Adjust the width */
+}
+
+/* Track (background) */
+.sidebar::-webkit-scrollbar-track {
+    background: var(--background-dark); /* Light gray background */
+    border-radius: 4px;
+}
+
+/* Handle (thumb) */
+.sidebar::-webkit-scrollbar-thumb {
+    background: #888; /* Darker gray */
+    border-radius: 4px;
+}
+
+/* Handle on hover */
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: var(--hover-highlight-dark); /* Even darker gray */
+}
+
+/* Target the scrollbar */
+.main-content::-webkit-scrollbar {
+  width: 4px; /* Adjust the width */
+}
+
+/* Track (background) */
+.main-content::-webkit-scrollbar-track {
+  background: var(--background-dark); /* Light gray background */
+  border-radius: 4px;
+}
+
+/* Handle (thumb) */
+.main-content::-webkit-scrollbar-thumb {
+  background: #888; /* Darker gray */
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+.main-content::-webkit-scrollbar-thumb:hover {
+  background: var(--hover-highlight-dark); /* Even darker gray */
+}
+
+#dropdown-container {
+  margin-top: 10px;
+}
+
+#company, #year, #report {
+  background-color: #333;
+  color: var(--text-light);
+}
+
+#company {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+select#year, select#report {
+  width: 49%;
+}
+
+#date-report {
+  display: flex;
+  justify-content: space-between;
+}
+
+#menu {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.menu-item {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #333;
+  color: var(--text-light);
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.menu-item:hover {
+  background-color: var(--hover-light);
+}
+
+.submenu {
+  display: none;
+  margin-left: 15px;
+}
+
+.submenu .submenu-item {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.submenu .submenu-item:hover, .submenu-item-selected {
+  background-color: var(--hover-highlight-dark);
+  border-radius: 5px;
+}
+
+.highlight-light {
+  background-color: var(--hover-highlight-light);
+}
+
+.highlight-dark {
+  background-color: var(--hover-highlight-dark);
+}
+
+.chatprompt {
+  background-color: gray;
+  display: flex;
+  color: white;
+  width: fit-content;
+  max-width: 60%;
+  margin: 10px 5% 10px auto; /* Aligns the box to the right */
+  padding: 10px 15px;
+  text-align: right; /* Aligns the text inside the box */
+  border-radius: 16px; /* More rounded for chat bubble feel */
+  font-size: 16px;
+  word-wrap: break-word;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow */
+}
+
+.EDGAR_response {
+  width: 75%;
+  margin: 20px auto 10px auto; /* Top, sides, bottom */
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.5; /* More spacing between lines for readability */
+  white-space: pre-wrap; /* Supports line breaks and spacing in response */
+}
+
+#citation-source {
+  text-align: left;
+}
+
+/* Guided Mode Popups use this class! */
+.guidedpopup {
+  background-color: var(--button-color);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 1;
+  max-width: 225px;            /* Force line wrapping */
+  width: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Definition Popups use this class! */
+.definitionpopup {
+  background-color: var(--button-color);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 1;
+  max-width: 190px;            /* Force line wrapping */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Closes the Guided Mode popups */
+.popup-close {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px; /* x size */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.popup-message {
+  padding-right: 20px;
+}
+
+.definition-word {
+  cursor: help; /* Cursor changes to a question mark when hovering over a definition */
+  background-color: rgba(48, 197, 255, 0.5);
+  border-bottom: 1px dotted gray;
+}
+
+a {
+  color: rgb(48, 197, 255);
+}
+
+.definition-tooltip {
+  position: absolute;
+  z-index: 1;
+  padding: 8px 12px;
+  color: white;
+  background: #333;
+  border: 1px solid gray;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-size: 14px;
+  max-width: 300px;
+  display: none;
+  pointer-events: none;
+}
+
+/* Spinner generated from https://10015.io/tools/css-loader-generator */
+.spinner {
+   position: relative;
+   margin-top: 50px;
+   margin-bottom: 50px;
+   left: 50%;
+   width: 11.2px;
+   height: 11.2px;
+   animation: spinner-o824ag 1s infinite linear;
+}
+
+.spinner div {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: rgb(48, 197, 255);
+   border-radius: 50%;
+   animation: spinner-vse6n7 1.25s infinite ease;
+}
+
+.spinner div:nth-child(1) {
+   --rotation: 90;
+}
+
+.spinner div:nth-child(2) {
+   --rotation: 180;
+}
+
+.spinner div:nth-child(3) {
+   --rotation: 270;
+}
+
+.spinner div:nth-child(4) {
+   --rotation: 360;
+}
+
+@keyframes spinner-vse6n7 {
+   0%, 100% {
+      transform: rotate(calc(var(--rotation) * 1deg)) translateY(0);
+   }
+
+   50% {
+      transform: rotate(calc(var(--rotation) * 1deg)) translateY(300%);
+   }
+}
+
+@keyframes spinner-o824ag {
+   to {
+      transform: rotate(360deg);
+   }
+}
