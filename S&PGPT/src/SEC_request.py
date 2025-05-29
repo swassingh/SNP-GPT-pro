@@ -26,19 +26,19 @@ def get_10k_filing(api_key, ticker, year):
         return f"Error: {response.status_code}, {response.text}"
 
 
-def save_filing_to_file(filing, ticker, year):
-    filename = f'{ticker}_10k_{year}.json'
-    with open(filename, 'w') as f:
-        json.dump(filing, f, indent=4)
-    print(f"Filing saved to {filename}")
+# def save_filing_to_file(filing, ticker, year):
+#     filename = f'{ticker}_10k_{year}.json'
+#     with open(filename, 'w') as f:
+#         json.dump(filing, f, indent=4)
+#     print(f"Filing saved to {filename}")
 
 
-def read_file(ticker, year):
-    filename = f'{ticker}_10k_{year}.json'
-    with open(filename, 'r') as file:
-        data = json.load(file)
-    filing_url = data['filings'][0]['linkToFilingDetails']
-    return filing_url
+# def read_file(ticker, year):
+#     filename = f'{ticker}_10k_{year}.json'
+#     with open(filename, 'r') as file:
+#         data = json.load(file)
+#     filing_url = data['filings'][0]['linkToFilingDetails']
+#     return filing_url
 
 
 def extract_10k_part(api_key, filing_url, item, return_type="text"):

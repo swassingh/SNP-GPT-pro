@@ -19,6 +19,7 @@ if (localStorage.getItem('definitionsActive') === null) {
 
 let definitions = {};
 
+// Function to save the username to the database
 function saveUsername(event) {
     event.preventDefault();
 
@@ -67,7 +68,7 @@ if (document.getElementById("greeting") && document.getElementById("greeting p")
     beginningDescription.textContent = "Welcome to Learning Mode.";
 }
 
-
+// Function to clear the username from the database
 function clearUsername() {
     localStorage.removeItem("username"); // Remove username from storage
     window.location.href = "Initial.html"; // Redirect to the login page
@@ -112,11 +113,7 @@ function closePopup(container, object) {
     container.removeChild(object);
 }
 
-function clearUsername() {
-  localStorage.removeItem("username"); // Remove username from storage
-  window.location.href = "Initial.html"; // Redirect to the login page
-}
-
+//Function to toggle the submenu
 function toggleSubmenu(id) {
     var submenu = document.getElementById(id);
     if (submenu.style.display === "block") {
@@ -166,6 +163,7 @@ submenuItems.forEach(item => {
   });
 });
 
+// Function to attach the form submit handler to the form
 function attachFormSubmitHandler() {
     document.querySelector('form').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the default form submission
@@ -222,7 +220,7 @@ function attachFormSubmitHandler() {
     });
 }
 
-// Get Definitions JSON data from Python Server
+// Function to get Definitions JSON data from Python Server
 function getDefinitionsList() {
     const apiUrl = 'http://localhost:8000/submitDef';
 
@@ -246,7 +244,7 @@ function getDefinitionsList() {
 }
 
 
-// Function to handle the search input for company tickers
+// Handles the search input for company tickers in learningmode.html
 if (document.URL.includes("learningmode.html")) {
     document.getElementById("company").addEventListener("input", function () {
         let query = this.value.toUpperCase();
@@ -281,7 +279,7 @@ if (document.URL.includes("learningmode.html")) {
     });
 }
 
-// Display the API response
+// Function to display the API response
 function displayApiResponse(data) {
     const pain = document.getElementById("container");
     pain.innerHTML = ""; // Clear previous content
@@ -625,11 +623,12 @@ function formatKey(key) {
 }
 
 
-function buttonquery() {
+// Function to handle the button query in learningmode.html
+function buttonQuery(event) {
     const buttonText = event.target.textContent;
     const buttonId = event.target.id; // Get the ID of the clicked button
-    console.log("Button clicked:", buttonText);
-    console.log("Button ID:", buttonId); // Log the button ID
+    // console.log("Button clicked:", buttonText);
+    // console.log("Button ID:", buttonId); // Log the button ID
 
     const x = buttonId.split(" ")[1]; // Get the second word of the button text
     const button = buttonId.split(" ")[0]; // Get the first word of the button ID
@@ -640,25 +639,23 @@ function buttonquery() {
 }
 
 
-// Display initial popup on learningmode telling users to select a company,
-// year, and file type. Appears to the right of the sidebar.
+// Display initial popups on learningmode guiding users how to respond to the chatbot.
 function introGuidedModePopup() {
     // If Guided Mode popups should be shown to the user
     if (getConfigFlag('guidedModeActive') && document.URL.includes("learningmode.html")) {
 
         let target = document.getElementById("company");
-        let container = document.getElementById("dropdown-container");
 
-        createGuidedModePopup(target, container, "right", "Select a company ticker, year, and file type.");
+        createGuidedModePopup(target, "right", "Select a company ticker, year, and file type.");
 
         target = document.getElementById("menu");
         container = document.getElementById("financialContainer");
 
-        createGuidedModePopup(target, container, "right", "Select an SEC section to analyze.");
+        createGuidedModePopup(target, "right", "Select an SEC section to analyze.");
 
         target = document.querySelector("#query-form .config-icon");
         container = document.querySelector("#query-form");
-        createGuidedModePopup(target, container, "top", "You can change User Settings here.");
+        createGuidedModePopup(target, "top", "You can change User Settings here.");
 
     } else {
         // Remove all Guided Mode popups
@@ -673,7 +670,7 @@ function introGuidedModePopup() {
 
 // Helper Function to create a Guided Mode popup.
 // Needs the target DOM object, the container for the target, and the message to display.
-function createGuidedModePopup(target, container, location, message) {
+function createGuidedModePopup(target, location, message) {
     let popup = document.createElement("span");
     popup.classList.add("guidedpopup");
 
