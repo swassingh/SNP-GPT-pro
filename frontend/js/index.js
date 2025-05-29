@@ -183,7 +183,7 @@ function attachFormSubmitHandler() {
 
         console.log(ticker);
 
-        const apiUrl = 'spgpt-api-swassingh-aycabaezfed7ekf0.westus-01.azurewebsites.net/submit';
+        const apiUrl = 'https://spgpt-api-swassingh-aycabaezfed7ekf0.westus-01.azurewebsites.net/submit';
 
         // Create and append loading spinner
         const spinner = document.createElement('div');
@@ -224,7 +224,7 @@ function attachFormSubmitHandler() {
 
 // Get Definitions JSON data from Python Server
 function getDefinitionsList() {
-    const apiUrl = 'spgpt-api-swassingh-aycabaezfed7ekf0.westus-01.azurewebsites.net/submitDef';
+    const apiUrl = 'https://spgpt-api-swassingh-aycabaezfed7ekf0.westus-01.azurewebsites.net/submitDef';
 
     fetch(apiUrl, {
         method: 'POST',
@@ -252,7 +252,7 @@ if (document.URL.includes("learningmode.html")) {
         let query = this.value.toUpperCase();
 
         if (query.length > 0) {
-            fetch(`spgpt-api-swassingh-aycabaezfed7ekf0.westus-01.azurewebsites.net/search?query=${query}`)
+            fetch(`https://spgpt-api-swassingh-aycabaezfed7ekf0.westus-01.azurewebsites.net/search?query=${query}`)
                 .then(response => response.json())
                 .then(data => {
                     let suggestionsList = document.getElementById("suggestionsList");
