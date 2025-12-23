@@ -1,273 +1,188 @@
-# S&PGPT: AI-Powered Financial Analysis
+# S&PGPT  
+**AI-Powered Analysis of S&P 500 Financial Statements**
 
-This project aims to revolutionize financial analysis by providing an AI-powered tool that can analyze financial statements and answer complex questions about them.  S&PGPT dives deep into 10-K filings of S&P 500 companies, providing insightful answers about their income statements and balance sheets.
+S&PGPT is an AI-driven financial analysis system that enables users to query and analyze S&P 500 company financials using natural language. The system ingests and structures 10-K filings, extracts key financial data, and uses large language models to answer complex questions about income statements, balance sheets, and financial trends.
+
+This project was developed as a capstone for the Informatics program, with a strong emphasis on **LLM orchestration, data pipelines, and applied financial analysis**.
+
+---
 
 ## Table of Contents
 
-* [Project Overview](#project-overview)
-* [Features](#features)
-* [Getting Started](#getting-started)
-    * [Prerequisites](#prerequisites)
-    * [Installation](#installation)
-* [Codebase Structure](#codebase-structure)
-* [Building and Deploying](#building-and-deploying)
-* [Contributing](#contributing)
-* [Team](#team)
-* [License](#license)
-* [Contact](#contact)
+- [Project Overview](#project-overview)
+- [Core Features](#core-features)
+- [Architecture Overview](#architecture-overview)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Codebase Structure](#codebase-structure)
+- [Running the Project](#running-the-project)
+- [Future Work](#future-work)
+- [Contributing](#contributing)
+- [Team](#team)
+- [License](#license)
+- [Contact](#contact)
+
+---
 
 ## Project Overview
 
-S&PGPT leverages the power of AI to make financial statement analysis more accessible and efficient.  It's designed to assist students, financial analysts, and investors in gaining deeper insights into company financials.  This project is developed as a capstone project for the Informatics program at [Your University Name].
+Traditional financial statement analysis is time-consuming and inaccessible without deep accounting or finance expertise. S&PGPT bridges this gap by combining structured financial data extraction with large language models, enabling users to:
 
-## Features
+- Ask natural-language questions about company financials  
+- Explore trends and ratios across reporting periods  
+- Interpret complex SEC filings without manual parsing  
 
-* **S&P 500 Data Analysis:** Analyze financial data from 10-K filings of S&P 500 companies.
-* **Natural Language Queries:** Ask complex questions about financial statements in natural language.
-* **Key Financial Ratios:** Calculate and display important financial ratios.
-* **Trend Analysis:** Identify trends in financial performance over time.
-* **[Future Features (Phase 2)]:**  Investment recommendations, ChatGPT integration.
+The system is designed for students, analysts, and technically curious investors who want fast, explainable insights from raw financial documents.
+
+---
+
+## Core Features
+
+- **10-K Ingestion and Parsing**  
+  Extracts structured financial data from S&P 500 SEC filings.
+
+- **Natural Language Querying**  
+  Ask questions such as:
+  - How did Apple’s operating margin change year over year?
+  - Compare Microsoft’s assets and liabilities across recent filings.
+
+- **Financial Metrics and Ratios**  
+  Automatically computes key ratios from balance sheets and income statements.
+
+- **Trend Analysis**  
+  Identifies patterns and changes in financial performance over time.
+
+- **Modular LLM Pipeline**  
+  Designed to support multiple models and prompt strategies.
+
+---
+
+## Architecture Overview
+
+S&PGPT is composed of four primary layers:
+
+1. **Data Layer**  
+   - Raw SEC filings  
+   - Parsed and normalized financial tables  
+
+2. **Analysis Layer**  
+   - Financial computations  
+   - Ratio calculations  
+   - Trend extraction  
+
+3. **LLM Layer**  
+   - Prompt-driven financial reasoning  
+   - Context-aware question answering  
+
+4. **Interface Layer (Optional)**  
+   - API endpoints or UI components  
+
+---
 
 ## Getting Started
 
 ### Prerequisites
 
-Before getting started, ensure you have the following installed:
+Ensure you have the following installed:
 
-* Python 3.x
-* [List any required Python libraries, e.g., pandas, numpy, transformers, etc.]  Use `pip freeze > requirements.txt` to generate this.
-* [Specify any other dependencies, e.g., database, cloud platform, etc.]
-* [If using a specific GPT model, mention it here and how to obtain it.]
-* [If you have specific hardware requirements, e.g., GPU for training, mention it here.]
+- Python 3.9 or higher  
+- pip or conda  
+- An API key for your chosen LLM provider (for example, OpenAI)  
+- Optional: Jupyter Notebook for exploration  
+
+Key Python libraries are listed in `requirements.txt`, including:
+
+- pandas  
+- numpy  
+- requests  
+- langchain or equivalent LLM SDK  
+
+---
 
 ### Installation
 
-1. Clone the repository:
-   git clone {link where it says clone repository}
-2. Navigate to the project directory:
-   cd S-PGPT
-3. Create a virtual environment (recommended):
+1. Clone the repository: 
+   git clone https://github.com/swassingh/SNP-GPT-pro.git
+2. Navigate to the project directory: 
+   cd SNP-GPT-pro
+3. Create and activate a virtual environment:
    python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-4. Install the required dependencies:
+   source venv/bin/activate   # On Windows: venv\Scripts\activate
+4. Install dependencies:
    pip install -r requirements.txt
+5. Set required environment variables:
+   in the .env file, OPENAI_API_KEY=your_api_key_here, SEC_API_KEY=your_api_key_here
 
-You can't directly create a file within this chat interface.  However, I can give you the text formatted so you can easily copy and paste it into a file named README.md in your project directory.  Just copy the text below, open a text editor, paste the text, save the file as README.md, and you're good to go!
-Markdown
 
-# S&PGPT: AI-Powered Financial Analysis
-
-This project aims to revolutionize financial analysis by providing an AI-powered tool that can analyze financial statements and answer complex questions about them.  S&PGPT dives deep into 10-K filings of S&P 500 companies, providing insightful answers about their income statements and balance sheets.
-
-## Table of Contents
-
-* [Project Overview](#project-overview)
-* [Features](#features)
-* [Getting Started](#getting-started)
-    * [Prerequisites](#prerequisites)
-    * [Installation](#installation)
-* [Codebase Structure](#codebase-structure)
-* [Building and Deploying](#building-and-deploying)
-* [Contributing](#contributing)
-* [Team](#team)
-* [License](#license)
-* [Contact](#contact)
-
-## Project Overview
-
-S&PGPT leverages the power of AI to make financial statement analysis more accessible and efficient.  It's designed to assist students, financial analysts, and investors in gaining deeper insights into company financials.  This project is developed as a capstone project for the Informatics program at [Your University Name].
-
-## Features
-
-* **S&P 500 Data Analysis:** Analyze financial data from 10-K filings of S&P 500 companies.
-* **Natural Language Queries:** Ask complex questions about financial statements in natural language.
-* **Key Financial Ratios:** Calculate and display important financial ratios.
-* **Trend Analysis:** Identify trends in financial performance over time.
-* **[Future Features (Phase 2)]:**  Investment recommendations, ChatGPT integration.
-
-## Getting Started
-
-### Prerequisites
-
-Before getting started, ensure you have the following installed:
-
-* Python 3.x
-* [List any required Python libraries, e.g., pandas, numpy, transformers, etc.]  Use `pip freeze > requirements.txt` to generate this.
-* [Specify any other dependencies, e.g., database, cloud platform, etc.]
-* [If using a specific GPT model, mention it here and how to obtain it.]
-* [If you have specific hardware requirements, e.g., GPU for training, mention it here.]
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/](https://github.com/)[your-github-username]/S-PGPT.git
-
-    Navigate to the project directory:
-    Bash
-
-cd S-PGPT
-
-Create a virtual environment (recommended):
-Bash
-
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-Install the required dependencies:
-Bash
-
-    pip install -r requirements.txt
-
-5. [Provide specific instructions for setting up any API keys, environment variables, or configuration files.]  
-
-Codebase Structure
+### Codebase Structure
 
 SNP-GPT/
-├── data/           # Contains raw and processed financial data.
-├── src/            # Contains the source code.
-│   ├── main.py     # Main application file.
-│   ├── analysis.py # Financial analysis functions.
-│   ├── api.py      # API endpoints (if applicable).
-│   ├── ui/         # User interface files (if applicable).
-│   └── utils.py    # Utility functions.
-├── tests/          # Contains unit tests.
-├── notebooks/      # Jupyter notebooks for exploration and development.
-├── requirements.txt # List of project dependencies.
-├── README.md       # This file.
-└── ...             # Other project files.
+├── data/                 # Raw and processed SEC financial data
+├── models/               # Model configs or fine-tuned artifacts
+├── src/
+│   ├── main.py           # Application entry point
+│   ├── analysis.py       # Financial calculations and logic
+│   ├── api.py            # API endpoints (optional)
+│   ├── utils.py          # Shared utilities
+│   └── ui/               # Interface components (optional)
+├── notebooks/            # Exploratory analysis and prototyping
+├── tests/                # Unit and integration tests
+├── requirements.txt      # Python dependencies
+├── README.md             # Project documentation
+└── ...
 
-Running the application locally. (e.g., python src/main.py)
-Deploying to a cloud platform.
-Setting up the user interface.
+### Running the Project
 
-Contributing
+To run the application locally:
+   python src/main.py
+Depending on configuration, this may start a CLI-based query interface, launch an API server, or execute predefined analysis pipelines. Refer to inline documentation in main.py for configuration options.
 
-Contributions are welcome! To contribute to S&PGPT, please follow these steps:
+## Future Work
 
-    Fork the repository.
-    Create a new branch for your feature or bug fix.
-    Make your changes and commit them with clear and concise messages.
-    Push your changes to your forked repository.   
+Planned enhancements include:
 
-Submit a pull request to the main branch of the original repository.  
+- Investment insight generation (non-advisory)
+- Multi-company comparative analysis
+- Improved retrieval over long SEC filings
+- Interactive frontend dashboard
+- Support for filings beyond the S&P 500
 
-Please ensure that your code adheres to the project's coding style guidelines and includes appropriate unit tests.
+---
 
-You can't directly create a file within this chat interface.  However, I can give you the text formatted so you can easily copy and paste it into a file named README.md in your project directory.  Just copy the text below, open a text editor, paste the text, save the file as README.md, and you're good to go!
-Markdown
+## Contributing
 
-# S&PGPT: AI-Powered Financial Analysis
+Contributions are welcome.
 
-This project aims to revolutionize financial analysis by providing an AI-powered tool that can analyze financial statements and answer complex questions about them.  S&PGPT dives deep into 10-K filings of S&P 500 companies, providing insightful answers about their income statements and balance sheets.
+1. Fork the repository  
+2. Create a feature branch  
+3. Commit changes with clear, descriptive messages  
+4. Open a pull request against the main branch  
 
-## Table of Contents
+Please include tests where applicable and follow existing coding standards.
 
-* [Project Overview](#project-overview)
-* [Features](#features)
-* [Getting Started](#getting-started)
-    * [Prerequisites](#prerequisites)
-    * [Installation](#installation)
-* [Codebase Structure](#codebase-structure)
-* [Building and Deploying](#building-and-deploying)
-* [Contributing](#contributing)
-* [Team](#team)
-* [License](#license)
-* [Contact](#contact)
+---
 
-## Project Overview
+## Team
 
-S&PGPT leverages the power of AI to make financial statement analysis more accessible and efficient.  It's designed to assist students, financial analysts, and investors in gaining deeper insights into company financials.  This project is developed as a capstone project for the Informatics program at [Your University Name].
+- **Bella** – UX Design  
+- **Jay** – UX Design  
+- **Swastik Singh** – Product Management and Technical Development  
+- **Wen** – Product Management  
+- **Dylan** – Technical Development and Data Security  
 
-## Features
+---
 
-* **S&P 500 Data Analysis:** Analyze financial data from 10-K filings of S&P 500 companies.
-* **Natural Language Queries:** Ask complex questions about financial statements in natural language.
-* **Key Financial Ratios:** Calculate and display important financial ratios.
-* **Trend Analysis:** Identify trends in financial performance over time.
-* **[Future Features (Phase 2)]:**  Investment recommendations, ChatGPT integration.
+## License
 
-## Getting Started
+This project is licensed under the MIT License unless otherwise stated.
 
-### Prerequisites
+---
 
-Before getting started, ensure you have the following installed:
+## Contact
 
-* Python 3.x
-* [List any required Python libraries, e.g., pandas, numpy, transformers, etc.]  Use `pip freeze > requirements.txt` to generate this.
-* [Specify any other dependencies, e.g., database, cloud platform, etc.]
-* [If using a specific GPT model, mention it here and how to obtain it.]
-* [If you have specific hardware requirements, e.g., GPU for training, mention it here.]
+For questions or collaboration inquiries:
 
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/](https://github.com/)[your-github-username]/S-PGPT.git
-
-    Navigate to the project directory:
-    Bash
-
-cd S-PGPT
-
-Create a virtual environment (recommended):
-Bash
-
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-Install the required dependencies:
-Bash
-
-    pip install -r requirements.txt
-
-5. [Provide specific instructions for setting up any API keys, environment variables, or configuration files.]  
-
-Codebase Structure
-
-S-PGPT/
-├── data/           # Contains raw and processed financial data.
-├── models/         # Contains the trained AI models.
-├── src/            # Contains the source code.
-│   ├── main.py     # Main application file.
-│   ├── analysis.py # Financial analysis functions.
-│   ├── api.py      # API endpoints (if applicable).
-│   ├── ui/         # User interface files (if applicable).
-│   └── utils.py    # Utility functions.
-├── tests/          # Contains unit tests.
-├── notebooks/      # Jupyter notebooks for exploration and development.
-├── requirements.txt # List of project dependencies.
-├── README.md       # This file.
-└── ...             # Other project files.
-
-Building and Deploying
-
-[Provide detailed instructions on how to build and deploy the project.  This will vary depending on your specific setup.  Include steps for: ]
-
-    Running the application locally. (e.g., python src/main.py)
-    Training the AI model (if applicable).
-    Deploying to a cloud platform (if applicable).
-    Setting up the user interface (if applicable).
-
-Contributing
-
-Contributions are welcome! To contribute to S&PGPT, please follow these steps:
-
-    Fork the repository.
-    Create a new branch for your feature or bug fix.
-    Make your changes and commit them with clear and concise messages.
-    Push your changes to your forked repository.   
-
-Submit a pull request to the main branch of the original repository.  
-
-Please ensure that your code adheres to the project's coding style guidelines and includes appropriate unit tests.  
-
-Team
-
-    Bella: UX Design (iboult@uw.edu)
-    Jay: UX Design (jkim982@uw.edu)
-    Swas: Product Management & Marketing (Swas@uw.edu)
-    Wen: Product Management & Marketing (wechen@uw.edu)
-    Dylan: Technical Development & Data Security (dlj949@uw.edu)
-    Swas: Technical Development & Data Security (Swas@uw.edu)
-
+**Swastik Singh**  
+Email: swas@uw.edu  
+GitHub: https://github.com/swassingh
